@@ -1,0 +1,203 @@
+/* 
+ * Scroll Performance Optimization CSS
+ * Fixes scrollbar dragging and animation issues
+ */
+
+/* Optimized scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  transition: width 0.2s ease;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ffbd84, #ff1f8e);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+  background: linear-gradient(45deg, #ff9656, #e91e83);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ffaa71, #f51e87);
+}
+
+/* Prevent scroll behavior conflicts */
+html {
+  scroll-behavior: auto !important;
+}
+
+html.smooth-scroll {
+  scroll-behavior: smooth !important;
+}
+
+/* Optimize body for better scroll performance */
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 80px;
+}
+
+/* Performance optimizations for animations */
+.hero-section,
+.particles-container,
+#particles-js,
+#particles-js1 {
+  will-change: auto;
+  contain: layout style paint;
+}
+
+/* Reduce animation complexity during scroll */
+.animate-float,
+.animate-glow,
+.animate-blob {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize heavy transitions */
+.service-card-prb,
+.testimonial-card-a,
+.card-list .single-card-item {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Remove problematic transitions */
+* {
+  transition: none !important;
+}
+
+/* Selective re-enable important transitions */
+.btn,
+button,
+.nav-link,
+.dropdown-menu,
+.modal,
+.card:hover,
+.service-card:hover {
+  transition: all 0.3s ease !important;
+}
+
+/* Optimize scroll-triggered animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize particles containers */
+#particles-js,
+#particles-js1 {
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.particles-paused {
+  opacity: 0.3 !important;
+}
+
+/* Floating CTA optimization */
+.floating-cta {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Sticky navigation optimization */
+.navfix {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: auto;
+}
+
+.navfix.sticky {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Carousel optimizations */
+.owl-carousel {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Form elements scroll optimization */
+input,
+textarea,
+select {
+  will-change: auto;
+}
+
+/* Loading optimization */
+.loading-skeleton {
+  contain: strict;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Critical path optimizations */
+.hero-section {
+  contain: layout style;
+}
+
+/* Scroll snap for better UX */
+.section-scroll-snap {
+  scroll-snap-type: y mandatory;
+}
+
+.section-scroll-snap > section {
+  scroll-snap-align: start;
+}
+
+/* Prevent layout thrashing */
+.container,
+.row,
+.col {
+  contain: layout;
+}
+
+/* GPU acceleration for key elements */
+.card,
+.btn,
+.hero-content,
+.service-item {
+  transform: translateZ(0);
+  will-change: auto;
+}

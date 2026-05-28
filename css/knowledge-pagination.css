@@ -1,0 +1,28 @@
+.kb-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 10px;
+}
+
+.kb-pagination button {
+    border: 1px solid #c9d5e6;
+    background: #fff;
+    color: #1a2f4a;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.kb-pagination button.active {
+    background: #27466b;
+    color: #fff;
+    border-color: #27466b;
+}
+
+.kb-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

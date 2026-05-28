@@ -1,0 +1,196 @@
+/* 
+ * Clients Section Performance Optimizations
+ * Reduces animation delays and improves scroll performance
+ */
+
+/* Main section optimizations */
+.clients-section-optimized {
+  contain: layout style paint;
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Grid container optimizations */
+.client-logos-grid {
+  contain: layout;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Individual client item optimizations */
+.client-logo-item {
+  contain: layout style;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(229, 231, 235, 1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Staggered animation with reduced delays */
+.client-logo-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.client-logo-item:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.client-logo-item:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.client-logo-item:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.client-logo-item:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.client-logo-item:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.client-logo-item:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.client-logo-item:nth-child(8) {
+  animation-delay: 0.35s;
+}
+.client-logo-item:nth-child(n + 9) {
+  animation-delay: 0.4s;
+}
+
+/* Optimized fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+/* Hover effects with hardware acceleration */
+.client-logo-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) translateZ(0);
+}
+
+/* Logo container optimizations */
+.client-logo-container {
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+}
+
+/* Image optimizations */
+.client-logo-container img {
+  content-visibility: auto;
+  contain-intrinsic-size: 150px 50px;
+  height: 3rem;
+  width: auto;
+  max-width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease, transform 0.2s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.client-logo-item:hover .client-logo-container img {
+  filter: grayscale(0%);
+  transform: scale(1.05) translateZ(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .client-logo-item {
+    animation-duration: 0.3s;
+  }
+
+  .client-logo-item:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .client-logo-container {
+    padding: 1.5rem;
+  }
+
+  .client-logo-container img {
+    height: 2.5rem;
+  }
+}
+
+/* Performance optimizations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .client-logo-item:hover {
+    transform: none;
+  }
+
+  .client-logo-container img {
+    transition: none;
+  }
+}
+
+/* GPU acceleration hints */
+.client-logo-item,
+.client-logo-container,
+.client-logo-container img {
+  will-change: auto;
+}
+
+/* Intersection observer ready state */
+.client-logo-item.animate-in {
+  animation-play-state: running;
+}
+
+/* Loading state optimization */
+.client-logo-container img:not(.loaded) {
+  /* opacity: 0.7; */
+}
+
+.client-logo-container img.loaded {
+  opacity: 1;
+}
+
+/* Grid layout fallback for older browsers */
+@supports not (display: grid) {
+  .client-logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem;
+  }
+
+  .client-logo-item {
+    flex: 0 0 calc(50% - 2rem);
+    margin: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .client-logo-item {
+      flex: 0 0 calc(25% - 2rem);
+    }
+  }
+}
