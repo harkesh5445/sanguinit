@@ -25,17 +25,20 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                             <li data-target="#blogHeroSlider" data-slide-to="2"></li>
                         </ol>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="<?php echo blog_post_url('adobe-commerce-cloud-migration-ultimate-guide'); ?>">
-                                    <img src="images/about_2/data_8.jpg" alt="Adobe Commerce Cloud Migration guide">
+                            <?php
+                            $carouselSlugs = array_slice($blogPostsListingOrder, 0, 3);
+                            foreach ($carouselSlugs as $ci => $cSlug) :
+                                $cPost = get_blog_post($cSlug);
+                                if (!$cPost) {
+                                    continue;
+                                }
+                                ?>
+                            <div class="carousel-item<?php echo $ci === 0 ? ' active' : ''; ?>">
+                                <a href="<?php echo blog_post_url($cSlug); ?>">
+                                    <img src="<?php echo htmlspecialchars($cPost['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($cPost['title'], ENT_QUOTES, 'UTF-8'); ?>">
                                 </a>
                             </div>
-                            <div class="carousel-item">
-                                <img src="images/about_2/data_4.jpg" alt="Cloud operations and analytics view">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/about_2/cation_10.jpg" alt="Business growth chart analysis">
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                         <a class="carousel-control-prev" href="#blogHeroSlider" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,65 +52,24 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                 </article>
 
                 <div id="blogListWrap">
-                    <article class="blog-list-card" data-title="Adobe Commerce Cloud Migration: The Ultimate Guide" data-content="Adobe Commerce Cloud migration planning, benefits, and phased go-live strategy for enterprise merchants.">
-                        <img src="images/about_2/data_8.jpg" alt="Adobe Commerce Cloud Migration">
+                    <?php foreach ($blogPostsListingOrder as $listSlug) :
+                        $listPost = get_blog_post($listSlug);
+                        if (!$listPost) {
+                            continue;
+                        }
+                        $listTitle = $listPost['title'];
+                        $listExcerpt = isset($listPost['list_excerpt']) ? $listPost['list_excerpt'] : $listPost['excerpt'];
+                        ?>
+                    <article class="blog-list-card" data-title="<?php echo htmlspecialchars($listTitle, ENT_QUOTES, 'UTF-8'); ?>" data-content="<?php echo htmlspecialchars($listExcerpt, ENT_QUOTES, 'UTF-8'); ?>">
+                        <img src="<?php echo htmlspecialchars($listPost['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($listTitle, ENT_QUOTES, 'UTF-8'); ?>">
                         <div class="blog-list-card-content">
-                            <h3>Adobe Commerce Cloud Migration: The Ultimate Guide</h3>
-                            <p class="blog-meta">June 5, 2024 &nbsp; | &nbsp; No Comments</p>
-                            <p class="lh">Moving to Adobe Commerce Cloud is more than a hosting change—it is a platform modernization initiative. This guide covers discovery, migration approaches, cloud benefits, and post-launch optimization for growing ecommerce brands.</p>
-                            <a href="<?php echo blog_post_url('adobe-commerce-cloud-migration-ultimate-guide'); ?>" class="blog-read-btn">Read More</a>
+                            <h3><?php echo htmlspecialchars($listTitle, ENT_QUOTES, 'UTF-8'); ?></h3>
+                            <p class="blog-meta"><?php echo htmlspecialchars($listPost['date'], ENT_QUOTES, 'UTF-8'); ?> &nbsp; | &nbsp; <?php echo get_blog_comments_label($listPost['comments']); ?></p>
+                            <p class="lh"><?php echo htmlspecialchars($listExcerpt, ENT_QUOTES, 'UTF-8'); ?></p>
+                            <a href="<?php echo blog_post_url($listSlug); ?>" class="blog-read-btn">Read More</a>
                         </div>
                     </article>
-
-                    <article class="blog-list-card" data-title="AMP with Magento2: Get to Know How Fast Loading Pages Can Win Customers" data-content="Page speed impacts Magento store search performance, user engagement, and conversion rates.">
-                        <img src="images/about_2/cation_4.jpg" alt="AMP with Magento2 article">
-                        <div class="blog-list-card-content">
-                            <h3>AMP with Magento2: Get to Know How Fast Loading Pages Can Win Customers</h3>
-                            <p class="blog-meta">May 6, 2026 &nbsp; | &nbsp; 1 Comment</p>
-                            <p class="lh">Page speed is no longer just a technical detail. It directly impacts how your Magento store performs in search, how users engage, and how much you sell. Search engines now focus heavily on speed and user experience when ranking ecommerce websites.</p>
-                            <a href="<?php echo blog_post_url('amp-with-magento2-fast-loading-pages'); ?>" class="blog-read-btn">Read More</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-list-card" data-title="Moodle LMS 5.2: Everything You Need to Know About the Latest Upgrade" data-content="Modern LMS platforms help organizations train teams, maintain compliance, and scale digital learning programs.">
-                        <img src="images/about_2/cation_5.jpg" alt="Moodle LMS 5.2 article">
-                        <div class="blog-list-card-content">
-                            <h3>Moodle LMS 5.2: Everything You Need to Know About the Latest Upgrade</h3>
-                            <p class="blog-meta">April 23, 2026 &nbsp; | &nbsp; No Comments</p>
-                            <p class="lh">Despite the fact that we live in a world where technology is integral to education, digital learning has become the norm rather than the exception. Organizations are using modern LMS platforms to train teams, maintain compliance, and scale learning.</p>
-                            <a href="<?php echo blog_post_url('moodle-lms-5-2-latest-upgrade'); ?>" class="blog-read-btn">Read More</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-list-card" data-title="A Useful Guide to the Magento Security Patches" data-content="Guide to Magento patch priorities, implementation approach, and maintenance best practices for secure operations.">
-                        <img src="images/about_2/cation_6.jpg" alt="Magento security patches article">
-                        <div class="blog-list-card-content">
-                            <h3>A Useful Guide to the Magento Security Patches</h3>
-                            <p class="blog-meta">March 28, 2026 &nbsp; | &nbsp; No Comments</p>
-                            <p class="lh">Magento websites are a critical part of business operations since they handle customer data and transactions. This guide explains patch priorities, implementation approach, and maintenance best practices for secure operations.</p>
-                            <a href="<?php echo blog_post_url('magento-security-patches-guide'); ?>" class="blog-read-btn">Read More</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-list-card" data-title="Sitefinity 15 Upgrade Checklist for Enterprise Portals" data-content="Readiness assessments, migration sequencing, and post-go-live validation for Sitefinity enterprise upgrades.">
-                        <img src="images/about_2/cation_7.jpg" alt="Sitefinity 15 upgrade checklist">
-                        <div class="blog-list-card-content">
-                            <h3>Sitefinity 15 Upgrade Checklist for Enterprise Portals</h3>
-                            <p class="blog-meta">March 14, 2026 &nbsp; | &nbsp; 2 Comments</p>
-                            <p class="lh">Upgrading Sitefinity across large content estates requires careful planning. This checklist covers environment readiness, widget compatibility, content migration, and launch validation for enterprise teams.</p>
-                            <a href="contact-us.php" class="blog-read-btn">Read More</a>
-                        </div>
-                    </article>
-
-                    <article class="blog-list-card" data-title="How Headless Commerce Improves Performance and Flexibility" data-content="Practical guide to evaluate and implement headless commerce architecture for modern storefronts.">
-                        <img src="images/about_2/cation_8.jpg" alt="How headless commerce improves performance">
-                        <div class="blog-list-card-content">
-                            <h3>How Headless Commerce Improves Performance and Flexibility</h3>
-                            <p class="blog-meta">February 27, 2026 &nbsp; | &nbsp; No Comments</p>
-                            <p class="lh">Headless commerce separates frontend experience from backend services, enabling faster releases and better channel coverage. Learn when to adopt headless architecture and how to plan your rollout.</p>
-                            <a href="contact-us.php" class="blog-read-btn">Read More</a>
-                        </div>
-                    </article>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
@@ -172,7 +134,15 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         min-width: 230px;
         height: 155px;
         object-fit: cover;
+        object-position: center;
         display: block;
+        background: #e8e8e8;
+    }
+
+    .blog-feature-panel img {
+        max-height: 400px;
+        object-fit: cover;
+        object-position: center;
     }
 
     .blog-list-card-content h3 {

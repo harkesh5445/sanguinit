@@ -135,6 +135,7 @@ Brooklyn, NY 11203.</span><br><span>  <a href="tel:(+1)662-300-1685">Ph- 662-300
       <script src="js/plugin.min.js"></script>
       <!--common script file-->
       <script src="js/main.js"></script>
+      <script src="js/quote-popup.js"></script>
       <script src="js/portfolio/lazysizes.min.js"></script>
       <script src="js/portfolio/jquery.slimscroll.min.js"></script>
       <script type='text/javascript' src="js/portfolio/aos.js?ver=5.2.2"></script>

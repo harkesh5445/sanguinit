@@ -1,0 +1,190 @@
+<?php
+
+/**
+ * Knowledge Base e-books metadata and readable chapter content.
+ */
+$ebookPosts = [
+    'workplace-mobility-benefits-sectors' => [
+        'title' => 'Sectors That Will Benefit from Workplace Mobility',
+        'date' => 'May 16, 2026',
+        'read_time' => '12 min read',
+        'category' => 'Mobility',
+        'category_slug' => 'mobility',
+        'featured_image' => 'images/ebooks/workplace-mobility.jpg',
+        'cover_line' => 'Sectors That Will Benefit from',
+        'cover_highlight' => 'WORKPLACE MOBILITY',
+        'list_summary' => 'How field services, healthcare, logistics, and retail use mobile apps to improve productivity and customer outcomes.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'why-mobility-matters', 'label' => 'Why mobility matters now'],
+            ['id' => 'sector-playbooks', 'label' => 'Sector playbooks'],
+            ['id' => 'implementation', 'label' => 'Implementation checklist'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'seo-content-that-ranks' => [
+        'title' => 'How To Write Content That Ranks Well',
+        'date' => 'May 2, 2026',
+        'read_time' => '14 min read',
+        'category' => 'Marketing',
+        'category_slug' => 'marketing',
+        'featured_image' => 'images/ebooks/seo-content.jpg',
+        'cover_line' => 'How To Write',
+        'cover_highlight' => 'CONTENT THAT RANKS WELL',
+        'list_summary' => 'A practical guide to search intent, structure, internal linking, and measuring content performance.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'search-intent', 'label' => 'Understand search intent'],
+            ['id' => 'structure', 'label' => 'Structure for readability and SEO'],
+            ['id' => 'distribution', 'label' => 'Distribution and measurement'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'choosing-right-outsourcing-partner' => [
+        'title' => 'Choosing The Right Outsourcing Partner',
+        'date' => 'April 18, 2026',
+        'read_time' => '15 min read',
+        'category' => 'Web Development',
+        'category_slug' => 'web',
+        'featured_image' => 'images/ebooks/outsourcing-partner.jpg',
+        'cover_line' => 'Choosing Right',
+        'cover_highlight' => 'OUTSOURCING PARTNER',
+        'list_summary' => 'Evaluate vendors on delivery model, engineering quality, security posture, and cultural fit before you sign.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'engagement-models', 'label' => 'Engagement models'],
+            ['id' => 'evaluation-criteria', 'label' => 'Evaluation criteria'],
+            ['id' => 'red-flags', 'label' => 'Red flags to avoid'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'free-app-marketing-strategies' => [
+        'title' => '10 Ways To Market Your App For Free',
+        'date' => 'April 4, 2026',
+        'read_time' => '11 min read',
+        'category' => 'Marketing',
+        'category_slug' => 'marketing',
+        'featured_image' => 'images/ebooks/app-marketing.jpg',
+        'cover_line' => '10 Ways to',
+        'cover_highlight' => 'MARKET YOUR APP FOR FREE',
+        'list_summary' => 'Organic growth tactics for early-stage apps—ASO, communities, partnerships, and retention loops without paid spend.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'foundation', 'label' => 'Foundation before promotion'],
+            ['id' => 'ten-tactics', 'label' => 'Ten free marketing tactics'],
+            ['id' => 'measure', 'label' => 'Measure what matters'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'cloud-transformation-governance-handbook' => [
+        'title' => 'Cloud Transformation Governance Handbook',
+        'date' => 'March 15, 2026',
+        'read_time' => '16 min read',
+        'category' => 'Cloud',
+        'category_slug' => 'cloud',
+        'featured_image' => 'images/ebooks/cloud-governance.jpg',
+        'cover_line' => 'Cloud Transformation',
+        'cover_highlight' => 'GOVERNANCE HANDBOOK',
+        'list_summary' => 'Policies, FinOps rhythms, and accountability models for sustainable cloud programs.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'governance-principles', 'label' => 'Governance principles'],
+            ['id' => 'finops', 'label' => 'FinOps operating rhythm'],
+            ['id' => 'security-compliance', 'label' => 'Security and compliance'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'product-led-engineering-guide' => [
+        'title' => 'Practical Guide to Product-Led Engineering',
+        'date' => 'February 28, 2026',
+        'read_time' => '13 min read',
+        'category' => 'Web Development',
+        'category_slug' => 'web',
+        'featured_image' => 'images/ebooks/product-engineering.jpg',
+        'cover_line' => 'Product-Led',
+        'cover_highlight' => 'ENGINEERING GUIDE',
+        'list_summary' => 'Align product discovery, engineering delivery, and metrics so teams ship value—not just output.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'discovery', 'label' => 'Discovery and outcomes'],
+            ['id' => 'delivery', 'label' => 'Delivery practices'],
+            ['id' => 'metrics', 'label' => 'Metrics that matter'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'magento-b2b-commerce-implementation-guide' => [
+        'title' => 'Magento B2B Commerce Implementation Guide',
+        'date' => 'February 10, 2026',
+        'read_time' => '17 min read',
+        'category' => 'Ecommerce',
+        'category_slug' => 'ecommerce',
+        'featured_image' => 'images/ebooks/magento-b2b.jpg',
+        'cover_line' => 'Magento B2B',
+        'cover_highlight' => 'COMMERCE GUIDE',
+        'list_summary' => 'Catalog design, company accounts, quote workflows, and ERP integration for Adobe Commerce B2B.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'b2b-fundamentals', 'label' => 'B2B commerce fundamentals'],
+            ['id' => 'architecture', 'label' => 'Architecture and integrations'],
+            ['id' => 'launch', 'label' => 'Launch readiness'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+    'agile-delivery-distributed-teams' => [
+        'title' => 'Agile Delivery Handbook for Distributed Teams',
+        'date' => 'January 20, 2026',
+        'read_time' => '14 min read',
+        'category' => 'Web Development',
+        'category_slug' => 'web',
+        'featured_image' => 'images/ebooks/agile-delivery.jpg',
+        'cover_line' => 'Agile Delivery',
+        'cover_highlight' => 'HANDBOOK',
+        'list_summary' => 'Ceremonies, communication norms, and quality gates that keep offshore and hybrid teams aligned.',
+        'toc' => [
+            ['id' => 'introduction', 'label' => 'Introduction'],
+            ['id' => 'team-design', 'label' => 'Team design'],
+            ['id' => 'ceremonies', 'label' => 'Ceremonies that work remotely'],
+            ['id' => 'quality', 'label' => 'Quality and release discipline'],
+            ['id' => 'next-steps', 'label' => 'Next steps'],
+        ],
+    ],
+];
+
+$ebookPostsListingOrder = [
+    'workplace-mobility-benefits-sectors',
+    'seo-content-that-ranks',
+    'choosing-right-outsourcing-partner',
+    'free-app-marketing-strategies',
+    'cloud-transformation-governance-handbook',
+    'product-led-engineering-guide',
+    'magento-b2b-commerce-implementation-guide',
+    'agile-delivery-distributed-teams',
+];
+
+function ebook_post_url($slug)
+{
+    return 'ebook-single.php?slug=' . rawurlencode($slug);
+}
+
+function get_ebook_post($slug)
+{
+    global $ebookPosts;
+    return isset($ebookPosts[$slug]) ? $ebookPosts[$slug] : null;
+}
+
+function get_ebook_post_html($slug)
+{
+    $post = get_ebook_post($slug);
+    if (!$post) {
+        return '';
+    }
+
+    $contentFile = __DIR__ . '/ebook-content/' . $slug . '.php';
+    if (is_readable($contentFile)) {
+        ob_start();
+        include $contentFile;
+        return ob_get_clean();
+    }
+
+    return '<p class="eb-p">' . htmlspecialchars($post['list_summary'], ENT_QUOTES, 'UTF-8') . '</p>';
+}

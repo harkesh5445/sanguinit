@@ -1,9 +1,12 @@
 <?php
+require_once __DIR__ . '/includes/video-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('videos');
 include __DIR__ . '/includes/kb-premium-banner.php';
+
+$prefilterTopic = isset($_GET['topic']) ? trim($_GET['topic']) : '';
 ?>
 
 <section class="video-library pad-tb">
@@ -11,150 +14,55 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         <div class="row align-items-start mb20">
             <div class="col-lg-8">
                 <div class="video-top-note">
-                    <p class="lh">Explore SanguineIT video sessions on commerce platforms, cloud delivery, security, and modern engineering practices—curated for teams who need clarity, not clutter.</p>
+                    <p class="lh">Explore nine SanguineIT video sessions on commerce platforms, cloud delivery, CMS, security, and team culture—curated for teams who need clarity, not clutter.</p>
                 </div>
             </div>
-            <div class="col-lg-4 text-lg-right">
-                <button type="button" class="video-filter-btn"><i class="fas fa-sliders-h"></i> Filter</button>
+            <div class="col-lg-4">
+                <div class="video-top-search">
+                    <input type="search" id="videoSearchInput" placeholder="Search videos" aria-label="Search videos">
+                    <button type="button" id="videoSearchBtn">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row video-topic-filters mb15">
+            <div class="col-12">
+                <a href="videos.php" class="video-topic-chip<?php echo $prefilterTopic === '' ? ' active' : ''; ?>">All</a>
+                <a href="videos.php?topic=company" class="video-topic-chip<?php echo $prefilterTopic === 'company' ? ' active' : ''; ?>">Company</a>
+                <a href="videos.php?topic=sitefinity" class="video-topic-chip<?php echo $prefilterTopic === 'sitefinity' ? ' active' : ''; ?>">Sitefinity</a>
+                <a href="videos.php?topic=lms" class="video-topic-chip<?php echo $prefilterTopic === 'lms' ? ' active' : ''; ?>">LMS</a>
+                <a href="videos.php?topic=ecommerce" class="video-topic-chip<?php echo $prefilterTopic === 'ecommerce' ? ' active' : ''; ?>">Ecommerce</a>
+                <a href="videos.php?topic=cloud" class="video-topic-chip<?php echo $prefilterTopic === 'cloud' ? ' active' : ''; ?>">Cloud</a>
+                <a href="videos.php?topic=magento" class="video-topic-chip<?php echo $prefilterTopic === 'magento' ? ' active' : ''; ?>">Magento</a>
+                <a href="videos.php?topic=integration" class="video-topic-chip<?php echo $prefilterTopic === 'integration' ? ' active' : ''; ?>">Integration</a>
+                <a href="videos.php?topic=sharepoint" class="video-topic-chip<?php echo $prefilterTopic === 'sharepoint' ? ' active' : ''; ?>">SharePoint</a>
             </div>
         </div>
 
         <div class="row video-grid" id="videoGrid">
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Induction to New Joinees at SanguineIT">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cation_7.jpg" alt="Induction to New Joinees at SanguineIT">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Induction to New Joinees at SanguineIT</h4>
+            <?php foreach ($videoPostsListingOrder as $videoSlug) :
+                $videoItem = get_video_post($videoSlug);
+                if (!$videoItem) {
+                    continue;
+                }
+                $videoTitle = $videoItem['title'];
+                $videoUrl = video_post_url($videoSlug);
+                ?>
+            <div class="col-lg-4 col-md-6 mb25 video-grid-col" data-topic="<?php echo htmlspecialchars($videoItem['category_slug'], ENT_QUOTES, 'UTF-8'); ?>">
+                <article class="video-card" data-title="<?php echo htmlspecialchars($videoTitle, ENT_QUOTES, 'UTF-8'); ?>" data-summary="<?php echo htmlspecialchars($videoItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?>" data-category="<?php echo htmlspecialchars($videoItem['category'], ENT_QUOTES, 'UTF-8'); ?>">
+                    <a href="<?php echo $videoUrl; ?>" class="video-card-link">
+                        <div class="video-thumb-wrap">
+                            <img src="<?php echo htmlspecialchars($videoItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($videoTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <span class="video-play"><i class="fas fa-play"></i></span>
+                            <span class="video-duration-badge"><?php echo htmlspecialchars($videoItem['duration'], ENT_QUOTES, 'UTF-8'); ?></span>
+                        </div>
+                        <p class="video-card-meta"><?php echo htmlspecialchars($videoItem['date'], ENT_QUOTES, 'UTF-8'); ?> · <?php echo htmlspecialchars($videoItem['category'], ENT_QUOTES, 'UTF-8'); ?></p>
+                        <h4><?php echo htmlspecialchars($videoTitle, ENT_QUOTES, 'UTF-8'); ?></h4>
+                        <p class="video-card-summary"><?php echo htmlspecialchars($videoItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                    </a>
                 </article>
             </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Sitefinity: A Platform That Adapts To Your Business Needs">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cation_8.jpg" alt="Sitefinity adapts to your business needs">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Sitefinity: A Platform That Adapts To Your Business Needs</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Know the Benefits of Using an LMS and Why Moodle is Preferred">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cation_9.jpg" alt="Know the benefits of using an LMS">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Know the Benefits of Using an LMS and Why Moodle is Preferred</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Sitefinity CMS: Excellent for Enterprises">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_4.jpg" alt="Sitefinity CMS for enterprises">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-20s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Sitefinity CMS: Excellent for Enterprises</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="SanguineIT Family is getting Bigger - We are Hiring">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_5.jpg" alt="SanguineIT family is getting bigger">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-30s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>SanguineIT Family is getting Bigger- We are Hiring</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="6 Best Practices for B2B Commerce">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_6.jpg" alt="6 best practices for B2B commerce">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-5mb.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>6 Best Practices for B2B Commerce</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Modernizing Legacy Applications with Cloud-Native Patterns">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cont_2.jpg" alt="Modernizing legacy applications">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Modernizing Legacy Applications with Cloud-Native Patterns</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Magento Performance Optimization: Practical Tips">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cont_3.jpg" alt="Magento performance optimization tips">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Magento Performance Optimization: Practical Tips</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Building Secure APIs for Enterprise Integrations">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_7.jpg" alt="Building secure APIs for enterprise integrations">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Building Secure APIs for Enterprise Integrations</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="SharePoint Intranet Design Patterns That Scale">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/Share_2.jpg" alt="SharePoint intranet design patterns">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-20s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>SharePoint Intranet Design Patterns That Scale</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Product Discovery Workshops for Digital Teams">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_8.jpg" alt="Product discovery workshops">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-30s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Product Discovery Workshops for Digital Teams</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="DevOps Metrics That Matter for Leadership Reviews">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/data_9.jpg" alt="DevOps metrics for leadership reviews">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-5mb.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>DevOps Metrics That Matter for Leadership Reviews</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="WordPress Security Hardening Checklist">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/word_66.jpg" alt="WordPress security hardening checklist">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>WordPress Security Hardening Checklist</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="iOS App Release Readiness: QA and Store Guidelines">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/ios_1.jpg" alt="iOS app release readiness">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>iOS App Release Readiness: QA and Store Guidelines</h4>
-                </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb25">
-                <article class="video-card" data-title="Data Platform Foundations for Analytics Teams">
-                    <div class="video-thumb-wrap">
-                        <img src="images/about_2/cation_5.jpg" alt="Data platform foundations">
-                        <a href="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" target="_blank" class="video-play"><i class="fas fa-play"></i></a>
-                    </div>
-                    <h4>Data Platform Foundations for Analytics Teams</h4>
-                </article>
-            </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="row justify-content-center mt10">
@@ -184,17 +92,58 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         color: #404b5d;
     }
 
-    .video-filter-btn {
+    .video-top-search {
+        display: flex;
+        gap: 0;
+    }
+
+    .video-top-search input {
+        flex: 1;
+        height: 40px;
         border: 1px solid #b7c1cf;
-        background: #f7f8fa;
-        color: #1a2f4a;
-        font-weight: 600;
-        padding: 8px 18px;
+        padding: 0 12px;
+    }
+
+    .video-top-search button {
+        border: 0;
+        background: #dc2429;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 18px;
         cursor: pointer;
     }
 
-    .video-card {
-        background: transparent;
+    .video-topic-filters {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .video-topic-chip {
+        display: inline-block;
+        margin: 0 6px 8px 0;
+        padding: 6px 12px;
+        border: 1px solid #b7c1cf;
+        background: #fff;
+        color: #1a2f4a;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .video-topic-chip.active,
+    .video-topic-chip:hover {
+        background: #27466b;
+        border-color: #27466b;
+        color: #fff;
+    }
+
+    .video-card-link {
+        display: block;
+        color: inherit;
+    }
+
+    .video-card-link:hover {
+        color: inherit;
+        text-decoration: none;
     }
 
     .video-thumb-wrap {
@@ -224,16 +173,44 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         align-items: center;
         justify-content: center;
         font-size: 20px;
+        pointer-events: none;
+    }
+
+    .video-duration-badge {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        background: rgba(0, 0, 0, 0.72);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 2px;
+    }
+
+    .video-card-meta {
+        font-size: 12px;
+        color: #666;
+        margin: 8px 0 4px;
+        font-weight: 600;
     }
 
     .video-card h4 {
-        font-size: 14px;
-        margin-top: 8px;
-        margin-bottom: 0;
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 6px;
         padding-bottom: 6px;
         border-bottom: 2px solid #dd2b30;
         display: inline-block;
         line-height: 1.4;
+        color: #111;
+    }
+
+    .video-card-summary {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #4a5568;
+        margin: 0;
     }
 
     .video-bottom-btn {
@@ -251,16 +228,49 @@ include __DIR__ . '/includes/kb-premium-banner.php';
             margin-bottom: 10px;
         }
 
-        .text-lg-right {
-            text-align: left !important;
+        .video-top-search {
+            margin-top: 4px;
         }
     }
 </style>
 
-<link rel="stylesheet" href="css/knowledge-pagination.css">
-<script src="js/knowledge-pagination.js"></script>
 <script>
-    window.createKbPagination({ container: "#videoGrid", itemSelector: "> div", perPage: 6 });
+(function () {
+    var prefilterTopic = <?php echo json_encode($prefilterTopic); ?>;
+    var searchInput = document.getElementById("videoSearchInput");
+    var searchBtn = document.getElementById("videoSearchBtn");
+    var cols = document.querySelectorAll("#videoGrid .video-grid-col");
+
+    function filterVideos() {
+        var q = (searchInput && searchInput.value ? searchInput.value : "").trim().toLowerCase();
+        cols.forEach(function (col) {
+            var card = col.querySelector(".video-card");
+            if (!card) {
+                return;
+            }
+            var title = (card.getAttribute("data-title") || "").toLowerCase();
+            var summary = (card.getAttribute("data-summary") || "").toLowerCase();
+            var category = (card.getAttribute("data-category") || "").toLowerCase();
+            var topic = col.getAttribute("data-topic") || "";
+            var matchesTopic = !prefilterTopic || topic === prefilterTopic;
+            var matchesSearch = !q || title.indexOf(q) !== -1 || summary.indexOf(q) !== -1 || category.indexOf(q) !== -1;
+            col.style.display = matchesSearch && matchesTopic ? "" : "none";
+        });
+    }
+
+    filterVideos();
+
+    if (searchBtn) {
+        searchBtn.addEventListener("click", filterVideos);
+    }
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function (e) {
+            if (e.key === "Enter") {
+                filterVideos();
+            }
+        });
+    }
+})();
 </script>
 
 <?php include "footer.php"; ?>

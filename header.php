@@ -274,19 +274,22 @@
                            </div>
                         </div>
                      </li>
-                     <li><a href="#" class="btn-br bg-btn3 btshad-b2 lnk" data-toggle="modal" data-target="#quote-popup">Request A Quote <span class="circle"></span></a> </li>
+                     <li><a href="#" id="requestQuoteBtn" class="btn-br bg-btn3 btshad-b2 lnk" data-toggle="modal" data-target="#quote-popup">Request A Quote <span class="circle"></span></a> </li>
                   </ul>
                </div>
                <div class="mobile-menu2">
                   <ul class="mob-nav2">
-                     <li><a href="#" class="btn-round- trngl btn-br bg-btn btshad-b1"  data-toggle="modal" data-target="#menu-popup"><i class="fas fa-envelope-open-text"></i></a></li>
-                     <li class="navm-"> <a class="toggle" href="#"><span></span></a></li>
+                     <li class="mob-mail-li"><a href="#" class="btn-round- trngl btn-br bg-btn btshad-b1" data-toggle="modal" data-target="#menu-popup" aria-label="Write a message"><i class="fas fa-envelope-open-text"></i></a></li>
+                     <li class="navm-"><a class="toggle" href="#" aria-label="Open menu"><span></span></a></li>
                   </ul>
                </div>
             </div>
             <!--Mobile Menu-->
             <nav id="main-nav">
                <ul class="first-nav">
+                  <li class="custom-content mob-nav-quote-wrap">
+                     <a href="#quote-popup" role="button" class="btn-br bg-btn3 btshad-b2 lnk mob-nav-quote-btn">Request A Quote <span class="circle"></span></a>
+                  </li>
                   <li>
                      <a>Company</a>
                      <ul>
@@ -491,40 +494,82 @@
       <!--Mobile contact-->
       <div class="popup-modal1 quote-popup-wrap">
          <div class="modal" id="quote-popup">
-            <div class="modal-dialog quote-modal-dialog">
+            <div class="modal-dialog quote-modal-dialog modal-dialog-centered">
                <div class="modal-content quote-modal-content">
-                  <div class="modal-header quote-popup-header">
-                     <h4 class="mt0 mb0">Get A Free Consultation</h4>
-                     <button type="button" class="closes" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body quote-popup-body">
-                     <div class="quote-popup-topline">CONTACT NOW</div>
-                     <h3 class="quote-popup-title">Have Question? Write a Message</h3>
-                     <p class="quote-popup-subtitle">We will catch you as early as we receive the message</p>
-                     <form action="send-mail.php" method="post" class="quote-popup-form">
-                        <input type="hidden" name="_next" value="/thankyou.php">
-                        <input type="hidden" name="c_code" value="+1">
-                        <div class="quote-form-grid">
-                           <input type="text" name="name" placeholder="Enter your name *" required>
-                           <input type="email" name="email" placeholder="Enter your email *" required>
-                           <input type="text" name="phone" placeholder="Enter your Phone No *" required>
-                           <input type="text" name="organization" placeholder="Company Name (optional)">
-                           <select name="service" required>
-                              <option value="">Select Service</option>
-                              <option value="web-development">Web Development</option>
-                              <option value="mobile-app">Mobile App Development</option>
-                              <option value="ecommerce">Ecommerce Solutions</option>
-                              <option value="maintenance">Maintenance & Support</option>
-                           </select>
+                  <button type="button" class="quote-modal-close closes" data-dismiss="modal" aria-label="Close">&times;</button>
+                  <div class="quote-modal-layout">
+                     <aside class="quote-modal-hero">
+                        <div class="quote-sheet-handle" aria-hidden="true"></div>
+                        <img src="images/logo/sanguine-logo2.png" alt="SanguineIT" class="quote-hero-logo">
+                        <span class="quote-hero-badge">Free consultation</span>
+                        <h3 class="quote-hero-title">Let's discuss your project</h3>
+                        <p class="quote-hero-text">Tell us what you need — our specialists respond within one business day.</p>
+                        <ul class="quote-hero-list">
+                           <li><i class="fas fa-check-circle"></i> Web, mobile &amp; cloud delivery</li>
+                           <li><i class="fas fa-check-circle"></i> Magento, Sitefinity &amp; .NET experts</li>
+                           <li><i class="fas fa-check-circle"></i> Dedicated teams &amp; fixed-scope projects</li>
+                        </ul>
+                        <p class="quote-hero-contact"><i class="fas fa-phone-alt"></i> <a href="tel:(+1)662-300-1685">(+1) 662-300-1685</a></p>
+                     </aside>
+                     <div class="quote-modal-form-panel">
+                        <div class="quote-form-head quote-form-head--desktop">
+                           <h4>Request a quote</h4>
+                           <p>Fill in the details below and we'll get back to you shortly.</p>
                         </div>
-                        <textarea name="message" placeholder="Message for me *" rows="4" required></textarea>
-                        <label class="quote-consent">
-                           <input type="checkbox" name="consent" checked required>
-                           <span>I agree to the <a href="#">Terms &amp; Conditions</a> of SanguineIT.</span>
-                        </label>
-                        <button type="submit" class="quote-submit-btn">Submit</button>
-                        <p class="quote-privacy-note"><i class="fas fa-lock"></i> We hate spam, and we respect your privacy.</p>
-                     </form>
+                        <div class="quote-form-head quote-form-head--mobile">
+                           <h4>Request a quote</h4>
+                           <p>We'll get back to you shortly.</p>
+                        </div>
+                        <form action="send-mail.php" method="post" class="quote-popup-form">
+                           <input type="hidden" name="_next" value="/thankyou.php">
+                           <input type="hidden" name="c_code" value="+1">
+                           <div class="quote-form-row quote-form-row-2">
+                              <div class="quote-field">
+                                 <label for="quote-name">Full name *</label>
+                                 <input type="text" id="quote-name" name="name" placeholder="John Smith" required>
+                              </div>
+                              <div class="quote-field">
+                                 <label for="quote-email">Work email *</label>
+                                 <input type="email" id="quote-email" name="email" placeholder="you@company.com" required>
+                              </div>
+                           </div>
+                           <div class="quote-form-row quote-form-row-2">
+                              <div class="quote-field">
+                                 <label for="quote-phone">Phone *</label>
+                                 <input type="text" id="quote-phone" name="phone" placeholder="+1 (000) 000-0000" required>
+                              </div>
+                              <div class="quote-field">
+                                 <label for="quote-org">Company</label>
+                                 <input type="text" id="quote-org" name="organization" placeholder="Company name">
+                              </div>
+                           </div>
+                           <div class="quote-field">
+                              <label for="quote-service">Service interested in *</label>
+                              <select id="quote-service" name="service" required>
+                                 <option value="">Choose a service</option>
+                                 <option value="web-development">Web Development</option>
+                                 <option value="mobile-app">Mobile App Development</option>
+                                 <option value="ecommerce">Ecommerce / Magento</option>
+                                 <option value="sitefinity">Sitefinity / CMS</option>
+                                 <option value="cloud-devops">Cloud &amp; DevOps</option>
+                                 <option value="maintenance">Maintenance &amp; Support</option>
+                                 <option value="dedicated-team">Dedicated Hiring</option>
+                              </select>
+                           </div>
+                           <div class="quote-field">
+                              <label for="quote-message">Project details *</label>
+                              <textarea id="quote-message" name="message" placeholder="Briefly describe your goals, timeline, and budget range..." rows="4" required></textarea>
+                           </div>
+                           <label class="quote-consent">
+                              <input type="checkbox" name="consent" checked required>
+                              <span>I agree to SanguineIT <a href="#">Terms &amp; Conditions</a> and privacy policy.</span>
+                           </label>
+                           <div class="quote-form-actions">
+                              <button type="submit" class="quote-submit-btn">Send request <i class="fas fa-arrow-right"></i></button>
+                              <p class="quote-privacy-note"><i class="fas fa-lock"></i> Your information is secure and never shared.</p>
+                           </div>
+                        </form>
+                     </div>
                   </div>
                </div>
             </div>

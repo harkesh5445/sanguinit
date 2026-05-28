@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/includes/whitepaper-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
 include 'header.php';
 
@@ -6,195 +7,63 @@ $kbBanner = kb_get_banner_config('whitepapers');
 $kbBanner['title_html'] = 'Enterprise Research for <strong>Confident Decision-Making</strong>';
 $kbBanner['title'] = '';
 include __DIR__ . '/includes/kb-premium-banner.php';
+
+$prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
 ?>
 
 <section class="wp-library pad-tb">
     <div class="container">
         <div class="row align-items-center mb20">
-            <div class="col-lg-8"></div>
-            <div class="col-lg-4 text-lg-right">
-                <button type="button" class="wp-filter-btn" id="wpFilterToggle" aria-expanded="false" aria-controls="wpFilterPanel">
-                    <i class="fas fa-sliders-h"></i> Filter
-                </button>
+            <div class="col-lg-7">
+                <p class="wp-page-intro lh">Eight analyst-grade whitepapers on commerce, cloud, compliance, and platform strategy—readable online with executive summaries.</p>
+            </div>
+            <div class="col-lg-5">
+                <div class="wp-top-search">
+                    <input type="search" id="wpSearchInput" placeholder="Search whitepapers" aria-label="Search whitepapers">
+                    <button type="button" id="wpSearchBtn">Search</button>
+                </div>
             </div>
         </div>
 
-        <div class="wp-filter-panel" id="wpFilterPanel" hidden>
-            <p class="wp-filter-label">Filter by category</p>
-            <div class="wp-filter-options">
-                <label><input type="checkbox" class="wp-cat-check" value="all" checked> All</label>
-                <label><input type="checkbox" class="wp-cat-check" value="ecommerce"> Ecommerce</label>
-                <label><input type="checkbox" class="wp-cat-check" value="sitefinity"> Sitefinity</label>
-                <label><input type="checkbox" class="wp-cat-check" value="cloud"> Cloud</label>
-                <label><input type="checkbox" class="wp-cat-check" value="security"> Security</label>
-                <label><input type="checkbox" class="wp-cat-check" value="research"> Research</label>
-                <label><input type="checkbox" class="wp-cat-check" value="compliance"> Compliance</label>
-                <label><input type="checkbox" class="wp-cat-check" value="strategy"> Strategy</label>
+        <div class="row wp-category-chips mb15">
+            <div class="col-12">
+                <a href="whitepapers.php" class="wp-cat-chip<?php echo $prefilterCategory === '' ? ' active' : ''; ?>">All</a>
+                <a href="whitepapers.php?category=ecommerce" class="wp-cat-chip<?php echo $prefilterCategory === 'ecommerce' ? ' active' : ''; ?>">Ecommerce</a>
+                <a href="whitepapers.php?category=sitefinity" class="wp-cat-chip<?php echo $prefilterCategory === 'sitefinity' ? ' active' : ''; ?>">Sitefinity</a>
+                <a href="whitepapers.php?category=cloud" class="wp-cat-chip<?php echo $prefilterCategory === 'cloud' ? ' active' : ''; ?>">Cloud</a>
+                <a href="whitepapers.php?category=compliance" class="wp-cat-chip<?php echo $prefilterCategory === 'compliance' ? ' active' : ''; ?>">Compliance</a>
+                <a href="whitepapers.php?category=research" class="wp-cat-chip<?php echo $prefilterCategory === 'research' ? ' active' : ''; ?>">Research</a>
+                <a href="whitepapers.php?category=strategy" class="wp-cat-chip<?php echo $prefilterCategory === 'strategy' ? ' active' : ''; ?>">Strategy</a>
+                <a href="whitepapers.php?category=security" class="wp-cat-chip<?php echo $prefilterCategory === 'security' ? ' active' : ''; ?>">Security</a>
             </div>
-            <button type="button" class="wp-filter-apply" id="wpFilterApply">Apply</button>
         </div>
 
         <div class="row wp-grid" id="whitepaperGrid">
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="ecommerce">
-                    <a href="contact-us.php" class="wp-card-link">
+            <?php foreach ($whitepaperPostsListingOrder as $wpSlug) :
+                $wpItem = get_whitepaper_post($wpSlug);
+                if (!$wpItem) {
+                    continue;
+                }
+                $wpTitle = $wpItem['title'];
+                $wpUrl = whitepaper_post_url($wpSlug);
+                ?>
+            <div class="col-lg-3 col-md-6 mb25 wp-grid-col" data-category="<?php echo htmlspecialchars($wpItem['category_slug'], ENT_QUOTES, 'UTF-8'); ?>">
+                <article class="wp-card" data-title="<?php echo htmlspecialchars($wpTitle, ENT_QUOTES, 'UTF-8'); ?>" data-summary="<?php echo htmlspecialchars($wpItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?>" data-category-label="<?php echo htmlspecialchars($wpItem['category'], ENT_QUOTES, 'UTF-8'); ?>" data-author="<?php echo htmlspecialchars($wpItem['author'], ENT_QUOTES, 'UTF-8'); ?>">
+                    <a href="<?php echo $wpUrl; ?>" class="wp-card-link">
                         <div class="wp-card-thumb">
-                            <img src="images/about_2/audit_1.jpg" alt="How you can enhance your online business with Magento">
+                            <img src="<?php echo htmlspecialchars($wpItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($wpTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <span class="wp-card-badge">Whitepaper</span>
                         </div>
-                        <h4>How You can Enhance Your Online Business with Magento</h4>
+                        <div class="wp-card-body">
+                            <p class="wp-card-meta"><?php echo htmlspecialchars($wpItem['date'], ENT_QUOTES, 'UTF-8'); ?> · <?php echo htmlspecialchars($wpItem['read_time'], ENT_QUOTES, 'UTF-8'); ?></p>
+                            <h4><?php echo htmlspecialchars($wpTitle, ENT_QUOTES, 'UTF-8'); ?></h4>
+                            <p class="wp-card-summary"><?php echo htmlspecialchars($wpItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?></p>
+                            <span class="wp-card-cta">Read whitepaper &rarr;</span>
+                        </div>
                     </a>
                 </article>
             </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="sitefinity">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/audit_2.jpg" alt="Understanding the specialized capabilities of Sitefinity">
-                        </div>
-                        <h4>Understanding the Specialized Capabilities of Sitefinity</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="cloud">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/audit_3.jpg" alt="Total cost of ownership legacy vs cloud-native">
-                        </div>
-                        <h4>Total Cost of Ownership: Legacy vs Cloud-Native</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="compliance">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/audit_4.jpg" alt="Governance patterns for regulated SaaS platforms">
-                        </div>
-                        <h4>Governance Patterns for Regulated SaaS Platforms</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="research">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/data_7.jpg" alt="AI-assisted engineering risks guardrails and ROI">
-                        </div>
-                        <h4>AI-Assisted Engineering: Risks, Guardrails, and ROI</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="strategy">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/data_8.jpg" alt="Enterprise resilience blueprint for digital platforms">
-                        </div>
-                        <h4>Enterprise Resilience Blueprint for Digital Platforms</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="cloud">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/data_9.jpg" alt="Multi-cloud cost optimization framework">
-                        </div>
-                        <h4>Multi-Cloud Cost Optimization Framework</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="strategy">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cation_5.jpg" alt="API platform maturity model for enterprise integration">
-                        </div>
-                        <h4>API Platform Maturity Model for Enterprise Integration</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="compliance">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cation_6.jpg" alt="Data privacy compliance playbook for global SaaS">
-                        </div>
-                        <h4>Data Privacy Compliance Playbook for Global SaaS</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="research">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cation_7.jpg" alt="Platform engineering operating model">
-                        </div>
-                        <h4>Platform Engineering Operating Model</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="security">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cation_8.jpg" alt="Observability strategy for mission-critical applications">
-                        </div>
-                        <h4>Observability Strategy for Mission-Critical Applications</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="ecommerce">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cation_9.jpg" alt="Headless commerce ROI assessment guide">
-                        </div>
-                        <h4>Headless Commerce ROI Assessment Guide</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="security">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cont_2.jpg" alt="Identity modernization roadmap for enterprise IAM">
-                        </div>
-                        <h4>Identity Modernization Roadmap for Enterprise IAM</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="research">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/cont_3.jpg" alt="Legacy modernization business case toolkit">
-                        </div>
-                        <h4>Legacy Modernization Business Case Toolkit</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="sitefinity">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/data_4.jpg" alt="Sitefinity upgrade readiness and migration planning">
-                        </div>
-                        <h4>Sitefinity Upgrade Readiness and Migration Planning</h4>
-                    </a>
-                </article>
-            </div>
-            <div class="col-lg-3 col-md-6 mb25">
-                <article class="wp-card" data-category="ecommerce">
-                    <a href="contact-us.php" class="wp-card-link">
-                        <div class="wp-card-thumb">
-                            <img src="images/about_2/data_5.jpg" alt="B2B commerce platform selection guide">
-                        </div>
-                        <h4>B2B Commerce Platform Selection Guide</h4>
-                    </a>
-                </article>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -204,76 +73,62 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         background: #fff;
     }
 
-    .wp-filter-btn {
-        border: 1px solid #b7c1cf;
-        background: #fff;
-        color: #1a2f4a;
-        font-weight: 600;
-        padding: 8px 18px;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
-    .wp-filter-btn i {
-        margin-right: 6px;
-    }
-
-    .wp-filter-panel {
-        background: #f8fafc;
-        border: 1px solid #d7dce4;
-        padding: 16px 18px;
-        margin-bottom: 20px;
-    }
-
-    .wp-filter-panel[hidden] {
-        display: none;
-    }
-
-    .wp-filter-label {
-        margin: 0 0 10px;
-        font-weight: 700;
-        color: #1a2f4a;
-        font-size: 14px;
-    }
-
-    .wp-filter-options {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 18px;
-        margin-bottom: 12px;
-        font-size: 14px;
-    }
-
-    .wp-filter-options label {
-        display: flex;
-        align-items: center;
-        gap: 6px;
+    .wp-page-intro {
         margin: 0;
-        cursor: pointer;
-        color: #334155;
+        color: #404b5d;
+        font-size: 16px;
+        line-height: 1.6;
     }
 
-    .wp-filter-apply {
+    .wp-top-search {
+        display: flex;
+    }
+
+    .wp-top-search input {
+        flex: 1;
+        height: 42px;
+        border: 1px solid #b7c1cf;
+        padding: 0 12px;
+    }
+
+    .wp-top-search button {
         border: 0;
-        background: #27466b;
+        background: #dc2429;
         color: #fff;
-        padding: 7px 16px;
-        font-weight: 600;
+        font-weight: 700;
+        padding: 0 20px;
         cursor: pointer;
+    }
+
+    .wp-cat-chip {
+        display: inline-block;
+        margin: 0 6px 8px 0;
+        padding: 7px 14px;
+        border: 1px solid #b7c1cf;
+        background: #f8fafc;
+        color: #1a2f4a;
         font-size: 13px;
+        font-weight: 600;
+    }
+
+    .wp-cat-chip.active,
+    .wp-cat-chip:hover {
+        background: #27466b;
+        border-color: #27466b;
+        color: #fff;
     }
 
     .wp-card {
         background: #fff;
-        border: 1px solid #e8ecf1;
-        box-shadow: 0 2px 10px rgba(26, 47, 74, 0.07);
+        border: 1px solid #e4e8ee;
+        box-shadow: 0 4px 16px rgba(26, 47, 74, 0.09);
         height: 100%;
         transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
 
     .wp-card:hover {
-        box-shadow: 0 8px 22px rgba(26, 47, 74, 0.12);
-        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(26, 47, 74, 0.16);
+        transform: translateY(-3px);
     }
 
     .wp-card-link {
@@ -283,112 +138,119 @@ include __DIR__ . '/includes/kb-premium-banner.php';
     }
 
     .wp-card-link:hover {
-        text-decoration: none;
         color: inherit;
+        text-decoration: none;
     }
 
     .wp-card-thumb {
+        position: relative;
         overflow: hidden;
-        background: #eef2f7;
+        background: #0f2744;
     }
 
     .wp-card-thumb img {
         width: 100%;
-        height: 175px;
+        height: 185px;
         object-fit: cover;
         display: block;
-        transition: transform 0.3s ease;
+        opacity: 0.92;
+        transition: transform 0.35s ease;
     }
 
     .wp-card:hover .wp-card-thumb img {
-        transform: scale(1.02);
+        transform: scale(1.04);
+    }
+
+    .wp-card-badge {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background: rgba(220, 36, 41, 0.95);
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+
+    .wp-card-body {
+        padding: 14px 16px 16px;
+    }
+
+    .wp-card-meta {
+        font-size: 12px;
+        color: #64748b;
+        font-weight: 600;
+        margin: 0 0 6px;
     }
 
     .wp-card h4 {
         font-size: 15px;
         line-height: 1.4;
-        margin: 0;
-        padding: 12px 14px 14px;
+        margin: 0 0 8px;
         color: #1a3e67;
         font-weight: 700;
     }
 
-    @media (max-width: 991px) {
-        .text-lg-right {
-            text-align: left !important;
-        }
+    .wp-card-summary {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #4a5568;
+        margin: 0 0 10px;
     }
 
-    @media (max-width: 767px) {
-        .wp-card-thumb img {
-            height: 160px;
+    .wp-card-cta {
+        font-size: 13px;
+        font-weight: 700;
+        color: #dc2429;
+    }
+
+    @media (max-width: 991px) {
+        .wp-page-intro {
+            margin-bottom: 12px;
         }
     }
 </style>
 
-<link rel="stylesheet" href="css/knowledge-pagination.css">
-<script src="js/knowledge-pagination.js"></script>
 <script>
-    (function () {
-        var filterToggle = document.getElementById("wpFilterToggle");
-        var filterPanel = document.getElementById("wpFilterPanel");
-        var filterApply = document.getElementById("wpFilterApply");
-        var checks = Array.prototype.slice.call(document.querySelectorAll(".wp-cat-check"));
-        var cols = Array.prototype.slice.call(document.querySelectorAll("#whitepaperGrid > div"));
-        var cards = cols.map(function (col) { return col.querySelector(".wp-card"); });
-        var pager = window.createKbPagination({ container: "#whitepaperGrid", itemSelector: "> div", perPage: 8 });
+(function () {
+    var prefilterCategory = <?php echo json_encode($prefilterCategory); ?>;
+    var searchInput = document.getElementById("wpSearchInput");
+    var searchBtn = document.getElementById("wpSearchBtn");
+    var cols = document.querySelectorAll("#whitepaperGrid .wp-grid-col");
 
-        filterToggle.addEventListener("click", function () {
-            var open = filterPanel.hasAttribute("hidden");
-            if (open) {
-                filterPanel.removeAttribute("hidden");
-                filterToggle.setAttribute("aria-expanded", "true");
-            } else {
-                filterPanel.setAttribute("hidden", "");
-                filterToggle.setAttribute("aria-expanded", "false");
+    function filterWhitepapers() {
+        var q = (searchInput && searchInput.value ? searchInput.value : "").trim().toLowerCase();
+        cols.forEach(function (col) {
+            var card = col.querySelector(".wp-card");
+            if (!card) {
+                return;
+            }
+            var title = (card.getAttribute("data-title") || "").toLowerCase();
+            var summary = (card.getAttribute("data-summary") || "").toLowerCase();
+            var categoryLabel = (card.getAttribute("data-category-label") || "").toLowerCase();
+            var author = (card.getAttribute("data-author") || "").toLowerCase();
+            var category = col.getAttribute("data-category") || "";
+            var matchesCategory = !prefilterCategory || category === prefilterCategory;
+            var matchesSearch = !q || title.indexOf(q) !== -1 || summary.indexOf(q) !== -1 || categoryLabel.indexOf(q) !== -1 || author.indexOf(q) !== -1;
+            col.style.display = matchesCategory && matchesSearch ? "" : "none";
+        });
+    }
+
+    filterWhitepapers();
+
+    if (searchBtn) {
+        searchBtn.addEventListener("click", filterWhitepapers);
+    }
+    if (searchInput) {
+        searchInput.addEventListener("keyup", function (e) {
+            if (e.key === "Enter") {
+                filterWhitepapers();
             }
         });
-
-        function applyCategoryFilters() {
-            var selected = checks.filter(function (c) { return c.checked && c.value !== "all"; }).map(function (c) { return c.value; });
-            var showAll = checks.some(function (c) { return c.value === "all" && c.checked; }) || !selected.length;
-
-            cards.forEach(function (card, idx) {
-                var cat = card.getAttribute("data-category") || "";
-                var match = showAll || selected.indexOf(cat) >= 0;
-                if (pager && cols[idx]) {
-                    pager.setMatch(cols[idx], match);
-                }
-            });
-            if (pager) {
-                pager.resetPage();
-            }
-        }
-
-        checks.forEach(function (check) {
-            check.addEventListener("change", function () {
-                if (check.value === "all" && check.checked) {
-                    checks.forEach(function (c) {
-                        if (c.value !== "all") {
-                            c.checked = false;
-                        }
-                    });
-                } else if (check.value !== "all" && check.checked) {
-                    checks.forEach(function (c) {
-                        if (c.value === "all") {
-                            c.checked = false;
-                        }
-                    });
-                }
-            });
-        });
-
-        filterApply.addEventListener("click", function () {
-            applyCategoryFilters();
-            filterPanel.setAttribute("hidden", "");
-            filterToggle.setAttribute("aria-expanded", "false");
-        });
-    })();
+    }
+})();
 </script>
 
 <?php include "footer.php"; ?>

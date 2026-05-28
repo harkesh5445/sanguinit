@@ -77,15 +77,16 @@ $activeBlogCategory = isset($activeBlogCategory) ? $activeBlogCategory : '';
     <h4>Recent Posts</h4>
     <ul class="blog-recent-list">
         <?php
-        global $blogPostsListing;
-        if (!empty($blogPostsListing)) {
-            foreach ($blogPostsListing as $recent) {
-                $recentPost = get_blog_post($recent['slug']);
+        global $blogPostsListingOrder;
+        if (!empty($blogPostsListingOrder)) {
+            $recentSlugs = array_slice($blogPostsListingOrder, 0, 5);
+            foreach ($recentSlugs as $recentSlug) {
+                $recentPost = get_blog_post($recentSlug);
                 if (!$recentPost) {
                     continue;
                 }
                 ?>
-        <li><a href="<?php echo blog_post_url($recent['slug']); ?>"><?php echo htmlspecialchars($recentPost['title'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+        <li><a href="<?php echo blog_post_url($recentSlug); ?>"><?php echo htmlspecialchars($recentPost['title'], ENT_QUOTES, 'UTF-8'); ?></a></li>
                 <?php
             }
         }

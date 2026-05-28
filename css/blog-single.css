@@ -18,8 +18,9 @@
 .blog-single-featured img {
     width: 100%;
     height: auto;
-    max-height: 420px;
+    max-height: 520px;
     object-fit: cover;
+    object-position: center;
     display: block;
     border: 1px solid #e2e2e2;
     background: #fff;
@@ -128,6 +129,37 @@
 .blog-article-list li {
     margin-bottom: 8px;
     line-height: 1.6;
+}
+
+.blog-article-list--ordered {
+    list-style: decimal;
+    margin: 0 0 16px 20px;
+    padding: 0;
+}
+
+.blog-article-figure {
+    margin: 0 0 24px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.blog-article-figure img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-article-figure figcaption {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.45;
+    background: #fafafa;
+    border-top: 1px solid #ececec;
 }
 
 .blog-benefits-infographic {

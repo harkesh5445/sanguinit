@@ -3,7 +3,8 @@ if (empty($kbBanner) || !is_array($kbBanner)) {
     return;
 }
 
-$bg = isset($kbBanner['bg']) ? $kbBanner['bg'] : 'images/banner/6.jpg';
+$bg = isset($kbBanner['bg']) ? $kbBanner['bg'] : 'images/kb-banners/blogs.jpg';
+$bgPosition = isset($kbBanner['bg_position']) ? $kbBanner['bg_position'] : 'center center';
 $eyebrow = isset($kbBanner['eyebrow']) ? $kbBanner['eyebrow'] : 'SanguineIT Knowledge Base';
 $title = isset($kbBanner['title']) ? $kbBanner['title'] : '';
 $titleHtml = isset($kbBanner['title_html']) ? $kbBanner['title_html'] : '';
@@ -13,9 +14,13 @@ $stats = isset($kbBanner['stats']) && is_array($kbBanner['stats']) ? $kbBanner['
 $featuredHeadline = isset($kbBanner['featured_headline']) ? $kbBanner['featured_headline'] : '';
 $featuredDate = isset($kbBanner['featured_date']) ? $kbBanner['featured_date'] : '';
 $featuredLink = isset($kbBanner['featured_link']) ? $kbBanner['featured_link'] : 'contact-us.php';
+$bgEsc = htmlspecialchars($bg, ENT_QUOTES, 'UTF-8');
+$bgPosEsc = htmlspecialchars($bgPosition, ENT_QUOTES, 'UTF-8');
 ?>
 <link rel="stylesheet" href="css/kb-premium-banner.css">
-<section class="kb-premium-banner kb-premium-banner--<?php echo htmlspecialchars($variant, ENT_QUOTES, 'UTF-8'); ?>" data-background="<?php echo htmlspecialchars($bg, ENT_QUOTES, 'UTF-8'); ?>" style="--kb-banner-image: url('<?php echo htmlspecialchars($bg, ENT_QUOTES, 'UTF-8'); ?>');">
+<link rel="preload" as="image" href="<?php echo $bgEsc; ?>" fetchpriority="high">
+<section class="kb-premium-banner kb-premium-banner--<?php echo htmlspecialchars($variant, ENT_QUOTES, 'UTF-8'); ?>" style="--kb-banner-image: url('<?php echo $bgEsc; ?>'); --kb-banner-position: <?php echo $bgPosEsc; ?>;">
+    <img class="kb-premium-banner__photo" src="<?php echo $bgEsc; ?>" alt="" width="1920" height="1280" decoding="async" fetchpriority="high">
     <div class="kb-premium-banner__overlay">
         <div class="container">
             <div class="row align-items-center">
@@ -24,7 +29,7 @@ $featuredLink = isset($kbBanner['featured_link']) ? $kbBanner['featured_link'] :
                         <p class="kb-premium-banner__eyebrow"><?php echo htmlspecialchars($eyebrow, ENT_QUOTES, 'UTF-8'); ?></p>
                         <?php if ($titleHtml !== '') : ?>
                             <h1 class="kb-premium-banner__title"><?php echo $titleHtml; ?></h1>
-                        <?php else : ?>
+                        <?php elseif ($title !== '') : ?>
                             <h1 class="kb-premium-banner__title"><?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?></h1>
                         <?php endif; ?>
 

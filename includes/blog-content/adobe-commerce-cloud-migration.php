@@ -1,3 +1,5 @@
+<?php echo blog_figure('images/blog/adobe-commerce-cloud.jpg', 'Enterprise team reviewing cloud commerce analytics and migration roadmap', 'SanguineIT helps merchants modernize Adobe Commerce on scalable cloud infrastructure.'); ?>
+
 <p class="lh">The eCommerce ecosystem has evolved rapidly over the last decade. Merchants that once relied on monolithic on-premise stacks now need elastic infrastructure, faster release cycles, and stronger security posture. Adobe Commerce Cloud (formerly Magento Commerce Cloud) addresses these needs by combining the Adobe Commerce application with managed cloud services, CI/CD tooling, and integrated monitoring.</p>
 
 <p class="lh">For organizations already on Magento Open Source or Adobe Commerce on-premise, migration is not simply a hosting change. It is a business transformation initiative that touches catalog architecture, integrations, checkout flows, operations, and total cost of ownership (TCO). This guide explains what cloud migration means in practice, the benefits you should expect, and a phased approach your team can follow.</p>

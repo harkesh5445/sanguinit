@@ -17,13 +17,10 @@ $articleHtml = get_blog_post_html($slug);
 require_once __DIR__ . '/includes/kb-banner-config.php';
 include 'header.php';
 
-$kbBanner = [
-    'eyebrow' => 'SanguineIT Blog · ' . $post['category'],
-    'title' => $pageTitle,
-    'subtitle' => $post['date'] . ' · ' . $commentsLabel,
-    'bg' => $post['featured_image'],
-    'variant' => 'compact',
-];
+$kbBanner = kb_get_banner_config('blog-single');
+$kbBanner['eyebrow'] = 'SanguineIT Blog · ' . $post['category'];
+$kbBanner['title'] = $pageTitle;
+$kbBanner['subtitle'] = $post['date'] . ' · ' . $commentsLabel;
 include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 
