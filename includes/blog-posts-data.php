@@ -11,6 +11,7 @@ $blogPosts = [
         'category' => 'Adobe Commerce',
         'category_slug' => 'adobe-commerce',
         'featured_image' => 'images/blog/adobe-commerce-cloud.jpg',
+        'carousel_image' => 'images/blog/carousel-1.jpg',
         'list_excerpt' => 'Moving to Adobe Commerce Cloud is more than a hosting change—it is a platform modernization initiative. This guide covers discovery, migration approaches, cloud benefits, and post-launch optimization for growing ecommerce brands.',
         'excerpt' => 'A practical guide to planning, migrating, and optimizing Adobe Commerce on cloud infrastructure for scalability, security, and long-term TCO.',
         'toc' => [
@@ -32,6 +33,7 @@ $blogPosts = [
         'category' => 'Magento',
         'category_slug' => 'magento',
         'featured_image' => 'images/blog/magento-amp-speed.jpg',
+        'carousel_image' => 'images/blog/carousel-2.jpg',
         'list_excerpt' => 'Page speed is no longer a technical detail—it shapes search visibility, mobile conversions, and customer trust. Learn how AMP and Magento 2 performance practices help SanguineIT clients win on Core Web Vitals.',
         'excerpt' => 'Page speed directly impacts Magento store search performance, user engagement, and conversion rates.',
         'toc' => [
@@ -49,6 +51,7 @@ $blogPosts = [
         'category' => 'LMS',
         'category_slug' => 'lms',
         'featured_image' => 'images/blog/moodle-lms.jpg',
+        'carousel_image' => 'images/blog/carousel-3.jpg',
         'list_excerpt' => 'Moodle 5.2 brings UX improvements, stronger reporting, and better integration hooks for enterprise learning programs. Here is what training leaders and IT teams should plan before upgrading production.',
         'excerpt' => 'Modern LMS platforms help organizations train teams, maintain compliance, and scale digital learning programs.',
         'toc' => [
@@ -130,6 +133,18 @@ function get_blog_post($slug)
 {
     global $blogPosts;
     return isset($blogPosts[$slug]) ? $blogPosts[$slug] : null;
+}
+
+function get_blog_carousel_image($slug)
+{
+    $post = get_blog_post($slug);
+    if (!$post) {
+        return '';
+    }
+    if (!empty($post['carousel_image'])) {
+        return $post['carousel_image'];
+    }
+    return isset($post['featured_image']) ? $post['featured_image'] : '';
 }
 
 function get_blog_comments_label($count)

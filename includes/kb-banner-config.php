@@ -2,7 +2,10 @@
 
 /**
  * Premium banner copy and HD imagery for Knowledge Base pages.
- * Images: images/kb-banners/ (1920px wide, topic-specific).
+ * Banners: images/kb-banners/ — Unsplash sky/universe (unchanged by custom deploy).
+ * Cards:   images/{blog,articles,...}/ — from images/custom via setup-custom-kb-images.sh
+ * Refresh banners: scripts/fetch-all-kb-images.sh
+ * Refresh cards:   scripts/setup-custom-kb-images.sh
  */
 function kb_banner_image($filename, $fallback = 'images/banner/9.jpg')
 {
