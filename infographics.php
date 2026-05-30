@@ -27,7 +27,6 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
         <div class="row info-category-chips mb15">
             <div class="col-12">
                 <a href="infographics.php" class="info-cat-chip<?php echo $prefilterCategory === '' ? ' active' : ''; ?>">All</a>
-                <a href="infographics.php?category=lms" class="info-cat-chip<?php echo $prefilterCategory === 'lms' ? ' active' : ''; ?>">LMS</a>
                 <a href="infographics.php?category=ecommerce" class="info-cat-chip<?php echo $prefilterCategory === 'ecommerce' ? ' active' : ''; ?>">Ecommerce</a>
                 <a href="infographics.php?category=company" class="info-cat-chip<?php echo $prefilterCategory === 'company' ? ' active' : ''; ?>">Company</a>
                 <a href="infographics.php?category=web" class="info-cat-chip<?php echo $prefilterCategory === 'web' ? ' active' : ''; ?>">Web</a>

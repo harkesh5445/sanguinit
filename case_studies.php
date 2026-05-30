@@ -36,7 +36,7 @@ foreach ($caseStudiesListingOrder as $csSlug) {
 <link rel="stylesheet" href="css/case-studies-page.css">
 
 <!-- Hero banner -->
-<section class="cs-hero" style="background-image: url('images/banner/header-2.jpg');">
+<section class="cs-hero" style="background-image: url('images/case-study/cs-hero.jpg');">
     <div class="cs-hero__box">
         <h1>Case Studies</h1>
         <ul class="cs-hero__breadcrumb">

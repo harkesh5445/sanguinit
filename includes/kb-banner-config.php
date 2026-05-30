@@ -72,7 +72,7 @@ function kb_get_banner_config($pageKey)
             'bg' => $hd('whitepapers.jpg'),
             'bg_position' => 'center 40%',
             'stats' => [
-                ['value' => '8', 'label' => 'Research papers'],
+                ['value' => '7', 'label' => 'Research papers'],
                 ['value' => 'Executive', 'label' => 'Summary included'],
                 ['value' => 'Trusted', 'label' => 'By technology leaders'],
             ],
@@ -119,11 +119,11 @@ function kb_get_banner_config($pageKey)
         'videos' => [
             'eyebrow' => 'Knowledge Base · Videos',
             'title' => 'Expert Sessions on the Platforms You Run Every Day',
-            'subtitle' => 'Expert-led sessions on Magento, Sitefinity, SharePoint, cloud, and LMS platforms—practical knowledge your teams can apply across regions and time zones.',
+            'subtitle' => 'Expert-led sessions on Magento, SharePoint, and cloud—practical knowledge your teams can apply across regions and time zones.',
             'bg' => $hd('videos.jpg'),
             'bg_position' => 'center center',
             'stats' => [
-                ['value' => '9', 'label' => 'Expert sessions'],
+                ['value' => '7', 'label' => 'Expert sessions'],
                 ['value' => 'Platform-led', 'label' => 'Commerce & cloud'],
                 ['value' => 'Team-ready', 'label' => 'Share across orgs'],
             ],

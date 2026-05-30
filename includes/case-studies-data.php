@@ -11,8 +11,11 @@ $caseStudies = [
         'type_label' => 'Website',
         'industry' => 'Business Services',
         'summary' => 'A premium corporate web presence with custom theme styling, strong typography, and conversion-focused layout for a growing professional services brand.',
-        'featured_image' => 'images/case-study/atlasopen1.png',
-        'gallery' => ['images/case-study/atlasopen1.png'],
+        'featured_image' => 'images/case-study/cs-atlasopen.jpg',
+        'gallery' => [
+            'images/case-study/cs-atlasopen.jpg',
+            'images/case-study/cs-atlasopen-2.jpg',
+        ],
         'timeline' => '4 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '4 weeks'],
@@ -33,8 +36,11 @@ $caseStudies = [
         'type_label' => 'Website',
         'industry' => 'Data & Analytics',
         'summary' => 'Enterprise-grade marketing site for a data engineering firm — structured service pages, credibility sections, and a polished visual system aligned to technical buyers.',
-        'featured_image' => 'images/case-study/pearldatafirm.png',
-        'gallery' => ['images/case-study/pearldatafirm.png'],
+        'featured_image' => 'images/case-study/cs-pearl.jpg',
+        'gallery' => [
+            'images/case-study/cs-pearl.jpg',
+            'images/case-study/cs-pearl-2.jpg',
+        ],
         'timeline' => '5 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '5 weeks'],
@@ -55,8 +61,11 @@ $caseStudies = [
         'type_label' => 'Website',
         'industry' => 'Technology Consulting',
         'summary' => 'Clean, professional website combining sober UI patterns with premium imagery — designed to communicate trust and drive consultation requests.',
-        'featured_image' => 'images/case-study/optimall1.png',
-        'gallery' => ['images/case-study/optimall1.png'],
+        'featured_image' => 'images/case-study/cs-optimal.jpg',
+        'gallery' => [
+            'images/case-study/cs-optimal.jpg',
+            'images/case-study/cs-optimal-2.jpg',
+        ],
         'timeline' => '4 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '4 weeks'],
@@ -77,8 +86,11 @@ $caseStudies = [
         'type_label' => 'Mobile App',
         'industry' => 'Food & Delivery',
         'summary' => 'Consumer food ordering app with guest checkout, order tracking, and a streamlined menu experience built for repeat mobile usage.',
-        'featured_image' => 'images/case-study/foodmenuapp.png',
-        'gallery' => ['images/case-study/foodmenuapp.png', 'images/case-study/foodapp2.png'],
+        'featured_image' => 'images/case-study/cs-poncho.jpg',
+        'gallery' => [
+            'images/case-study/cs-poncho.jpg',
+            'images/case-study/cs-poncho-2.jpg',
+        ],
         'timeline' => '6 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '6 weeks'],
@@ -99,8 +111,11 @@ $caseStudies = [
         'type_label' => 'Mobile App',
         'industry' => 'Retail & Fashion',
         'summary' => 'Mobile commerce experience for fashion discovery with product browsing flows optimized for quick sessions and social sharing behavior.',
-        'featured_image' => 'images/case-study/Ogoxip1.png',
-        'gallery' => ['images/case-study/Ogoxip1.png', 'images/case-study/Ogoxip2.png'],
+        'featured_image' => 'images/case-study/cs-goxip.jpg',
+        'gallery' => [
+            'images/case-study/cs-goxip.jpg',
+            'images/case-study/cs-goxip-2.jpg',
+        ],
         'timeline' => '6 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '6 weeks'],
@@ -121,8 +136,11 @@ $caseStudies = [
         'type_label' => 'Mobile App',
         'industry' => 'Food & Delivery',
         'summary' => 'On-demand food delivery application with menu management, order placement, and delivery tracking tuned for high-frequency daily users.',
-        'featured_image' => 'images/case-study/foodappp.png',
-        'gallery' => ['images/case-study/foodappp.png'],
+        'featured_image' => 'images/case-study/cs-freshmenu.jpg',
+        'gallery' => [
+            'images/case-study/cs-freshmenu.jpg',
+            'images/case-study/cs-freshmenu-2.jpg',
+        ],
         'timeline' => '6 weeks',
         'metrics' => [
             ['label' => 'Delivery', 'value' => '6 weeks'],

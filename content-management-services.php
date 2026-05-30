@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>CMS platforms built for editorial velocity and IT confidence</h2>
 									<p class="lh">Whether you replatform a marketing site or govern a multi-brand portal estate, SanguineIT aligns CMS architecture with how your content teams publish and how IT manages change control. We document workflow rules, automate staging-to-production pipelines, and measure outcomes against publishing velocity, uptime, and SEO performance.</p>
-									<p class="lh">Read our <a href="blog-topic.php?topic=cms-portals">CMS &amp; Enterprise Portals</a> blog hub, explore <a href="articles.php">articles</a>, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a CMS platform assessment.</p>
+									<p class="lh">Read our <a href="articles.php">articles</a> and <a href="blogs.php">blog</a>, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a CMS platform assessment.</p>
 								</div>
 							</div>
 						</div>

@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/includes/blog-posts-data.php';
-require_once __DIR__ . '/includes/blog-topic-clusters.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
 require_once __DIR__ . '/includes/seo.php';
 require_once __DIR__ . '/includes/image-helpers.php';
@@ -16,31 +15,10 @@ include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 
 <link rel="stylesheet" href="css/blog-editorial.css">
-<link rel="stylesheet" href="css/blog-topic-cluster.css">
-
-<section class="blog-cluster-strip">
-    <div class="container">
-        <h2 class="blog-cluster-strip__title">Explore by Topic</h2>
-        <p class="blog-cluster-strip__lead lh">Pillar hubs group our best commerce, CMS, and LMS guides — each linking to services and related articles for deeper topical authority.</p>
-        <div class="blog-cluster-cards">
-            <?php foreach (get_blog_topic_cluster_slugs() as $topicSlug) :
-                $cluster = get_blog_topic_cluster($topicSlug);
-                $count = count(get_blog_posts_for_topic($topicSlug));
-                ?>
-            <a href="<?php echo blog_topic_url($topicSlug); ?>" class="blog-cluster-card">
-                <p class="blog-cluster-card__eyebrow"><?php echo sit_h($cluster['eyebrow']); ?></p>
-                <h3><?php echo sit_h($cluster['title']); ?></h3>
-                <p><?php echo sit_h($cluster['description']); ?></p>
-                <span class="blog-cluster-card__count"><?php echo (int) $count; ?> articles &rarr;</span>
-            </a>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
 
 <section class="blog-reference-section pad-tb">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-left">
             <div class="col-lg-11">
                 <h2 class="blog-main-title">Latest from SanguineIT</h2>
                 <p class="blog-page-lead">Original research and practitioner guides on commerce, cloud, CMS, and enterprise engineering—written for global technology leaders who need actionable insight, not recycled advice.</p>

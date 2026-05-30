@@ -18,7 +18,6 @@ $prefilterCategory = isset($prefilterCategory) ? $prefilterCategory : '';
         <li><a href="articles.php">All Articles</a></li>
         <li><a href="articles.php?category=magento">Magento</a></li>
         <li><a href="articles.php?category=web">Web Development</a></li>
-        <li><a href="articles.php?category=sitefinity">Sitefinity</a></li>
         <li><a href="articles.php?category=cms">CMS</a></li>
         <li><a href="articles.php?category=ecommerce">Ecommerce</a></li>
         <li><a href="articles.php?category=outsourcing">Outsourcing</a></li>

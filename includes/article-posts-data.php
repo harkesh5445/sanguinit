@@ -22,15 +22,6 @@ $articlePosts = [
         'featured_image' => 'images/articles/website-maintenance.jpg',
         'list_summary' => 'Discover why post-launch website maintenance is essential for enterprise security, SEO stability, uptime resilience, and sustained conversion performance.',
     ],
-    'sitefinity-maintenance-importance' => [
-        'title' => 'Importance of Maintaining Your Sitefinity Website',
-        'date' => 'April 15, 2026',
-        'author' => 'SanguineIT .NET Practice',
-        'category' => 'Sitefinity',
-        'category_slug' => 'sitefinity',
-        'featured_image' => 'images/articles/sitefinity-cms.jpg',
-        'list_summary' => 'Learn how proactive Sitefinity maintenance strengthens security, governance, editorial velocity, and performance across complex enterprise digital estates.',
-    ],
     'wordpress-website-optimization-practices' => [
         'title' => 'Practices for WordPress Website Optimization',
         'date' => 'March 30, 2026',
@@ -90,7 +81,6 @@ $articlePosts = [
 $articlePostsListingOrder = [
     'magento-sphinx-vs-elasticsearch',
     'website-maintenance-vital-after-development',
-    'sitefinity-maintenance-importance',
     'wordpress-website-optimization-practices',
     'headless-commerce-performance-flexibility',
     'outsource-full-stack-development-why',

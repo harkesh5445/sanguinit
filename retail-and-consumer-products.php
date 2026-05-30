@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>Retail platforms built for conversion and operational scale</h2>
 									<p class="lh">Peak season traffic, complex promotions, and returns workflows stress retail technology stacks. SanguineIT load-tests checkout paths, governs extension and plugin sprawl, and documents integration contracts so merchandising launches do not surprise warehouse and finance teams.</p>
-									<p class="lh">Read our <a href="blog-topic.php?topic=ecommerce">ecommerce blog hub</a>, view <a href="clients.php">client logos</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a retail commerce assessment.</p>
+									<p class="lh">Read our <a href="blogs.php">blog</a>, view <a href="clients.php">client logos</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a retail commerce assessment.</p>
 								</div>
 							</div>
 						</div>

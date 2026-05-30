@@ -30,7 +30,6 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
             <div class="col-12">
                 <a href="whitepapers.php" class="wp-cat-chip<?php echo $prefilterCategory === '' ? ' active' : ''; ?>">All</a>
                 <a href="whitepapers.php?category=ecommerce" class="wp-cat-chip<?php echo $prefilterCategory === 'ecommerce' ? ' active' : ''; ?>">Ecommerce</a>
-                <a href="whitepapers.php?category=sitefinity" class="wp-cat-chip<?php echo $prefilterCategory === 'sitefinity' ? ' active' : ''; ?>">Sitefinity</a>
                 <a href="whitepapers.php?category=cloud" class="wp-cat-chip<?php echo $prefilterCategory === 'cloud' ? ' active' : ''; ?>">Cloud</a>
                 <a href="whitepapers.php?category=compliance" class="wp-cat-chip<?php echo $prefilterCategory === 'compliance' ? ' active' : ''; ?>">Compliance</a>
                 <a href="whitepapers.php?category=research" class="wp-cat-chip<?php echo $prefilterCategory === 'research' ? ' active' : ''; ?>">Research</a>

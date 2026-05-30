@@ -27,29 +27,6 @@ $whitepaperPosts = [
             ['id' => 'recommendations', 'label' => 'Recommendations'],
         ],
     ],
-    'sitefinity-specialized-capabilities' => [
-        'title' => 'Understanding the Specialized Capabilities of Sitefinity',
-        'date' => 'April 30, 2026',
-        'read_time' => '16 min read',
-        'author' => 'SanguineIT .NET Practice',
-        'category' => 'Sitefinity',
-        'category_slug' => 'sitefinity',
-        'featured_image' => 'images/whitepapers/sitefinity-capabilities.jpg',
-        'list_summary' => 'An enterprise Sitefinity guide covering personalization, governance, integration architecture, and lifecycle modernization strategy.',
-        'executive_summary' => 'Sitefinity delivers marketing agility on a .NET foundation trusted by regulated and global organizations. This paper explains specialized capabilities that differentiate Sitefinity for enterprise portals and when to invest in customization versus configuration.',
-        'highlights' => [
-            ['value' => '.NET', 'label' => 'Enterprise stack fit'],
-            ['value' => 'DX', 'label' => 'Personalization depth'],
-            ['value' => 'Multi-site', 'label' => 'Brand governance'],
-        ],
-        'toc' => [
-            ['id' => 'executive-summary', 'label' => 'Executive summary'],
-            ['id' => 'platform-overview', 'label' => 'Platform overview'],
-            ['id' => 'enterprise-capabilities', 'label' => 'Enterprise capabilities'],
-            ['id' => 'integration-patterns', 'label' => 'Integration patterns'],
-            ['id' => 'recommendations', 'label' => 'Recommendations'],
-        ],
-    ],
     'tco-legacy-vs-cloud-native' => [
         'title' => 'Total Cost of Ownership: Legacy vs Cloud-Native',
         'date' => 'April 12, 2026',
@@ -192,7 +169,6 @@ $whitepaperPosts = [
 
 $whitepaperPostsListingOrder = [
     'magento-enhance-online-business',
-    'sitefinity-specialized-capabilities',
     'tco-legacy-vs-cloud-native',
     'governance-regulated-saas-platforms',
     'ai-assisted-engineering-roi',

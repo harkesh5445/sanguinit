@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>Financial platforms built for trust and scale</h2>
 									<p class="lh">Customers expect banking to work everywhere — and they expect their data to stay protected. SanguineIT designs financial applications with proactive fraud monitoring hooks, disaster recovery planning, and performance tuning for peak transaction volumes during market events and campaign launches.</p>
-									<p class="lh">Explore our <a href="android.php">mobile</a> and <a href="custom-web-development.php">web development</a> practices, read <a href="blog-topic.php?topic=enterprise-learning">enterprise insights</a>, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a financial services technology assessment.</p>
+									<p class="lh">Explore our <a href="android.php">mobile</a> and <a href="custom-web-development.php">web development</a> practices, read our <a href="blogs.php">knowledge base</a>, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a financial services technology assessment.</p>
 								</div>
 							</div>
 						</div>

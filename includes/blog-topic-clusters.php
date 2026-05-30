@@ -18,30 +18,6 @@ $blogTopicClusters = [
         ],
         'category_slugs' => ['adobe-commerce', 'magento', 'headless-commerce'],
     ],
-    'cms-portals' => [
-        'title' => 'CMS & Enterprise Portals',
-        'headline' => 'CMS & Portal <strong>Topic Hub</strong>',
-        'description' => 'Articles on Sitefinity upgrades, content governance, and enterprise portal delivery — for teams managing multi-site CMS estates.',
-        'eyebrow' => 'Topic Cluster · CMS',
-        'service_links' => [
-            ['label' => 'Sitefinity Development', 'url' => 'sitefinity.php'],
-            ['label' => 'SharePoint Support', 'url' => 'sharepoint-support-services.php'],
-            ['label' => 'Custom Web Development', 'url' => 'custom-web-development.php'],
-        ],
-        'category_slugs' => ['sitefinity'],
-    ],
-    'enterprise-learning' => [
-        'title' => 'Enterprise Learning & LMS',
-        'headline' => 'LMS & Training <strong>Topic Hub</strong>',
-        'description' => 'Insights on Moodle upgrades, compliance training, and scalable learning platforms for HR and IT teams rolling out digital education programs.',
-        'eyebrow' => 'Topic Cluster · LMS',
-        'service_links' => [
-            ['label' => 'Custom Web Development', 'url' => 'custom-web-development.php'],
-            ['label' => 'Application Maintenance', 'url' => 'app-maintenance.php'],
-            ['label' => 'Contact Our Team', 'url' => 'contact-us.php'],
-        ],
-        'category_slugs' => ['lms'],
-    ],
 ];
 
 function get_blog_topic_cluster($topicSlug)

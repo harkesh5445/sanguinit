@@ -15,7 +15,6 @@ if (!function_exists('infographic_post_url')) {
     <h4>Categories</h4>
     <ul class="info-sidebar-categories">
         <li><a href="infographics.php">All Infographics</a></li>
-        <li><a href="infographics.php?category=lms">LMS</a></li>
         <li><a href="infographics.php?category=ecommerce">Ecommerce</a></li>
         <li><a href="infographics.php?category=company">Company</a></li>
         <li><a href="infographics.php?category=web">Web Development</a></li>

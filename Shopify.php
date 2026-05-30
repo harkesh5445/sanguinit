@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>Shopify stores built for measurable revenue growth</h2>
 									<p class="lh">Whether you launch a DTC brand, expand wholesale, or replatform from a legacy stack, SanguineIT aligns Shopify architecture with how your merchandising and operations teams sell. We document integration contracts, validate checkout flows before launches, and measure outcomes against conversion rate, average order value, and site performance.</p>
-									<p class="lh">Read commerce insights on our <a href="blog-topic.php?topic=ecommerce">ecommerce blog hub</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a Shopify readiness assessment.</p>
+									<p class="lh">Read commerce insights on our <a href="blogs.php">blog</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a Shopify readiness assessment.</p>
 								</div>
 							</div>
 						</div>

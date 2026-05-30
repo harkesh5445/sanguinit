@@ -4,19 +4,6 @@
  * Knowledge Base infographics metadata and detail content.
  */
 $infographicPosts = [
-    'lms-enterprise-training-roadmap' => [
-        'title' => 'LMS: The Best Option for Enterprise Training at Scale',
-        'date' => 'May 18, 2026',
-        'category' => 'LMS',
-        'category_slug' => 'lms',
-        'featured_image' => 'images/infographics/lms-enterprise-training.jpg',
-        'list_summary' => 'Strategic roadmap for scaling enterprise LMS initiatives, from platform selection and migration sequencing to measurable learner adoption outcomes.',
-        'highlights' => [
-            ['value' => '72%', 'label' => 'Leaders prioritizing skills platforms'],
-            ['value' => '3x', 'label' => 'Faster onboarding with structured LMS'],
-            ['value' => 'Moodle', 'label' => 'Flexible open-source foundation'],
-        ],
-    ],
     'magento-ecommerce-sales-boost' => [
         'title' => 'Boost Sales of a Magento Ecommerce Store',
         'date' => 'May 5, 2026',
@@ -95,30 +82,15 @@ $infographicPosts = [
             ['value' => 'FinOps', 'label' => 'Continuous optimization'],
         ],
     ],
-    'sitefinity-content-operations-blueprint' => [
-        'title' => 'Sitefinity Content Operations Blueprint',
-        'date' => 'January 24, 2026',
-        'category' => 'Web Development',
-        'category_slug' => 'web',
-        'featured_image' => 'images/infographics/sitefinity-content-ops.jpg',
-        'list_summary' => 'Enterprise Sitefinity content operations blueprint for editorial governance, component reuse, release discipline, and measurable campaign execution.',
-        'highlights' => [
-            ['value' => '.NET', 'label' => 'Enterprise CMS foundation'],
-            ['value' => 'Multi-site', 'label' => 'Brand governance model'],
-            ['value' => 'DX', 'label' => 'Personalization ready'],
-        ],
-    ],
 ];
 
 $infographicPostsListingOrder = [
-    'lms-enterprise-training-roadmap',
     'magento-ecommerce-sales-boost',
     'fast-facts-about-sanguineit',
     'web-development-lifecycle-phases',
     'digital-transformation-maturity-model',
     'incident-response-timeline-blueprint',
     'cloud-cost-governance-control-map',
-    'sitefinity-content-operations-blueprint',
 ];
 
 function infographic_post_url($slug)

@@ -24,7 +24,6 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                 <aside class="article-filter-panel">
                     <div class="article-filter-head">View Articles by Category</div>
                     <div class="article-filter-body">
-                        <label><input type="checkbox" class="article-cat" value="sitefinity"<?php echo $prefilterCategory === 'sitefinity' ? ' checked' : ''; ?>> Sitefinity</label>
                         <label><input type="checkbox" class="article-cat" value="cms"<?php echo $prefilterCategory === 'cms' ? ' checked' : ''; ?>> CMS</label>
                         <label><input type="checkbox" class="article-cat" value="technology"<?php echo $prefilterCategory === 'technology' ? ' checked' : ''; ?>> Technology</label>
                         <label><input type="checkbox" class="article-cat" value="hiring"<?php echo $prefilterCategory === 'hiring' ? ' checked' : ''; ?>> Dedicated Hiring</label>

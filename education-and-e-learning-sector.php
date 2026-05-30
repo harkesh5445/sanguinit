@@ -89,7 +89,7 @@ include 'header.php';
 									<h2>Digital Engineering for Education &amp; E-Learning</h2>
 									<p class="lh">SanguineIT builds learning management systems, student portals, corporate training platforms, and mobile learning apps for universities, K-12 technology providers, and enterprise L&amp;D teams that need scalable content delivery, progress tracking, and integration with HR and identity systems — globally.</p>
 									<p class="lh">Our teams specialize in Moodle and custom LMS development, SCORM/xAPI content delivery, SSO with Azure AD and Google Workspace, proctored assessment workflows, and analytics dashboards that help administrators measure engagement and completion rates.</p>
-									<p class="lh">Explore our <a href="blog-topic.php?topic=enterprise-learning">Enterprise Learning</a> blog cluster for Moodle upgrades, LMS governance, and training platform best practices.</p>
+									<p class="lh">Explore our <a href="blogs.php">knowledge base</a> for ecommerce, CMS, and platform engineering guides.</p>
 								</div>
 							</div>
 						</div>

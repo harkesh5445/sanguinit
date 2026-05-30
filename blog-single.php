@@ -10,7 +10,6 @@ if (!$post) {
 }
 
 require_once __DIR__ . '/includes/seo.php';
-require_once __DIR__ . '/includes/blog-topic-clusters.php';
 require_once __DIR__ . '/includes/image-helpers.php';
 
 $pageTitle = $post['title'];
@@ -23,7 +22,6 @@ $page_data = [
     'json_ld' => [sit_blog_posting_schema($post, $slugParam)],
 ];
 $commentsLabel = ((int) $post['comments'] === 0) ? 'No Comments' : ((int) $post['comments'] === 1 ? '1 Comment' : (int) $post['comments'] . ' Comments');
-$activeBlogCategory = isset($post['category_slug']) ? $post['category_slug'] : '';
 $articleHtml = get_blog_post_html($slug);
 
 require_once __DIR__ . '/includes/kb-banner-config.php';
@@ -37,7 +35,6 @@ include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 
 <link rel="stylesheet" href="css/blog-single.css">
-<link rel="stylesheet" href="css/blog-topic-cluster.css">
 
 <section class="blog-single-section">
     <div class="container">
@@ -80,28 +77,6 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                     <div class="blog-article-body">
                         <?php echo $articleHtml; ?>
                     </div>
-
-                    <?php
-                    $postTopic = get_blog_topic_for_post($post);
-                    $relatedPosts = get_related_blog_posts_for_post($slug, 3);
-                    if ($postTopic || $relatedPosts) :
-                        $topicCluster = $postTopic ? get_blog_topic_cluster($postTopic) : null;
-                        ?>
-                    <div class="blog-single-cluster">
-                        <?php if ($topicCluster) : ?>
-                        <h4>Part of: <?php echo sit_h($topicCluster['title']); ?></h4>
-                        <p class="lh mb15"><a href="<?php echo blog_topic_url($postTopic); ?>">View the full topic hub &rarr;</a></p>
-                        <?php endif; ?>
-                        <?php if ($relatedPosts) : ?>
-                        <h4>Related in this cluster</h4>
-                        <ul>
-                            <?php foreach ($relatedPosts as $relSlug => $relPost) : ?>
-                            <li><a href="<?php echo blog_post_url($relSlug); ?>"><?php echo sit_h($relPost['title']); ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
-                        <?php endif; ?>
-                    </div>
-                    <?php endif; ?>
                 </article>
             </div>
 

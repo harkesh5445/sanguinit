@@ -12,9 +12,6 @@
 
 ## Knowledge base
 - https://sanguineit.com/blogs.php
-- https://sanguineit.com/blog-topic.php?topic=ecommerce
-- https://sanguineit.com/blog-topic.php?topic=cms-portals
-- https://sanguineit.com/blog-topic.php?topic=enterprise-learning
 - https://sanguineit.com/articles.php
 - https://sanguineit.com/news-events.php
 - https://sanguineit.com/videos.php

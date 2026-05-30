@@ -28,7 +28,12 @@ $kbBanner = kb_get_banner_config('blog-single');
 $kbBanner['eyebrow'] = 'Case Study · ' . $study['type_label'];
 $kbBanner['title'] = $pageTitle;
 $kbBanner['subtitle'] = $study['client'] . ' · ' . $study['industry'] . ' · ' . $study['timeline'];
-$kbBanner['bg'] = file_exists(__DIR__ . '/' . $study['featured_image']) ? $study['featured_image'] : $kbBanner['bg'];
+$featuredImage = $study['featured_image'];
+if (preg_match('#^https?://#i', $featuredImage)) {
+    $kbBanner['bg'] = $featuredImage;
+} elseif (file_exists(__DIR__ . '/' . $featuredImage)) {
+    $kbBanner['bg'] = $featuredImage;
+}
 include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 

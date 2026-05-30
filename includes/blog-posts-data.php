@@ -44,24 +44,6 @@ $blogPosts = [
             ['id' => 'conclusion', 'label' => 'The Bottom Line'],
         ],
     ],
-    'moodle-lms-5-2-latest-upgrade' => [
-        'title' => 'Moodle for Enterprise Teams: A Controlled Upgrade Path',
-        'date' => 'April 23, 2026',
-        'comments' => 0,
-        'category' => 'LMS',
-        'category_slug' => 'lms',
-        'featured_image' => 'images/blog/moodle-lms.jpg',
-        'carousel_image' => 'images/blog/carousel-3.jpg',
-        'list_excerpt' => 'Moodle 5.2 can improve enterprise learning outcomes when upgrades are executed with governance and testing discipline. Learn how to plan plugin validation, rollout sequencing, and adoption-focused LMS modernization.',
-        'excerpt' => 'Enterprise upgrade roadmap for Moodle 5.2 covering readiness checks, risk controls, and long-term LMS operations.',
-        'toc' => [
-            ['id' => 'overview', 'label' => 'Moodle 5.2 at a Glance'],
-            ['id' => 'features', 'label' => 'Key Features for Enterprise Teams'],
-            ['id' => 'upgrade-path', 'label' => 'Upgrade Path and Risk Controls'],
-            ['id' => 'sanguine-approach', 'label' => 'How SanguineIT Delivers LMS Programs'],
-            ['id' => 'conclusion', 'label' => 'The Bottom Line'],
-        ],
-    ],
     'magento-security-patches-guide' => [
         'title' => 'Magento Security Patches: Deploy Faster Without Breaking Production',
         'date' => 'March 28, 2026',
@@ -76,23 +58,6 @@ $blogPosts = [
             ['id' => 'patch-types', 'label' => 'Understanding Patch Types and Severity'],
             ['id' => 'process', 'label' => 'A Safe Patch Deployment Process'],
             ['id' => 'maintenance', 'label' => 'Ongoing Maintenance and Monitoring'],
-            ['id' => 'conclusion', 'label' => 'The Bottom Line'],
-        ],
-    ],
-    'sitefinity-15-upgrade-enterprise-portals' => [
-        'title' => 'Sitefinity 15 Portal Upgrades: Readiness, Testing, and Hypercare',
-        'date' => 'March 14, 2026',
-        'comments' => 2,
-        'category' => 'Sitefinity',
-        'category_slug' => 'sitefinity',
-        'featured_image' => 'images/blog/sitefinity-enterprise.jpg',
-        'list_excerpt' => 'Sitefinity 15 upgrades require more than version changes. Explore an enterprise checklist covering readiness audits, widget compatibility, integration testing, and post-launch hypercare for stable portal modernization.',
-        'excerpt' => 'Comprehensive Sitefinity 15 enterprise upgrade checklist for governance, testing, migration execution, and adoption continuity.',
-        'toc' => [
-            ['id' => 'readiness', 'label' => 'Pre-Upgrade Readiness Assessment'],
-            ['id' => 'content-widgets', 'label' => 'Content, Widgets, and Integrations'],
-            ['id' => 'environments', 'label' => 'Environment Strategy and Testing'],
-            ['id' => 'golive', 'label' => 'Go-Live and Post-Launch Support'],
             ['id' => 'conclusion', 'label' => 'The Bottom Line'],
         ],
     ],
@@ -118,9 +83,7 @@ $blogPosts = [
 $blogPostsListingOrder = [
     'adobe-commerce-cloud-migration-ultimate-guide',
     'amp-with-magento2-fast-loading-pages',
-    'moodle-lms-5-2-latest-upgrade',
     'magento-security-patches-guide',
-    'sitefinity-15-upgrade-enterprise-portals',
     'headless-commerce-performance-flexibility',
 ];
 

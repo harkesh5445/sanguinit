@@ -2,8 +2,6 @@
 if (!function_exists('blog_post_url')) {
     require_once __DIR__ . '/blog-posts-data.php';
 }
-require_once __DIR__ . '/blog-topic-clusters.php';
-$activeBlogCategory = isset($activeBlogCategory) ? $activeBlogCategory : '';
 ?>
 <aside class="blog-sidebar-box">
     <h4>Search our Blog</h4>
@@ -14,47 +12,8 @@ $activeBlogCategory = isset($activeBlogCategory) ? $activeBlogCategory : '';
 </aside>
 
 <aside class="blog-sidebar-box">
-    <h4>Hire Certified Developers</h4>
+    <h4>Work with SanguineIT</h4>
     <a href="contact-us.php" class="blog-sidebar-cta" data-toggle="modal" data-target="#quote-popup">Talk to Our Experts</a>
-</aside>
-
-<aside class="blog-sidebar-box">
-    <h4>Topic Hubs</h4>
-    <ul class="blog-category-list">
-        <?php foreach (get_blog_topic_cluster_slugs() as $topicSlug) :
-            $cluster = get_blog_topic_cluster($topicSlug);
-            ?>
-        <li><a href="<?php echo blog_topic_url($topicSlug); ?>"><?php echo $cluster['title']; ?></a></li>
-        <?php endforeach; ?>
-    </ul>
-</aside>
-
-<aside class="blog-sidebar-box">
-    <h4>Categories</h4>
-    <ul class="blog-category-list">
-        <?php
-        $blogCategories = [
-            'adobe-commerce' => 'Adobe Commerce',
-            'headless-commerce' => 'Headless Commerce',
-            'lms' => 'LMS',
-            'magento' => 'Magento',
-            'sitefinity' => 'Sitefinity',
-        ];
-        foreach ($blogCategories as $slug => $label) :
-            $topicForCat = null;
-            foreach (get_blog_topic_cluster_slugs() as $topicSlug) {
-                $cluster = get_blog_topic_cluster($topicSlug);
-                if (in_array($slug, $cluster['category_slugs'], true)) {
-                    $topicForCat = $topicSlug;
-                    break;
-                }
-            }
-            $href = $topicForCat ? blog_topic_url($topicForCat) : 'blogs.php';
-            $isActive = ($activeBlogCategory === $slug);
-            ?>
-        <li<?php echo $isActive ? ' class="is-active"' : ''; ?>><a href="<?php echo $href; ?>"><?php echo $label; ?></a></li>
-        <?php endforeach; ?>
-    </ul>
 </aside>
 
 <aside class="blog-sidebar-box">

@@ -16,8 +16,6 @@ if (!function_exists('video_post_url')) {
     <ul class="video-sidebar-topics">
         <li><a href="videos.php">All Videos</a></li>
         <li><a href="videos.php?topic=company">Company &amp; Careers</a></li>
-        <li><a href="videos.php?topic=sitefinity">Sitefinity</a></li>
-        <li><a href="videos.php?topic=lms">LMS</a></li>
         <li><a href="videos.php?topic=ecommerce">Ecommerce</a></li>
         <li><a href="videos.php?topic=cloud">Cloud</a></li>
         <li><a href="videos.php?topic=magento">Magento</a></li>

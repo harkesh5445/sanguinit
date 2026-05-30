@@ -6,7 +6,6 @@ header('Content-Type: application/xml; charset=utf-8');
 
 require_once __DIR__ . '/includes/seo.php';
 require_once __DIR__ . '/includes/blog-posts-data.php';
-require_once __DIR__ . '/includes/blog-topic-clusters.php';
 require_once __DIR__ . '/includes/article-posts-data.php';
 require_once __DIR__ . '/includes/news-posts-data.php';
 require_once __DIR__ . '/includes/case-studies-data.php';
@@ -36,9 +35,6 @@ $urls = [
 
 foreach (array_keys($blogPosts) as $slug) {
     $urls[] = '/blog-single.php?slug=' . rawurlencode($slug);
-}
-foreach (get_blog_topic_cluster_slugs() as $topicSlug) {
-    $urls[] = '/blog-topic.php?topic=' . rawurlencode($topicSlug);
 }
 if (isset($caseStudies) && is_array($caseStudies)) {
     foreach (array_keys($caseStudies) as $slug) {

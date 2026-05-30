@@ -89,7 +89,7 @@ include 'header.php';
 									<h2>Digital Engineering for Healthcare &amp; Life Sciences</h2>
 									<p class="lh">SanguineIT builds web and mobile applications for healthcare providers, health tech startups, and life sciences organizations that need HIPAA-aware architecture, reliable patient experiences, and integration with EHR and operational systems — delivered globally with security and accessibility as first-class requirements.</p>
 									<p class="lh">Our teams deliver patient portals, telehealth interfaces, provider dashboards, training platforms, and internal workflow tools with encryption, access controls, and audit logging appropriate for protected health information environments.</p>
-									<p class="lh">We also build LMS and training portals for clinical staff — see our <a href="blog-topic.php?topic=enterprise-learning">enterprise learning</a> content hub for Moodle and compliance training approaches.</p>
+									<p class="lh">We also build LMS and training portals for clinical staff — see our <a href="blogs.php">knowledge base</a> for platform engineering and compliance insights.</p>
 								</div>
 							</div>
 						</div>

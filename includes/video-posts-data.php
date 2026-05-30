@@ -14,26 +14,6 @@ $videoPosts = [
         'video_url' => 'https://samplelib.com/lib/preview/mp4/sample-30s.mp4',
         'list_summary' => 'A strategic onboarding walkthrough explaining how SanguineIT teams deliver quality outcomes across global engagements. Covers collaboration rhythms, engineering standards, and growth pathways for new joiners.',
     ],
-    'sitefinity-platform-business-needs' => [
-        'title' => 'Sitefinity: A Platform That Adapts To Your Business Needs',
-        'date' => 'May 8, 2026',
-        'duration' => '18 min',
-        'category' => 'Sitefinity',
-        'category_slug' => 'sitefinity',
-        'featured_image' => 'images/videos/sitefinity-platform.jpg',
-        'video_url' => 'https://samplelib.com/lib/preview/mp4/sample-20s.mp4',
-        'list_summary' => 'An enterprise-focused guide to using Sitefinity for scalable content operations, personalization, and multi-region governance. Includes practical integration and upgrade strategy insights for long-term platform health.',
-    ],
-    'lms-moodle-benefits-overview' => [
-        'title' => 'Know the Benefits of Using an LMS and Why Moodle is Preferred',
-        'date' => 'April 25, 2026',
-        'duration' => '16 min',
-        'category' => 'LMS',
-        'category_slug' => 'lms',
-        'featured_image' => 'images/videos/lms-learning.jpg',
-        'video_url' => 'https://samplelib.com/lib/preview/mp4/sample-15s.mp4',
-        'list_summary' => 'A practical overview of LMS strategy with a deep look at why Moodle remains a preferred enterprise option. Explains governance, integration, and global rollout patterns that improve adoption and learning outcomes.',
-    ],
     'sanguineit-we-are-hiring' => [
         'title' => 'SanguineIT Family is Getting Bigger — We are Hiring',
         'date' => 'April 10, 2026',
@@ -98,8 +78,6 @@ $videoPosts = [
 
 $videoPostsListingOrder = [
     'induction-new-joinees-sanguineit',
-    'sitefinity-platform-business-needs',
-    'lms-moodle-benefits-overview',
     'sanguineit-we-are-hiring',
     'b2b-commerce-best-practices',
     'legacy-cloud-native-modernization',

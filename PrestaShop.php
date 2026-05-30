@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>PrestaShop stores built for measurable growth</h2>
 									<p class="lh">Whether you operate regional catalogs, wholesale pricing, or marketplace listings, SanguineIT aligns PrestaShop architecture with how your merchandising and operations teams sell. We document integration contracts, validate checkout flows before launches, and measure outcomes against conversion rate, page speed, and support ticket volume.</p>
-									<p class="lh">Read commerce insights on our <a href="blog-topic.php?topic=ecommerce">ecommerce blog hub</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a PrestaShop readiness assessment.</p>
+									<p class="lh">Read commerce insights on our <a href="blogs.php">blog</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a PrestaShop readiness assessment.</p>
 								</div>
 							</div>
 						</div>

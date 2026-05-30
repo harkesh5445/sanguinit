@@ -163,6 +163,9 @@
     flex: 1 1 48%;
     position: relative;
     min-height: 280px;
+    max-width: 420px;
+    aspect-ratio: 3 / 4;
+    align-self: center;
 }
 
 .cs-card--dark .cs-card__media {
@@ -173,27 +176,13 @@
     padding-right: 24px;
 }
 
-.cs-card__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    min-height: 280px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-}
-
-.cs-card__media picture {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 280px;
-}
-
+.cs-card__media img,
+.cs-card__media picture,
 .cs-card__media picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     display: block;
     min-height: 280px;
@@ -533,6 +522,7 @@
 
     .cs-card__media {
         margin-bottom: 32px;
+        max-width: 100%;
     }
 
     .cs-testimonial__slide {

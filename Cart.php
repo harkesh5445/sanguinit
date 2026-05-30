@@ -133,7 +133,7 @@ include 'header.php';
 								<div class="common-heading text-l pl25">
 									<h2>OpenCart stores built for merchants who need control</h2>
 									<p class="lh">OpenCart rewards teams that invest in clean extension choices and disciplined updates. SanguineIT avoids extension sprawl, documents customizations, and load-tests checkout before peak seasons so merchants stay in control of their catalog and margins.</p>
-									<p class="lh">Read our <a href="blog-topic.php?topic=ecommerce">ecommerce blog hub</a> or <a href="contact-us.php">contact us</a> for an OpenCart assessment.</p>
+									<p class="lh">Read our <a href="blogs.php">blog</a> or <a href="contact-us.php">contact us</a> for an OpenCart assessment.</p>
 								</div>
 							</div>
 						</div>
