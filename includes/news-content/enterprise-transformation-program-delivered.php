@@ -35,4 +35,4 @@
 <p class="lh">As organizations worldwide re-evaluate digital operating models, this engagement demonstrates the value of phased transformation anchored in measurable outcomes rather than isolated technology milestones. The ability to combine modernization speed with governance discipline remains a key differentiator for enterprises managing complex, multi-region platform ecosystems.</p>
 
 <h2>About SanguineIT</h2>
-<p class="lh">SanguineIT provides digital engineering, modernization, and managed operations services to global organizations across web, ecommerce, mobile, cloud, and enterprise platform ecosystems. For transformation planning or delivery support, <a href="contact-us.php">connect with our experts</a>.</p>
+<p class="lh">SanguineIT provides digital engineering, modernization, and managed operations services to global organizations across mobile apps, custom web development, cloud, and enterprise platform ecosystems. For transformation planning or delivery support, <a href="contact-us.php">connect with our experts</a>.</p>

@@ -18,6 +18,7 @@ $bgEsc = htmlspecialchars($bg, ENT_QUOTES, 'UTF-8');
 $bgPosEsc = htmlspecialchars($bgPosition, ENT_QUOTES, 'UTF-8');
 ?>
 <link rel="stylesheet" href="css/kb-premium-banner.css">
+<link rel="stylesheet" href="css/content-pages-typography.css">
 <link rel="preload" as="image" href="<?php echo $bgEsc; ?>" fetchpriority="high">
 <section class="kb-premium-banner kb-premium-banner--<?php echo htmlspecialchars($variant, ENT_QUOTES, 'UTF-8'); ?>" style="--kb-banner-image: url('<?php echo $bgEsc; ?>'); --kb-banner-position: <?php echo $bgPosEsc; ?>;">
     <img class="kb-premium-banner__photo" src="<?php echo $bgEsc; ?>" alt="" width="1920" height="1280" decoding="async" fetchpriority="high">

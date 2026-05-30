@@ -6,17 +6,29 @@
 require_once __DIR__ . '/blog-posts-data.php';
 
 $blogTopicClusters = [
-    'ecommerce' => [
-        'title' => 'Ecommerce & Commerce Platforms',
-        'headline' => 'Ecommerce Engineering <strong>Topic Hub</strong>',
-        'description' => 'Guides on Adobe Commerce Cloud, Magento performance, security patches, and headless commerce — curated for merchants modernizing storefronts and integrations.',
-        'eyebrow' => 'Topic Cluster · Commerce',
+    'mobile-apps' => [
+        'title' => 'Mobile App Development',
+        'headline' => 'Mobile App Engineering <strong>Topic Hub</strong>',
+        'description' => 'Guides on custom iOS and Android development, cross-platform stacks, app security, and launch readiness — curated for product teams shipping mobile experiences.',
+        'eyebrow' => 'Topic Cluster · Mobile',
         'service_links' => [
-            ['label' => 'Ecommerce Development', 'url' => 'ecommerce-web-development.php'],
-            ['label' => 'Magento Services', 'url' => 'Magento.php'],
-            ['label' => 'Magento Maintenance', 'url' => 'magento-maintenance-services.php'],
+            ['label' => 'Android Development', 'url' => 'android.php'],
+            ['label' => 'iOS Development', 'url' => 'ios.php'],
+            ['label' => 'App Maintenance', 'url' => 'app-maintenance.php'],
         ],
-        'category_slugs' => ['adobe-commerce', 'magento', 'headless-commerce'],
+        'category_slugs' => ['mobile-apps', 'app-security'],
+    ],
+    'web-development' => [
+        'title' => 'Custom Web Development',
+        'headline' => 'Web Development <strong>Topic Hub</strong>',
+        'description' => 'Guides on custom websites, API-first architecture, progressive web apps, and performance optimization — curated for teams building scalable web platforms.',
+        'eyebrow' => 'Topic Cluster · Web',
+        'service_links' => [
+            ['label' => 'Custom Web Development', 'url' => 'custom-web-development.php'],
+            ['label' => 'Progressive Web Apps', 'url' => 'progressive-web-app.php'],
+            ['label' => 'Website Maintenance', 'url' => 'website-maintenance.php'],
+        ],
+        'category_slugs' => ['web-development'],
     ],
 ];
 

@@ -22,18 +22,9 @@ $typeFilters = [
     'website' => 'Website',
     'mobile-app' => 'Mobile App',
 ];
-$techFilters = [];
-foreach ($caseStudiesListingOrder as $csSlug) {
-    $csItem = get_case_study($csSlug);
-    if (!$csItem || empty($csItem['technologies'])) {
-        continue;
-    }
-    foreach ($csItem['technologies'] as $tech) {
-        $techFilters[cs_page_filter_slug($tech)] = $tech;
-    }
-}
 ?>
 <link rel="stylesheet" href="css/case-studies-page.css">
+<link rel="stylesheet" href="css/content-pages-typography.css">
 
 <!-- Hero banner -->
 <section class="cs-hero" style="background-image: url('images/case-study/cs-hero.jpg');">
@@ -53,21 +44,7 @@ foreach ($caseStudiesListingOrder as $csSlug) {
         <?php foreach ($typeFilters as $filterSlug => $filterLabel) : ?>
         <button type="button" class="cs-filter-btn" data-filter="<?php echo sit_h($filterSlug); ?>"><?php echo sit_h($filterLabel); ?></button>
         <?php endforeach; ?>
-        <?php foreach ($techFilters as $filterSlug => $filterLabel) : ?>
-        <button type="button" class="cs-filter-btn cs-filter-btn--tech" data-filter="<?php echo sit_h($filterSlug); ?>"><?php echo sit_h($filterLabel); ?></button>
-        <?php endforeach; ?>
     </div>
-    <?php if (!empty($techFilters)) : ?>
-    <div class="cs-filters-mobile-tech">
-        <label class="cs-filters-mobile-tech__label" for="csTechFilter">Technology</label>
-        <select id="csTechFilter" class="cs-filters-mobile-tech__select" aria-label="Filter by technology">
-            <option value="all">All technologies</option>
-            <?php foreach ($techFilters as $filterSlug => $filterLabel) : ?>
-            <option value="<?php echo sit_h($filterSlug); ?>"><?php echo sit_h($filterLabel); ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-    <?php endif; ?>
 </div>
 
 <!-- Case study cards -->
@@ -206,10 +183,8 @@ foreach ($caseStudiesListingOrder as $csSlug) {
 
 <script>
 (function () {
-    var typeButtons = document.querySelectorAll('.cs-filter-btn:not(.cs-filter-btn--tech)');
-    var allButtons = document.querySelectorAll('.cs-filter-btn');
+    var buttons = document.querySelectorAll('.cs-filter-btn');
     var cards = document.querySelectorAll('.cs-card[data-filters]');
-    var techSelect = document.getElementById('csTechFilter');
 
     function applyFilter(filter) {
         cards.forEach(function (card) {
@@ -220,44 +195,18 @@ foreach ($caseStudiesListingOrder as $csSlug) {
     }
 
     function setActiveButton(filter) {
-        allButtons.forEach(function (b) {
+        buttons.forEach(function (b) {
             b.classList.toggle('is-active', b.getAttribute('data-filter') === filter);
         });
     }
 
-    typeButtons.forEach(function (btn) {
+    buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
             var filter = btn.getAttribute('data-filter');
             setActiveButton(filter);
-            if (techSelect) {
-                techSelect.value = 'all';
-            }
             applyFilter(filter);
         });
     });
-
-    document.querySelectorAll('.cs-filter-btn--tech').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var filter = btn.getAttribute('data-filter');
-            setActiveButton(filter);
-            if (techSelect) {
-                techSelect.value = filter;
-            }
-            applyFilter(filter);
-        });
-    });
-
-    if (techSelect) {
-        techSelect.addEventListener('change', function () {
-            var filter = techSelect.value;
-            if (filter === 'all') {
-                setActiveButton('all');
-            } else {
-                allButtons.forEach(function (b) { b.classList.remove('is-active'); });
-            }
-            applyFilter(filter);
-        });
-    }
 })();
 </script>
 
