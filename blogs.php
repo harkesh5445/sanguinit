@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/seo.php';
 require_once __DIR__ . '/includes/image-helpers.php';
 $page_data = [
     'title' => 'Blog | Digital Engineering Insights | SanguineIT',
-    'description' => 'Read SanguineIT blog posts on ecommerce, CMS, cloud, security, and enterprise web development — practical guides for technical leaders.',
+    'description' => 'Read SanguineIT blog posts on mobile app development, custom websites, cloud, security, and enterprise engineering — practical guides for technical leaders.',
     'canonical' => sit_base_url() . '/blogs.php',
 ];
 include 'header.php';
@@ -21,7 +21,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
         <div class="row justify-content-left">
             <div class="col-lg-11">
                 <h2 class="blog-main-title">Latest from SanguineIT</h2>
-                <p class="blog-page-lead">Original research and practitioner guides on commerce, cloud, CMS, and enterprise engineering—written for global technology leaders who need actionable insight, not recycled advice.</p>
+                <p class="blog-page-lead">Original research and practitioner guides on mobile apps, custom web development, cloud, and enterprise engineering—written for global technology leaders who need actionable insight, not recycled advice.</p>
             </div>
         </div>
 

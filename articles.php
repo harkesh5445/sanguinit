@@ -15,7 +15,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
         <div class="row justify-content-left">
             <div class="col-lg-11">
                 <h2 class="article-title">SanguineIT Articles</h2>
-                <p class="article-page-intro lh">Long-form articles for engineering leaders and product owners—covering platform strategy, outsourcing models, commerce architecture, and operational excellence for organizations worldwide.</p>
+                <p class="article-page-intro lh">Long-form articles for engineering leaders and product owners—covering mobile app strategy, custom web development, outsourcing models, and operational excellence for organizations worldwide.</p>
             </div>
         </div>
 
@@ -27,9 +27,8 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                         <label><input type="checkbox" class="article-cat" value="cms"<?php echo $prefilterCategory === 'cms' ? ' checked' : ''; ?>> CMS</label>
                         <label><input type="checkbox" class="article-cat" value="technology"<?php echo $prefilterCategory === 'technology' ? ' checked' : ''; ?>> Technology</label>
                         <label><input type="checkbox" class="article-cat" value="hiring"<?php echo $prefilterCategory === 'hiring' ? ' checked' : ''; ?>> Dedicated Hiring</label>
-                        <label><input type="checkbox" class="article-cat" value="ecommerce"<?php echo $prefilterCategory === 'ecommerce' ? ' checked' : ''; ?>> Ecommerce</label>
+                        <label><input type="checkbox" class="article-cat" value="mobile"<?php echo $prefilterCategory === 'mobile' ? ' checked' : ''; ?>> Mobile Apps</label>
                         <label><input type="checkbox" class="article-cat" value="web"<?php echo $prefilterCategory === 'web' ? ' checked' : ''; ?>> Web Development</label>
-                        <label><input type="checkbox" class="article-cat" value="magento"<?php echo $prefilterCategory === 'magento' ? ' checked' : ''; ?>> Magento</label>
                         <label><input type="checkbox" class="article-cat" value="outsourcing"<?php echo $prefilterCategory === 'outsourcing' ? ' checked' : ''; ?>> Outsourcing</label>
                         <label><input type="checkbox" class="article-cat" value="sharepoint"<?php echo $prefilterCategory === 'sharepoint' ? ' checked' : ''; ?>> SharePoint</label>
                     </div>

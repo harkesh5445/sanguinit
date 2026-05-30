@@ -24,7 +24,7 @@ function kb_get_banner_config($pageKey)
         'blogs' => [
             'eyebrow' => 'SanguineIT Knowledge Base',
             'title' => 'Insights That Move Your Digital Roadmap Forward',
-            'subtitle' => 'Authoritative guides on commerce platforms, cloud architecture, CMS governance, and secure delivery—written for technology leaders building and scaling digital products worldwide.',
+            'subtitle' => 'Authoritative guides on mobile app development, custom websites, cloud architecture, and secure delivery—written for technology leaders building and scaling digital products worldwide.',
             'bg' => $hd('blogs.jpg'),
             'bg_position' => 'center 35%',
             'stats' => [
@@ -41,14 +41,14 @@ function kb_get_banner_config($pageKey)
             'bg_position' => 'center center',
             'stats' => [
                 ['value' => '9', 'label' => 'Expert articles'],
-                ['value' => 'B2B & B2C', 'label' => 'Commerce & SaaS focus'],
+                ['value' => 'Apps+Web', 'label' => 'Mobile & web focus'],
                 ['value' => 'Expert-led', 'label' => 'By SanguineIT practitioners'],
             ],
         ],
         'infographics' => [
             'eyebrow' => 'Knowledge Base · Infographics',
             'title' => 'Visual Intelligence for Complex Technology Decisions',
-            'subtitle' => 'Executive briefings on commerce, cloud, security, and digital transformation—designed for boardrooms, steering committees, and cross-functional leadership teams.',
+            'subtitle' => 'Executive briefings on app development, web platforms, cloud, security, and digital transformation—designed for boardrooms and cross-functional leadership teams.',
             'bg' => $hd('infographics.jpg'),
             'bg_position' => 'center center',
             'stats' => [
@@ -119,12 +119,12 @@ function kb_get_banner_config($pageKey)
         'videos' => [
             'eyebrow' => 'Knowledge Base · Videos',
             'title' => 'Expert Sessions on the Platforms You Run Every Day',
-            'subtitle' => 'Expert-led sessions on Magento, SharePoint, and cloud—practical knowledge your teams can apply across regions and time zones.',
+            'subtitle' => 'Expert-led sessions on mobile apps, custom web development, SharePoint, and cloud—practical knowledge your teams can apply across regions and time zones.',
             'bg' => $hd('videos.jpg'),
             'bg_position' => 'center center',
             'stats' => [
                 ['value' => '7', 'label' => 'Expert sessions'],
-                ['value' => 'Platform-led', 'label' => 'Commerce & cloud'],
+                ['value' => 'Platform-led', 'label' => 'Apps & cloud'],
                 ['value' => 'Team-ready', 'label' => 'Share across orgs'],
             ],
         ],

@@ -16,10 +16,9 @@ $prefilterCategory = isset($prefilterCategory) ? $prefilterCategory : '';
     <h4>Categories</h4>
     <ul class="article-sidebar-categories">
         <li><a href="articles.php">All Articles</a></li>
-        <li><a href="articles.php?category=magento">Magento</a></li>
         <li><a href="articles.php?category=web">Web Development</a></li>
+        <li><a href="articles.php?category=mobile">Mobile Apps</a></li>
         <li><a href="articles.php?category=cms">CMS</a></li>
-        <li><a href="articles.php?category=ecommerce">Ecommerce</a></li>
         <li><a href="articles.php?category=outsourcing">Outsourcing</a></li>
         <li><a href="articles.php?category=technology">Technology</a></li>
         <li><a href="articles.php?category=sharepoint">SharePoint</a></li>

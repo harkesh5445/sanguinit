@@ -3,8 +3,8 @@
 <p class="lh">The story behind the visual is simple: selecting a digital partner is no longer a capacity decision alone. Organizations are looking for teams that can execute under governance, integrate with cross-border stakeholders, and sustain value long after launch. Fast facts are useful only when they reflect operating maturity, not just headcount volume. This infographic is built around that standard and highlights how SanguineIT translates capability into measurable delivery performance.</p>
 
 <?php echo info_insights([
-    '15+ years delivering web, mobile, cloud, and commerce programs',
-    '350+ engineers across Magento, Sitefinity, .NET, mobile, and DevOps',
+    '15+ years delivering web, mobile, cloud, and custom application programs',
+    '350+ engineers across mobile, .NET, React, Laravel, Node.js, and DevOps',
     'Engagement models: dedicated hiring, fixed-scope, and managed delivery',
     'Industries served: retail, healthcare, education, and B2B manufacturing',
     'Global-ready governance, communication cadence, and lifecycle support',
@@ -12,7 +12,7 @@
 <?php echo info_audience('Procurement teams, technology leaders, and partners evaluating offshore delivery.'); ?>
 
 <h2>Capability profile: depth over generic scale</h2>
-<p class="lh">The infographic opens with delivery footprint indicators that show both longevity and domain specialization. Years in operation matter because they indicate repeatability under changing technology cycles. Specialized engineering coverage matters because modern programs demand platform-specific excellence, whether the use case involves Adobe Commerce, Sitefinity, Moodle LMS, or cloud-native application delivery.</p>
+<p class="lh">The infographic opens with delivery footprint indicators that show both longevity and domain specialization. Years in operation matter because they indicate repeatability under changing technology cycles. Specialized engineering coverage matters because modern programs demand platform-specific excellence, whether the use case involves custom web applications, mobile apps, CMS platforms, or cloud-native delivery.</p>
 
 <p class="lh">The visual reinforces that expertise is most valuable when deployed through multidisciplinary teams. High-performing engagements combine architects, developers, QA automation specialists, DevOps engineers, and delivery managers who work against common KPIs. This integration reduces handoff delays and improves predictability across roadmap phases.</p>
 
@@ -22,7 +22,7 @@
 <p class="lh">By showing these options side by side, the visual helps stakeholders avoid a common procurement mistake: selecting a delivery model based on budget format rather than execution complexity. Program success improves when contract structure, governance cadence, and internal sponsorship are aligned from the start.</p>
 
 <h2>Industry relevance and contextual execution</h2>
-<p class="lh">Fast facts become meaningful when mapped to sector-specific needs. The infographic highlights representative industries and explains how delivery priorities differ by context. Retail and ecommerce clients focus on conversion, performance, and release agility. Healthcare organizations prioritize security, privacy, and workflow reliability. Education programs emphasize adoption and learning continuity. B2B enterprises often require integration-heavy platforms with strict governance and phased rollout control.</p>
+<p class="lh">Fast facts become meaningful when mapped to sector-specific needs. The infographic highlights representative industries and explains how delivery priorities differ by context. Retail clients focus on mobile engagement, performance, and release agility. Healthcare organizations prioritize security, privacy, and workflow reliability. Education programs emphasize adoption and platform continuity. B2B enterprises often require integration-heavy web portals with strict governance and phased rollout control.</p>
 
 <p class="lh">This contextual perspective demonstrates that SanguineIT does not apply a one-size-fits-all playbook. Instead, delivery frameworks are adapted to regulatory requirements, customer expectations, and operational constraints of each domain.</p>
 

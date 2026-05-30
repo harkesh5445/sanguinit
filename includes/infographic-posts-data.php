@@ -5,16 +5,16 @@
  */
 $infographicPosts = [
     'magento-ecommerce-sales-boost' => [
-        'title' => 'Boost Sales of a Magento Ecommerce Store',
+        'title' => 'Mobile App Launch Checklist: From Idea to App Store',
         'date' => 'May 5, 2026',
-        'category' => 'Ecommerce',
-        'category_slug' => 'ecommerce',
+        'category' => 'Mobile Apps',
+        'category_slug' => 'mobile',
         'featured_image' => 'images/infographics/magento-sales-boost.jpg',
-        'list_summary' => 'Actionable ecommerce growth blueprint covering discovery relevance, checkout optimization, promotional governance, and Magento performance engineering.',
+        'list_summary' => 'Visual launch checklist covering discovery, platform choice, API architecture, QA, store submission, and post-launch monitoring for iOS and Android apps.',
         'highlights' => [
-            ['value' => '38%', 'label' => 'Avg. cart abandonment without tuning'],
-            ['value' => '5', 'label' => 'Revenue pillars in the visual'],
-            ['value' => 'B2B+B2C', 'label' => 'Commerce models covered'],
+            ['value' => '6', 'label' => 'Launch phases mapped'],
+            ['value' => 'iOS+Android', 'label' => 'Platform coverage'],
+            ['value' => 'MVP→Scale', 'label' => 'Release path'],
         ],
     ],
     'fast-facts-about-sanguineit' => [

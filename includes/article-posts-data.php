@@ -5,13 +5,13 @@
  */
 $articlePosts = [
     'magento-sphinx-vs-elasticsearch' => [
-        'title' => 'Magento Sphinx Search vs Magento Elasticsearch: Here is Everything You Should Know',
+        'title' => 'Laravel vs Node.js: Choosing Your Backend Stack for Web Apps',
         'date' => 'May 12, 2026',
-        'author' => 'SanguineIT Commerce Team',
-        'category' => 'Magento',
-        'category_slug' => 'magento',
+        'author' => 'SanguineIT Web Engineering',
+        'category' => 'Web Development',
+        'category_slug' => 'web',
         'featured_image' => 'images/articles/magento-search.jpg',
-        'list_summary' => 'A strategic Magento search guide comparing Sphinx and Elasticsearch across relevance quality, scalability, migration planning, and long-term merchandising control.',
+        'list_summary' => 'Compare Laravel and Node.js for custom web applications — covering team skills, API design, real-time features, and long-term maintainability.',
     ],
     'website-maintenance-vital-after-development' => [
         'title' => 'Why Website Maintenance is Vital After Development?',
@@ -32,13 +32,13 @@ $articlePosts = [
         'list_summary' => 'A premium WordPress optimization playbook covering architecture, plugin governance, content operations, and performance practices for global digital teams.',
     ],
     'headless-commerce-performance-flexibility' => [
-        'title' => 'How Headless Commerce Improves Performance and Flexibility',
+        'title' => 'API-First Web Architecture: Building Scalable Custom Websites',
         'date' => 'March 18, 2026',
-        'author' => 'SanguineIT Ecommerce Architects',
-        'category' => 'Ecommerce',
-        'category_slug' => 'ecommerce',
+        'author' => 'SanguineIT Web Architects',
+        'category' => 'Web Development',
+        'category_slug' => 'web',
         'featured_image' => 'images/articles/headless-commerce.jpg',
-        'list_summary' => 'Understand when headless commerce delivers measurable gains in speed, flexibility, omnichannel growth, and release agility for enterprise programs.',
+        'list_summary' => 'Learn how API-first architecture improves web application performance, enables mobile clients, and accelerates release cycles for enterprise teams.',
     ],
     'outsource-full-stack-development-why' => [
         'title' => 'When to Outsource Full Stack Development and Why',

@@ -15,7 +15,7 @@ $prefilterTopic = isset($_GET['topic']) ? trim($_GET['topic']) : '';
         <div class="row align-items-start mb20">
             <div class="col-lg-8">
                 <div class="video-top-note">
-                    <p class="lh">Expert video sessions on Magento, SharePoint, and cloud modernization—designed for engineering teams, architects, and program leaders across global markets.</p>
+                    <p class="lh">Expert video sessions on mobile apps, custom web development, SharePoint, and cloud modernization—designed for engineering teams, architects, and program leaders across global markets.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -30,9 +30,9 @@ $prefilterTopic = isset($_GET['topic']) ? trim($_GET['topic']) : '';
             <div class="col-12">
                 <a href="videos.php" class="video-topic-chip<?php echo $prefilterTopic === '' ? ' active' : ''; ?>">All</a>
                 <a href="videos.php?topic=company" class="video-topic-chip<?php echo $prefilterTopic === 'company' ? ' active' : ''; ?>">Company</a>
-                <a href="videos.php?topic=ecommerce" class="video-topic-chip<?php echo $prefilterTopic === 'ecommerce' ? ' active' : ''; ?>">Ecommerce</a>
+                <a href="videos.php?topic=web" class="video-topic-chip<?php echo $prefilterTopic === 'web' ? ' active' : ''; ?>">Web Development</a>
                 <a href="videos.php?topic=cloud" class="video-topic-chip<?php echo $prefilterTopic === 'cloud' ? ' active' : ''; ?>">Cloud</a>
-                <a href="videos.php?topic=magento" class="video-topic-chip<?php echo $prefilterTopic === 'magento' ? ' active' : ''; ?>">Magento</a>
+                <a href="videos.php?topic=mobile" class="video-topic-chip<?php echo $prefilterTopic === 'mobile' ? ' active' : ''; ?>">Mobile Apps</a>
                 <a href="videos.php?topic=integration" class="video-topic-chip<?php echo $prefilterTopic === 'integration' ? ' active' : ''; ?>">Integration</a>
                 <a href="videos.php?topic=sharepoint" class="video-topic-chip<?php echo $prefilterTopic === 'sharepoint' ? ' active' : ''; ?>">SharePoint</a>
             </div>

@@ -14,7 +14,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
     <div class="container">
         <div class="row align-items-center mb20">
             <div class="col-lg-7">
-                <p class="eb-page-intro lh">In-depth digital guides on mobility, cloud governance, commerce, SEO, and delivery strategy—readable online and built for teams planning their next platform initiative.</p>
+                <p class="eb-page-intro lh">In-depth digital guides on mobile apps, web development, cloud governance, SEO, and delivery strategy—readable online and built for teams planning their next platform initiative.</p>
             </div>
             <div class="col-lg-5">
                 <div class="eb-top-search">

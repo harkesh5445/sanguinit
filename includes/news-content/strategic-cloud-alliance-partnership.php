@@ -32,4 +32,4 @@
 <p class="lh">Program teams can also benefit from faster access to specialized expertise during critical migration and optimization windows.</p>
 
 <h2>About SanguineIT</h2>
-<p class="lh">SanguineIT is a global digital engineering and modernization partner delivering web, mobile, ecommerce, cloud, and managed technology services. The company supports enterprises with dedicated teams and transformation programs built around accountability, transparency, and measurable business outcomes. To explore your cloud roadmap, <a href="contact-us.php">request a joint discovery workshop</a> with SanguineIT architects.</p>
+<p class="lh">SanguineIT is a global digital engineering and modernization partner delivering web, mobile, custom web, cloud, and managed technology services. The company supports enterprises with dedicated teams and transformation programs built around accountability, transparency, and measurable business outcomes. To explore your cloud roadmap, <a href="contact-us.php">request a joint discovery workshop</a> with SanguineIT architects.</p>
