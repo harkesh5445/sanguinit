@@ -1,5 +1,15 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Security Auditing Services | SanguineIT',
+    'description' => 'Application and infrastructure security audits — vulnerability assessment, penetration testing support, OWASP reviews, and remediation roadmaps for web and mobile platforms.',
+    'keywords' => 'security auditing, application security audit, vulnerability assessment, OWASP audit, penetration testing, SanguineIT',
+    'canonical' => sit_base_url() . '/security-auditing.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
@@ -7,8 +17,6 @@
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
 									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Security Auditing</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
 								</div>
 							</div>
 						</div>
@@ -66,21 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/truly_1.jpg', 'Application security auditing services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>OKAY TRULY TRUST THE CONSEQUENCES OF A FREE IT REVIEW? </h2>
-									<p class="lh">Numerous IT organizations offer a free IT review as a motivator to pursue a drawn out assistance contract, or as an in-street to offer extra items and administrations. </p>
-									<p class="lh">By all accounts, the recommendation of a free IT review is an alluring one, yet the administration is frequently deceptive on the grounds that numerous free IT reviews are directed by a specialist that doesn't have the opportunity, or the information that is needed to finish an exhaustive assessment and assessment of your IT framework. </p>
-									
+									<h2>Security Audits That Find Real Risk — Not Checkbox Compliance</h2>
+									<p class="lh">SanguineIT performs security audits for web applications, mobile apps, APIs, and cloud deployments — identifying vulnerabilities before attackers do and delivering prioritized remediation roadmaps your engineering team can act on.</p>
+									<p class="lh">Our audits cover OWASP Top 10 risks, authentication and session management, API security, infrastructure misconfiguration, dependency vulnerabilities, and data handling practices — aligned to PCI, HIPAA, and SOC 2 contexts where applicable.</p>
+									<p class="lh">We complement development work with actionable findings, not generic reports — paired with our <a href="application-auditing-services.php">application auditing</a> and <a href="app-maintenance.php">ongoing support</a> programs for post-audit fixes.</p>
 								</div>
 							</div>
 						</div>
@@ -89,112 +98,24 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>For what reason do we place an incentive on our Professional IT Auditing administration? </h2>
-									<p class="lh">We're an ISO 27001: 2013 authorize IT arrangements supplier that offers a devoted IT Auditing administration to organsations that are situated across USA and the East of England. Our IT Auditing administration is directed by a group of profoundly specialized and exceptionally experienced IT experts and IT Consultants. </p>
-									<p class="lh">
-We will investigate every possibility. We will direct a FULL assessment and assessment of your whole IT foundation, your cycles, arrangements, best practice, tasks and upkeep. 
-</p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_2.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</section>
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_3.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>The 5 targets of our Professional IT Network Audit. </h2>
+									<h2>Security audit scope we cover</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>	1. To give you a profoundly nitty gritty stock of your whole IT Infrastructure. </li>
-									<li>2. To decide failures in your IT frameworks, cycles and the board. </li>
-									<li>3. Where needed, to give medium and long haul suggestions that can be set up to guarantee that your IT foundation is running effectively and you are getting ideal incentive for cash from your speculation. </li>
-									<li>4. To guarantee that any cycles set up and working appropriately and are in consistence with IT-explicit approaches laws and best practice. </li>
-									<li>5. To guarantee that data the executives measures are consistent and information uprightness is guaranteed. </li>
-									</ul>
-									</p>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				
-				<!--Start About-->
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-							
-									<h2>Each review is remarkable. </h2>
-									<p class="lh">We'll evaluate your IT frameworks against your business challenges and your general business objectives. We will at that point furnish you with an IT guide that is organized around your special prerequisites. </p>
-									<p  class="lh">
-Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote Support 
+									<li><b>Web application testing —</b> Injection, XSS, CSRF, broken access control, and insecure configuration review.</li>
+									<li><b>API security —</b> Authentication flaws, excessive data exposure, rate limiting, and token handling.</li>
+									<li><b>Mobile app review —</b> Insecure storage, certificate pinning gaps, and reverse-engineering exposure.</li>
+									<li><b>Cloud &amp; infrastructure —</b> IAM misconfiguration, exposed services, and secrets management gaps.</li>
+									<li><b>Dependency analysis —</b> Known CVEs in frameworks, libraries, and third-party components.</li>
+									<li><b>Remediation planning —</b> Severity-ranked findings with effort estimates and fix guidance.</li>
+</ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_4.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</section>
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_5.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>A breakdown of our Professional IT Auditing Service. </h2>
-									
-									<p class="lh">Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote Support </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-							
-									<h2>The human component. </h2>
-									<p class="lh">A Professional IT specialist will meet your inward supervisory group and other staff individuals that have a continuous inclusion in IT activities at each level. We'll utilize this chance to increase a comprehension of individuals' duties and feature any continuous issues and worries that the staff have about the current IT scene. </p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_6.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/truly_2.jpg', 'OWASP security assessment and penetration testing', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 						</div>
@@ -203,163 +124,18 @@ Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Des
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_7.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/truly_3.jpg', 'Security audit remediation and compliance', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>The robotized appraisal. </h2>
-									
-									<p class="lh">We utilize a choice of exceptionally complex inspecting instruments and applications to direct a mechanized disclosure measure that will distinguish, record and evaluate each component of your IT scene. </p>
-								<p class="lh">We utilize a choice of exceptionally complex inspecting instruments and applications to direct a mechanized disclosure measure that will distinguish, record and evaluate each component of your IT scene. </p>
+									<h2>From audit findings to measurable risk reduction</h2>
+									<p class="lh">Security audits only matter if teams fix what matters most. SanguineIT delivers executive summaries for stakeholders and technical detail for developers — then optionally implements remediation through our engineering squads with regression verification after each fix cycle.</p>
+									<p class="lh">Combine with <a href="full-website-audit.php">full website audits</a> for SEO and performance, or <a href="contact-us.php">contact us</a> to schedule a security assessment.</p>
 								</div>
 							</div>
-						</div>
-					</div>
-				</section>
-				
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-							
-									<h2>The human evaluation.</h2>
-									<p class="lh">An expert IT specialist will likewise direct a manual assessment of different components of your IT scene, including far off network, information, information respectability, data the executives, strategies and cycles. </p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_8.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_9.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>The provider appraisal. </h2>
-									
-									<p class="lh">We will survey any assistance arrangements that you have set up that identify with IT administrations. This may incorporate IT uphold administration arrangements, web network and VoIP communication contracts. </p>
-									<p class="lh">Our point is to guarantee that you are getting an incentive for cash from your specialist organizations and to determine any issues with providers that were featured by staff individuals in the underlying meeting. </p>
-									<p class="lh">Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote Support </p>
-							
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</section>
-				
-				
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-							
-									<h2>The last report. </h2>
-									<p class="lh">When the review is finished, we will give you a definite report which fuses a completely far reaching breakdown of your whole IT network framework. </p>
-									<p class="lh">
-This report ought to be treated as your vital IT plan that has been set up to guarantee that your IT foundation is running productively and is adjusted to address your business difficulties and objectives, inside a spending that is practical to your business. 
-</p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_10.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_11.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>Each point that has been canvassed in the review will be deliberately disclosed to you in a last gathering.  </h2>
-									
-									<p class="lh">Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote Support </p>
-							
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-							
-									<h2>The proposal guide. </h2>
-									<p class="lh">Wealthy in content however straightforward, our report includes a one of a kind traffic signal framework that depends on our examination of your organization and our medium to long haul proposals pushing ahead. </p>
-									<p class="lh">Grant Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote SupportAward Winning IT Support in USA Cyber Security, Office 365, Exchange, Hosted Desktop, GDPR, Cyber Essentials, Cloud Computing, Remote Support </p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_12.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/truly_13.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>What data do we record?  </h2>
-									
-									<p class="lh">
-									<ul class="listing">
-										<li>All PC equipment, including all workstations, workers and cell phones </li>
-										<li>All outsider programming licenses (applications and working frameworks) </li>
-										<li>All peripherals </li>
-										<li>All organization security gear and security programming </li>
-										<li>All organization availability gear </li>
-										<li>Specialist organization subtleties, including agreements and arrangements </li>
-										<li>All inner IT documentation including cycles and arrangements </li>
-										<li>Debacle Recovery (DR)process documentation</li>
-									</ul></p>
-							
-								</div>
-							</div>
-							
 						</div>
 					</div>
 				</section>
@@ -386,9 +162,9 @@ This report ought to be treated as your vital IT plan that has been set up to gu
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Auditing Services</span>
+									<h2>Security Audit Services</h2>
+									<p class="lh mb30">Focused capabilities backed by global delivery experience.</p>
 								</div>
 							</div>
 						</div>
@@ -396,60 +172,55 @@ This report ought to be treated as your vital IT plan that has been set up to gu
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Web Application Security</h4>
+									<p class="lh">OWASP-aligned testing for public-facing web apps and admin portals.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>API Security Review</h4>
+									<p class="lh">Authentication, authorization, and data exposure analysis for REST/GraphQL APIs.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Mobile App Security</h4>
+									<p class="lh">iOS and Android storage, transport, and binary hardening review.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Cloud Configuration Audit</h4>
+									<p class="lh">AWS/Azure IAM, network exposure, and secrets management assessment.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Dependency &amp; CVE Scanning</h4>
+									<p class="lh">Framework and library vulnerability identification with upgrade paths.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Remediation Support</h4>
+									<p class="lh">Prioritized fix implementation and verification by our engineering teams.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Security Audit</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -458,7 +229,7 @@ This report ought to be treated as your vital IT plan that has been set up to gu
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -470,8 +241,6 @@ This report ought to be treated as your vital IT plan that has been set up to gu
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

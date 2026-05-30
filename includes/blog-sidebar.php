@@ -2,6 +2,7 @@
 if (!function_exists('blog_post_url')) {
     require_once __DIR__ . '/blog-posts-data.php';
 }
+require_once __DIR__ . '/blog-topic-clusters.php';
 $activeBlogCategory = isset($activeBlogCategory) ? $activeBlogCategory : '';
 ?>
 <aside class="blog-sidebar-box">
@@ -18,57 +19,40 @@ $activeBlogCategory = isset($activeBlogCategory) ? $activeBlogCategory : '';
 </aside>
 
 <aside class="blog-sidebar-box">
+    <h4>Topic Hubs</h4>
+    <ul class="blog-category-list">
+        <?php foreach (get_blog_topic_cluster_slugs() as $topicSlug) :
+            $cluster = get_blog_topic_cluster($topicSlug);
+            ?>
+        <li><a href="<?php echo blog_topic_url($topicSlug); ?>"><?php echo $cluster['title']; ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</aside>
+
+<aside class="blog-sidebar-box">
     <h4>Categories</h4>
     <ul class="blog-category-list">
         <?php
         $blogCategories = [
             'adobe-commerce' => 'Adobe Commerce',
-            'app-development' => 'App Development',
-            'artificial-intelligence' => 'Artificial Intelligence',
-            'aspnet' => 'ASP.NET',
-            'bigcommerce' => 'BigCommerce',
-            'bigdata' => 'Bigdata',
-            'blockchain' => 'BlockChain Technology',
-            'business' => 'Business',
-            'cms' => 'CMS',
-            'dedicated-hiring' => 'Dedicated Hiring',
-            'digital-marketing' => 'Digital Marketing',
-            'drupal' => 'Drupal development',
-            'ecommerce' => 'Ecommerce',
-            'ecommerce-website-development' => 'Ecommerce website development',
-            'frontend' => 'Front End Development',
-            'full-stack' => 'Full Stack Development',
-            'general' => 'General &amp; Others',
             'headless-commerce' => 'Headless Commerce',
-            'news' => 'SanguineIT News',
-            'infographic' => 'infographic',
-            'internet-marketing' => 'Internet Marketing',
-            'it-services' => 'IT Services',
-            'laravel' => 'Laravel Development',
             'lms' => 'LMS',
             'magento' => 'Magento',
-            'magento-extension' => 'Magento 2 Extension',
-            'mobile-apps' => 'Mobile Apps Development India',
-            'monitoring' => 'Monitoring Service',
-            'moodle' => 'Moodle',
-            'open-source' => 'Open Source Technology',
-            'outsourcing' => 'Outsourcing',
-            'python' => 'Python',
-            'sharepoint' => 'SharePoint',
-            'shopify' => 'Shopify',
             'sitefinity' => 'Sitefinity',
-            'software-development' => 'Software Development india',
-            'software-testing' => 'Software Testing',
-            'technology' => 'Technology',
-            'umbraco' => 'Umbraco Development',
-            'web-development' => 'Web Development India',
-            'web-hosting' => 'Web Hosting',
-            'website-maintenance' => 'Website Maintenance',
         ];
         foreach ($blogCategories as $slug => $label) :
+            $topicForCat = null;
+            foreach (get_blog_topic_cluster_slugs() as $topicSlug) {
+                $cluster = get_blog_topic_cluster($topicSlug);
+                if (in_array($slug, $cluster['category_slugs'], true)) {
+                    $topicForCat = $topicSlug;
+                    break;
+                }
+            }
+            $href = $topicForCat ? blog_topic_url($topicForCat) : 'blogs.php';
             $isActive = ($activeBlogCategory === $slug);
             ?>
-        <li<?php echo $isActive ? ' class="is-active"' : ''; ?>><a href="blogs.php"><?php echo $label; ?></a></li>
+        <li<?php echo $isActive ? ' class="is-active"' : ''; ?>><a href="<?php echo $href; ?>"><?php echo $label; ?></a></li>
         <?php endforeach; ?>
     </ul>
 </aside>

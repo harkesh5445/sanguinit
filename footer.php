@@ -54,7 +54,7 @@ Brooklyn, NY 11203.</span><br><span>  <a href="tel:(+1)662-300-1685">Ph- 662-300
                      <h5>Company</h5>
                      <ul class="footer-address-list link-hover">
                         <li><a href="contact-us.php">Contact</a></li>
-                        <li><a href="#">Customer's FAQ</a></li>
+                        <li><a href="index.php#faqs">Customer's FAQ</a></li>
                         <li><a href="#">Refund Policy</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms and Conditions</a></li>
@@ -105,15 +105,9 @@ Brooklyn, NY 11203.</span><br><span>  <a href="tel:(+1)662-300-1685">Ph- 662-300
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="footer-social-media-icons">
-                           <a href="https://www.facebook.com/Sanguineit" target="blank"><i class="fab fa-facebook"></i></a>
-                           <a href="https://twitter.com/sanguineit" target="blank"><i class="fab fa-twitter"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-instagram"></i></a>
-                           <a href="https://www.linkedin.com/in/sanguine-it-971902210" target="blank"><i class="fab fa-linkedin"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-youtube"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-pinterest-p"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-vimeo-v"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-dribbble"></i></a>
-                           <a href="#" target="blank"><i class="fab fa-behance"></i></a>
+                           <a href="https://www.facebook.com/Sanguineit" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                           <a href="https://twitter.com/sanguineit" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                           <a href="https://www.linkedin.com/company/sanguineit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
                         <div class="footer-">
                            <p class="lh">Copyright &copy; 2021 SanguineIT. All rights reserved. SanguineIT By <a>SanguineIT</a></p>
@@ -128,27 +122,25 @@ Brooklyn, NY 11203.</span><br><span>  <a href="tel:(+1)662-300-1685">Ph- 662-300
       <!--scroll to top-->
       <a id="scrollUp" href="#top"></a>
       <!-- js placed at the end of the document so the pages load faster -->
-      <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/plugin.min.js"></script>
-      <!--common script file-->
-      <script src="js/main.js"></script>
-      <script src="js/quote-popup.js"></script>
-      <script src="js/portfolio/lazysizes.min.js"></script>
-      <script src="js/portfolio/jquery.slimscroll.min.js"></script>
-      <script type='text/javascript' src="js/portfolio/aos.js?ver=5.2.2"></script>
-      <script type='text/javascript' src="js/portfolio/ScrollMagic.min.js"></script>
-      <script type='text/javascript' src="js/portfolio/TweenMax.js"></script>
-      <script type='text/javascript' src="js/portfolio/home.js"></script>
-	  
-	  
-	    
-		<script src="js/particles.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/typewriter.js"></script>
-<script src="js/typed.min.js"></script>
+      <?php echo sit_defer_script_tag('js/vendor/modernizr-3.5.0.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/jquery.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/bootstrap.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/popper.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/plugin.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/main.js'); ?>
+      <?php echo sit_defer_script_tag('js/quote-popup.js'); ?>
+      <?php echo sit_defer_script_tag('js/portfolio/lazysizes.min.js'); ?>
+      <?php if (!empty($sit_load_portfolio_assets) && empty($sit_skip_portfolio_js)) : ?>
+      <?php echo sit_defer_script_tag('js/portfolio/jquery.slimscroll.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/portfolio/aos.js?ver=5.2.2'); ?>
+      <?php echo sit_defer_script_tag('js/portfolio/ScrollMagic.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/portfolio/TweenMax.js'); ?>
+      <?php echo sit_defer_script_tag('js/portfolio/home.js'); ?>
+      <?php endif; ?>
+      <?php if (sit_needs_home_scripts()) : ?>
+      <?php echo sit_defer_script_tag('js/typed.min.js'); ?>
+      <?php echo sit_defer_script_tag('js/typewriter.js'); ?>
+      <?php endif; ?>
 
    </body>
 </html>

@@ -1,13 +1,22 @@
-<?php include "header.php" ?>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Energy & Utilities Software Development | SanguineIT',
+    'description' => 'Energy and utilities software — customer portals, field service apps, IoT dashboards, billing integrations, and compliance-ready platforms for power and utility providers.',
+    'keywords' => 'energy software development, utilities IT, customer portal development, field service apps, smart grid software, SanguineIT',
+    'canonical' => sit_base_url() . '/energy-and-utilities.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Energy and utilities</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Energy &amp; Utilities</h1>
 								</div>
 							</div>
 						</div>
@@ -65,21 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/enargy_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/enargy_1.jpg', 'Energy and utilities software development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Energy and utilities</h2>
-									<p class="lh">Explore our technology solutions into energy & Utilities domains.</p>
-									<p class="lh">Energy transformation is a reality: huge demand growth, investment and affordability, cleaner energy, smarter energy, the changing role of a customer – all of these components add to a new power and utilities market structure that drives companies’ strategies. This will not happen tomorrow – it is happening now. The question is how this changing environment will impact the future model of power and utilities companies, from their assets to industry technology, regulation and customer engagement.</p>
-									<p class="lh">The Industry must address the mix of communications systems (private and public, radio, cellular and satellite), limited integration with back-end systems, and governance decisions regarding security, privacy, and bring your own device (BYOD) policies.</p>
+									<h2>Digital Engineering for Energy &amp; Utility Providers</h2>
+									<p class="lh">SanguineIT builds customer portals, field service mobile apps, and operational dashboards for energy companies, utilities, and renewable providers that need reliable self-service, outage communication, and integration with billing and asset management systems — across regulated markets worldwide.</p>
+									<p class="lh">Our teams deliver account management portals, usage analytics, outage maps, work order mobile apps for field technicians, and IoT data visualization — with security, audit logging, and role-based access appropriate for critical infrastructure environments.</p>
+									<p class="lh">We work within change-control processes enterprise utility IT teams require, with staging environments, regression testing, and documentation for compliance audits.</p>
 								</div>
 							</div>
 						</div>
@@ -88,54 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Here are some of the Energy and Utility Segments we serve</h2>
+									<h2>Energy &amp; utilities capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>1.	Oil and Gas</li>
-<li>2.	Utilities</li>
-<li>3.	Consumer Experience Management</li>
-
+									<li><b>Customer self-service portals —</b> Billing, usage history, payment plans, and service requests online.</li>
+									<li><b>Outage &amp; communication —</b> Real-time outage maps, SMS/email alerts, and estimated restoration updates.</li>
+									<li><b>Field service mobile apps —</b> Work orders, asset inspection, GPS routing, and offline sync for technicians.</li>
+									<li><b>IoT &amp; metering dashboards —</b> Smart meter data visualization and anomaly detection interfaces.</li>
+									<li><b>Billing &amp; CIS integration —</b> Connectors to customer information and billing systems.</li>
+									<li><b>Compliance &amp; security —</b> Audit trails, encryption, and architecture aligned to utility regulatory requirements.</li>
 </ul>
 </p>
-<p class="lh">Our Energy Management solutions address the challenges associated with managing energy programs and help support the rollout of consumption, rate and behavior analytics.</p>
-<p class="lh">As customer expectations and communication channels evolve, we focus on providing a best in class experience leveraging digital expertise.</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/enargy_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/enargy_2.jpg', 'Utility customer portal and mobile app development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/enargy_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/enargy_3.jpg', 'Energy utility platform engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>We devise solutions which will enable the leaders in the Energy and Utilities sector to:</h2>
-									<p class="lh"><ul class="listing">
-<li>Embrace the role of energy integrator</li>
-<li>Engage customers as individuals</li>
-<li>	Disruptively create or enhance innovative businesses processes</li>
-</ul>
-</p>
-									<p class="lh">Renewable and distributed energy resources are remaking the traditional provider infrastructure. At the same time, digital business is heightening customer expectations.</p>
-									<p class="lh">We aim to ensure the Gas, Power, Water and Waste Management industries have the right skills and right infrastructure at the right time. Energy and utility companies must integrate alternative energies and deepen customer relationships by continuing to deliver reliable, safe and affordable energy. Companies that can compete optimize and engage while anticipating constant change will be the most successful.</p>
- 
-<p class="lh"><b>Contact us to strike a conversation with one of our consutants.</b></p>
-
+									<h2>Utility platforms built for reliability and customer trust</h2>
+									<p class="lh">When storms hit or billing cycles peak, utility digital channels cannot fail. SanguineIT designs for high availability, graceful degradation during traffic spikes, and clear status communication when integrations lag. We measure outcomes against portal uptime, self-service adoption, and field crew productivity metrics.</p>
+									<p class="lh">Explore our <a href="android.php">mobile</a> and <a href="custom-web-development.php">web development</a> practices, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a utilities technology assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -164,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for Energy &amp; Utilities</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -174,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Customer Self-Service Portals</h4>
+									<p class="lh">Billing, usage, payments, and service request management online.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Outage Communication</h4>
+									<p class="lh">Real-time maps, alerts, and restoration status for customers and ops teams.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Field Service Mobile Apps</h4>
+									<p class="lh">Work orders, inspections, and offline-capable tools for field crews.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>IoT &amp; Metering Dashboards</h4>
+									<p class="lh">Smart grid and meter data visualization with operational insights.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Billing System Integration</h4>
+									<p class="lh">CIS and ERP connectivity with secure data exchange patterns.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Security &amp; Compliance</h4>
+									<p class="lh">Audit logging, encryption, and regulated-environment architecture reviews.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Utilities Technology Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -236,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -248,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

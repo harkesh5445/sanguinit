@@ -1,5 +1,15 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Multilingual Website Development | SanguineIT',
+    'description' => 'Multilingual website development — i18n architecture, hreflang SEO, CMS translation workflows, and global storefronts for North America, Europe, and APAC markets.',
+    'keywords' => 'multilingual website development, i18n, hreflang SEO, translation workflow, global website, SanguineIT',
+    'canonical' => sit_base_url() . '/multilingual-website-development.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
@@ -7,8 +17,6 @@
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
 									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Multilingual Website Development</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
 								</div>
 							</div>
 						</div>
@@ -66,20 +74,21 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/glob_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/glob_1.jpg', 'Multilingual website development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Go Multilingual, Go Global!</h2>
-									<p class="lh">Creating a website is a business necessity. But going an extra mile to deliver ultimate customer satisfaction contributes to business growth. As the internet continues to become the prime medium for information and services, companies are also aspiring to enhance their potential on the international stage to ensure flexibility and adaptability to customer requirements. Since multilingual website design in PHP or any other platform makes business more accessible to people all over the globe, it is crucial.</p>
-									<p class="lh">If you want to create numerous foreign-language equivalents of your main website, then SanguineIT can be your multilingual website development outsourcing partner. With multiple marketing strategies targeting different regions, audiences and social strata, our software development experts can help your organization be on the crest of the wave.</p>
+									<h2>Global Websites Built for Language, Locale &amp; Search</h2>
+									<p class="lh">SanguineIT builds multilingual websites and ecommerce stores for brands expanding into international markets — with proper i18n architecture, hreflang SEO, translation workflows, and locale-specific formatting for currency, dates, and regulatory content.</p>
+									<p class="lh">We implement multilingual CMS configurations on WordPress, Drupal, Sitefinity, Magento, and Shopify — plus custom React and .NET applications with resource files and translation management integrations.</p>
 								</div>
 							</div>
 						</div>
@@ -88,88 +97,44 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>dedicated .NET developers <br> Our Key Multilingual Services</h2>
-									<p class="lh">As a multilingual web development agency, we assist organizations and companies to realize the potential of becoming international players and help them capitalize on the internet marketplace through our varied multilingual website design services in India. Our offshore team consists of experts who are experienced in languages like JavaScript, PHP, HTML, XML etc, creative designers and specialists having proficiency in developing websites in various languages.
+									<h2>Multilingual capabilities we deliver</h2>
+									<p class="lh">
 									<ul class="listing">
-									<li>Multilingual website development and designing</li>
-<li>	 Web designs with graphically arresting elements</li>
-<li>	Content creation services</li>
-<li>	Promotion of sites in search engines</li>
-<li>Platforms We Cater For</li>
-
+									<li><b>i18n architecture —</b> Language routing, fallback rules, and locale detection patterns.</li>
+									<li><b>hreflang &amp; SEO —</b> Correct regional indexing and duplicate content prevention.</li>
+									<li><b>CMS translation workflows —</b> Editorial processes for WordPress, Drupal, and Sitefinity.</li>
+									<li><b>Ecommerce localization —</b> Multi-currency, tax, shipping, and catalog translation for global stores.</li>
+									<li><b>RTL &amp; accessibility —</b> Right-to-left layouts and inclusive design for diverse audiences.</li>
+									<li><b>Translation integrations —</b> Connectors to TMS platforms and professional translation vendors.</li>
 </ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/glob_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/glob_2.jpg', 'International SEO and hreflang implementation', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/glob_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/glob_3.jpg', 'Global website localization engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<p class="lh">Our Reactjs developers are well versed and specialized in building frontend applications and we guarantee the best services that fits you.</p>
-									<p class="lh">
-									<ul class="listing">
-										<li>Magento</li>
-<li>Sitefinity</li>
-<li>Joomla</li>
-<li>Drupal</li>
-<li>Umbraco</li>
-<li>SharePoint</li>
-<li>DotNetNuke</li>
-<li>The Benefits Of Multilingual Web Development</li>
-<li>Instant translation of the web pages into desired language</li>
-<li>Display text according to the Geo location of the user</li>
-<li>No changes in the dynamic structure of the website</li>
-<li>Increased web traffic</li>
-<li>Enhanced user experience</li>
-<li>You can have a closer look at our case studies and projects to find out more about our implementation of multi-language solutions.</li>
-<li>If you are planning to create a multi language website, contact us soon and our experts will help you with this challenging task!</li>
-<li>Multilingual services</li>
-									</ul>
-									</p>
+									<h2>Multilingual sites that rank and convert in every market</h2>
+									<p class="lh">Machine-translated duplicate pages hurt SEO; poorly structured hreflang confuses Google. SanguineIT designs multilingual information architecture upfront — so marketing teams can publish locally relevant content without breaking search visibility or checkout flows in other regions.</p>
+									<p class="lh">Explore <a href="content-management-services.php">CMS services</a>, read our <a href="blogs.php">blog</a>, or <a href="contact-us.php">contact us</a> for a global web strategy review.</p>
 								</div>
 							</div>
-						</div>
-					</div>
-				</section>
-				
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>Why Do You Need A Multi-Language Website?</h2>
-									<p class="lh">
-We normally expect a site to be developed in English, but when someone is interested in the information and doesn’t know a single word in English, he / she would perhaps expect to find a translation of the page into the native tongue. If your site does not support multi-language, you miss out on the business opportunity.</p>
-<p class="lh">
-Because it allows you to display the information of your website based on the geo location of the user, you gain more visibility. From promoting your products to offering services through our solutions, we can help you grow and become global.
-</p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/glob_4.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							
 						</div>
 					</div>
 				</section>
@@ -196,9 +161,9 @@ Because it allows you to display the information of your website based on the ge
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Services</span>
+									<h2>Global Web Services</h2>
+									<p class="lh mb30">Focused capabilities backed by global delivery experience.</p>
 								</div>
 							</div>
 						</div>
@@ -206,60 +171,55 @@ Because it allows you to display the information of your website based on the ge
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>i18n Architecture</h4>
+									<p class="lh">Language routing, locale detection, and fallback configuration.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>hreflang &amp; International SEO</h4>
+									<p class="lh">Regional indexing strategy and duplicate content prevention.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>CMS Translation Workflows</h4>
+									<p class="lh">Multilingual publishing on WordPress, Drupal, and Sitefinity.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Ecommerce Localization</h4>
+									<p class="lh">Multi-currency stores with localized catalog and checkout.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>RTL &amp; Accessibility</h4>
+									<p class="lh">Right-to-left support and inclusive global UX patterns.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Translation System Integration</h4>
+									<p class="lh">TMS connectors and vendor workflow automation.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need <span>Multilingual Web Expertise</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -268,7 +228,7 @@ Because it allows you to display the information of your website based on the ge
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -280,8 +240,6 @@ Because it allows you to display the information of your website based on the ge
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

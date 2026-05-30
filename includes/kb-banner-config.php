@@ -24,7 +24,7 @@ function kb_get_banner_config($pageKey)
         'blogs' => [
             'eyebrow' => 'SanguineIT Knowledge Base',
             'title' => 'Insights That Move Your Digital Roadmap Forward',
-            'subtitle' => 'Practical guidance on web engineering, ecommerce platforms, cloud modernization, and enterprise delivery—from architects and engineers who build in production.',
+            'subtitle' => 'Authoritative guides on commerce platforms, cloud architecture, CMS governance, and secure delivery—written for technology leaders building and scaling digital products worldwide.',
             'bg' => $hd('blogs.jpg'),
             'bg_position' => 'center 35%',
             'stats' => [
@@ -36,7 +36,7 @@ function kb_get_banner_config($pageKey)
         'articles' => [
             'eyebrow' => 'Knowledge Base · Articles',
             'title' => 'Technology Leadership & Execution Insights',
-            'subtitle' => 'Research-backed perspectives on outsourcing, ecommerce architecture, AI adoption, security, and scalable product engineering for growth-focused organizations.',
+            'subtitle' => 'In-depth analysis for CTOs, engineering directors, and platform owners—covering architecture decisions, vendor strategy, and execution models for global enterprises.',
             'bg' => $hd('articles.jpg'),
             'bg_position' => 'center center',
             'stats' => [
@@ -48,7 +48,7 @@ function kb_get_banner_config($pageKey)
         'infographics' => [
             'eyebrow' => 'Knowledge Base · Infographics',
             'title' => 'Visual Intelligence for Complex Technology Decisions',
-            'subtitle' => 'Executive-ready infographics on commerce, cloud, cybersecurity, and digital transformation—designed to communicate strategy clearly and fast.',
+            'subtitle' => 'Executive briefings on commerce, cloud, security, and digital transformation—designed for boardrooms, steering committees, and cross-functional leadership teams.',
             'bg' => $hd('infographics.jpg'),
             'bg_position' => 'center center',
             'stats' => [
@@ -68,7 +68,7 @@ function kb_get_banner_config($pageKey)
         'whitepapers' => [
             'eyebrow' => 'Knowledge Base · Whitepapers',
             'title' => 'Enterprise Research for Confident Decision-Making',
-            'subtitle' => 'In-depth whitepapers on platform strategy, total cost of ownership, compliance, and modernization—grounded in how SanguineIT delivers for global clients.',
+            'subtitle' => 'Analyst-grade research on platform economics, compliance, modernization, and ROI—grounded in how global organizations evaluate and execute technology investments.',
             'bg' => $hd('whitepapers.jpg'),
             'bg_position' => 'center 40%',
             'stats' => [
@@ -88,7 +88,7 @@ function kb_get_banner_config($pageKey)
         'ebooks' => [
             'eyebrow' => 'Knowledge Base · E-Books',
             'title' => 'A Digital Library Built for Technology Teams',
-            'subtitle' => 'Downloadable guides for architecture reviews, vendor evaluation, and delivery planning—curated to keep your teams aligned with what works in the field.',
+            'subtitle' => 'Long-form playbooks for architecture reviews, vendor selection, and delivery planning—built for distributed teams across North America, Europe, and Asia-Pacific.',
             'bg' => $hd('ebooks.jpg'),
             'bg_position' => 'center center',
             'stats' => [
@@ -108,7 +108,7 @@ function kb_get_banner_config($pageKey)
         'news-events' => [
             'eyebrow' => 'SanguineIT Newsroom',
             'title' => 'NEWSROOM',
-            'subtitle' => 'Company announcements, platform security alerts, partnership updates, and industry news from the SanguineIT team.',
+            'subtitle' => 'Company announcements, security advisories, partnership news, and platform updates—covering the global digital engineering programs SanguineIT delivers.',
             'bg' => $hd('news-events.jpg'),
             'bg_position' => 'center center',
             'variant' => 'newsroom',
@@ -119,7 +119,7 @@ function kb_get_banner_config($pageKey)
         'videos' => [
             'eyebrow' => 'Knowledge Base · Videos',
             'title' => 'Expert Sessions on the Platforms You Run Every Day',
-            'subtitle' => 'Walkthroughs, explainers, and delivery best practices from SanguineIT architects—so your teams stay current without sifting through noise.',
+            'subtitle' => 'Expert-led sessions on Magento, Sitefinity, SharePoint, cloud, and LMS platforms—practical knowledge your teams can apply across regions and time zones.',
             'bg' => $hd('videos.jpg'),
             'bg_position' => 'center center',
             'stats' => [

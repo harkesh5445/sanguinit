@@ -1,6 +1,16 @@
-<?php include "header.php" ?>
-	  
-				<!--Breadcrumb Area-->
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Drupal Maintenance & Support Services | SanguineIT',
+    'description' => 'Drupal CMS maintenance and managed support — security patching, module governance, performance tuning, and SLA-backed care for enterprise and government portals.',
+    'keywords' => 'Drupal maintenance, Drupal support, Drupal security, module updates, Drupal SLA, CMS support, SanguineIT',
+    'canonical' => sit_base_url() . '/drupal-maintenance-and-support.php',
+];
+include 'header.php';
+?>
+			  
+<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
@@ -65,22 +75,22 @@
 					</div>
 				</div>
 				<!--End Hero-->
-				<!--Start About-->
+<!--Start About-->
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/Drupal_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/Drupal_1.jpg', 'Drupal CMS maintenance and support', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Drupal Maintenance and Support</h2>
-									<p class="lh"><b>Maintain a higher ranking in the search and keep your website performing optimally.</b></p>
-									<p class="lh">Do you have a Drupal site? Is your site playing out the best that you are anticipating? Upkeep of a Drupal site is critical to introduce the most recent data about your administrations and items viably, keep up a higher positioning in the inquiry and keep your site performing ideally and furthermore draw in clients more. </p>
-									<p class="lh">We, at SanguineIT are specialists in Drupal CMS and have an all around characterized upkeep and backing group completely prepared to deal with all your Drupal issues. </p>
+									<h2>Keep Your Drupal Platform Secure, Performant, and Governance-Ready</h2>
+									<p class="lh">Drupal powers complex enterprise portals, government sites, and multi-language content platforms — but deferred security patches, module drift, and configuration sprawl create real operational risk. SanguineIT provides dedicated Drupal maintenance for organizations that need stable publishing without pulling developers off strategic initiatives.</p>
+									<p class="lh">Our Drupal engineers apply updates through staging-first workflows, monitor performance and accessibility, govern custom modules, and resolve incidents with documented SLAs. We integrate with your internal IT processes or operate as your extended CMS support team.</p>
+									<p class="lh">For new builds, see our <a href="Drupal.php">Drupal development</a> services. For broader platform coverage, explore <a href="website-maintenance-and-support-services.php">website maintenance</a> and <a href="content-management-services.php">CMS services</a>.</p>
 								</div>
 							</div>
 						</div>
@@ -91,36 +101,46 @@
 						<div class="row">
 						<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Our Drupal Support and Maintenance Services Include: </h2>
-									<p class="lh">
-									<ul class="listing">
-									<li><b>Site execution reviews -</b> Our Drupal master group offers an exhaustive site review to discover if there are any presentation issues on the site, audit the site for any SEO improvement needs and distinguish security issues. 
-</li>
-<li><b>Security fix refreshes -</b> Keeping your Drupal site refreshed is basic for keeping up superior. We guarantee that you stay refreshed with all the security patches for complete security of your site. 
-</li>
-<li><b>Security fix refreshes -</b> Keeping your Drupal site refreshed is basic for keeping up superior. We guarantee that you stay refreshed with all the security patches for complete security of your site. 
-</li>
-<li><b>Module updates and appraisals -</b> We have long stretches of information on building complex Drupal modules that guarantee awesome and secure codes that meet your careful business necessities and encourages you to stay serious. 
-</li>
-<li><b>Execution and fix enhancement -</b> Other than growing very much characterized site, our specialists likewise assess the exhibition of the site and distinguish any bottlenecks that are available and amend the issues to improve by and large execution. 
-</li>
-<li><b>Interface enhancements -</b> We offer our clients uphold administrations to improve and assemble new highlights that can be added to the current site at whatever point there is any need to meet some particular business destinations.
-</li>
-</ul>
-</p>
+									<h2>Drupal support built for enterprise complexity</h2>
+									<p class="lh">Drupal estates often combine custom modules, Solr search, SSO, workflow rules, and multi-site configurations. Generic hosting support cannot safely manage those dependencies. Our programs address security advisories, Composer dependency conflicts, cache invalidation issues, and content workflow regressions after upgrades.</p>
+									<p class="lh">We establish baselines for page speed, accessibility, and error rates — then track improvements after each release. Every production change is validated on staging with representative content and integration traffic.</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/Drupal_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/Drupal_2.jpg', 'Drupal performance and security monitoring', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
-				
+				<section class="service pad-tb">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="image-block upset bg-shape wow fadeIn">
+									<?php sit_responsive_image('images/about_2/Drupal_1.jpg', 'Drupal CMS maintenance and support', ['class' => 'img-fluid']); ?>
+								</div>
+							</div>
+							<div class="col-lg-8 block-1">
+								<div class="common-heading text-l pl25">
+									<h2>What our Drupal support programs deliver</h2>
+									<p class="lh">
+									<ul class="listing">
+									<li><b>Security patch management —</b> Severity-based prioritization aligned with Drupal SA advisories and staged deployment.</li>
+									<li><b>Module &amp; core upgrades —</b> Composer-managed updates with regression testing and rollback plans.</li>
+									<li><b>Performance optimization —</b> Caching, database tuning, and search index health for high-traffic portals.</li>
+									<li><b>Accessibility &amp; SEO checks —</b> Structured content validation and redirect governance after migrations.</li>
+									<li><b>Multi-site governance —</b> Configuration management, environment parity, and release documentation.</li>
+									<li><b>Incident response —</b> Defined escalation for publishing outages, SSO failures, and integration breaks.</li>
+</ul>
+</p>
+									<p class="lh"><a href="contact-us.php">Request a Drupal maintenance assessment</a> tailored to your modules, integrations, and compliance requirements.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<!--End About-->
 				<!--Start Tech-->
 				<div class="techonology-used-">
@@ -144,70 +164,65 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Drupal Support</span>
+									<h2>Core Maintenance Services</h2>
+									<p class="lh mb30">Focused capabilities for Drupal production estates.</p>
 								</div>
-							</div>
+							</divur>
 						</div>
 						<div class="row upset link-hover">
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
+									<h4>Security &amp; Compliance</h4>
+									<p class="lh">Patch cycles, vulnerability remediation, and audit-ready change documentation.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
+									<h4>Performance Tuning</h4>
+									<p class="lh">Cache architecture, database optimization, and load testing before major campaigns.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
+									<h4>Managed Upgrades</h4>
+									<p class="lh">Drupal core and module upgrades validated in staging with regression checklists.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
+									<h4>Custom Module Support</h4>
+									<p class="lh">Maintenance and enhancement of bespoke Drupal modules and integrations.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Content Workflow Support</h4>
+									<p class="lh">Editor training, workflow fixes, and publishing assistance for marketing teams.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Dedicated Drupal Team</h4>
+									<p class="lh">Engineers who know your codebase, modules, and release calendar.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Drupal Support SLA</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -216,7 +231,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -228,8 +243,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

@@ -10,7 +10,7 @@ $infographicPosts = [
         'category' => 'LMS',
         'category_slug' => 'lms',
         'featured_image' => 'images/infographics/lms-enterprise-training.jpg',
-        'list_summary' => 'Visual roadmap for rolling out Moodle and enterprise LMS programs across distributed teams.',
+        'list_summary' => 'Strategic roadmap for scaling enterprise LMS initiatives, from platform selection and migration sequencing to measurable learner adoption outcomes.',
         'highlights' => [
             ['value' => '72%', 'label' => 'Leaders prioritizing skills platforms'],
             ['value' => '3x', 'label' => 'Faster onboarding with structured LMS'],
@@ -23,7 +23,7 @@ $infographicPosts = [
         'category' => 'Ecommerce',
         'category_slug' => 'ecommerce',
         'featured_image' => 'images/infographics/magento-sales-boost.jpg',
-        'list_summary' => 'Conversion levers for catalog search, checkout, promotions, and performance on Adobe Commerce.',
+        'list_summary' => 'Actionable ecommerce growth blueprint covering discovery relevance, checkout optimization, promotional governance, and Magento performance engineering.',
         'highlights' => [
             ['value' => '38%', 'label' => 'Avg. cart abandonment without tuning'],
             ['value' => '5', 'label' => 'Revenue pillars in the visual'],
@@ -36,7 +36,7 @@ $infographicPosts = [
         'category' => 'Company',
         'category_slug' => 'company',
         'featured_image' => 'images/infographics/sanguineit-fast-facts.jpg',
-        'list_summary' => 'At-a-glance snapshot of delivery footprint, practices, and global client outcomes.',
+        'list_summary' => 'Global capability snapshot highlighting SanguineIT delivery scale, specialization depth, and engagement models for enterprise technology programs.',
         'highlights' => [
             ['value' => '15+', 'label' => 'Years in digital delivery'],
             ['value' => '350+', 'label' => 'Technology specialists'],
@@ -49,7 +49,7 @@ $infographicPosts = [
         'category' => 'Web Development',
         'category_slug' => 'web',
         'featured_image' => 'images/infographics/web-development-phases.jpg',
-        'list_summary' => 'From discovery to launch and continuous improvement—the delivery phases SanguineIT uses on web programs.',
+        'list_summary' => 'Lifecycle framework mapping web delivery from strategic discovery through launch, stabilization, and continuous optimization.',
         'highlights' => [
             ['value' => '6', 'label' => 'Lifecycle phases mapped'],
             ['value' => 'UX→QA', 'label' => 'Cross-functional checkpoints'],
@@ -62,7 +62,7 @@ $infographicPosts = [
         'category' => 'Cloud & DevOps',
         'category_slug' => 'cloud',
         'featured_image' => 'images/infographics/digital-transformation-maturity.jpg',
-        'list_summary' => 'Assess where your organization sits—from legacy operations to cloud-native, data-driven delivery.',
+        'list_summary' => 'Maturity model to benchmark transformation progress from legacy operations to data-driven, continuously optimized digital enterprises.',
         'highlights' => [
             ['value' => '5', 'label' => 'Maturity stages'],
             ['value' => 'Cloud', 'label' => 'Platform modernization path'],
@@ -75,7 +75,7 @@ $infographicPosts = [
         'category' => 'Security',
         'category_slug' => 'security',
         'featured_image' => 'images/infographics/incident-response-timeline.jpg',
-        'list_summary' => 'Hour-by-hour response playbook for detection, containment, recovery, and stakeholder communication.',
+        'list_summary' => '72-hour incident response timeline blueprint for containment, eradication, recovery, and executive communication under cyber pressure.',
         'highlights' => [
             ['value' => '0–72h', 'label' => 'Critical response window'],
             ['value' => '4', 'label' => 'Response workstreams'],
@@ -88,7 +88,7 @@ $infographicPosts = [
         'category' => 'Cloud & DevOps',
         'category_slug' => 'cloud',
         'featured_image' => 'images/infographics/cloud-cost-governance.jpg',
-        'list_summary' => 'FinOps controls, tagging standards, and accountability models for sustainable cloud spend.',
+        'list_summary' => 'Cloud governance control map covering FinOps visibility, budget discipline, engineering optimization, and cross-functional accountability.',
         'highlights' => [
             ['value' => '30%', 'label' => 'Typical waste without governance'],
             ['value' => '7', 'label' => 'Control domains'],
@@ -101,7 +101,7 @@ $infographicPosts = [
         'category' => 'Web Development',
         'category_slug' => 'web',
         'featured_image' => 'images/infographics/sitefinity-content-ops.jpg',
-        'list_summary' => 'Editorial workflow, governance, and release patterns for enterprise Sitefinity marketing sites.',
+        'list_summary' => 'Enterprise Sitefinity content operations blueprint for editorial governance, component reuse, release discipline, and measurable campaign execution.',
         'highlights' => [
             ['value' => '.NET', 'label' => 'Enterprise CMS foundation'],
             ['value' => 'Multi-site', 'label' => 'Brand governance model'],

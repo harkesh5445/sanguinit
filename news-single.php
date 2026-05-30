@@ -9,7 +9,16 @@ if (!$post) {
     exit;
 }
 
+require_once __DIR__ . '/includes/seo.php';
+
 $pageTitle = $post['title'];
+$page_data = [
+    'title' => $pageTitle . ' | SanguineIT News',
+    'description' => !empty($post['excerpt']) ? $post['excerpt'] : $pageTitle,
+    'canonical' => sit_base_url() . '/news-single.php?slug=' . rawurlencode($slug),
+    'og_image' => !empty($post['featured_image']) ? $post['featured_image'] : '',
+    'json_ld' => [sit_article_schema($post, $slug, 'news-single.php', 'NewsArticle')],
+];
 $articleHtml = get_news_post_html($slug);
 
 require_once __DIR__ . '/includes/kb-banner-config.php';

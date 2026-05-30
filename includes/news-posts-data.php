@@ -10,7 +10,7 @@ $newsPosts = [
         'category' => 'Technology News',
         'category_slug' => 'technology',
         'featured_image' => 'images/news/adobe-security.jpg',
-        'list_summary' => 'Adobe security bulletin APSB25-106 addresses critical InDesign vulnerabilities. Enterprise design and publishing teams should patch immediately.',
+        'list_summary' => 'SanguineIT issues a global advisory on APSB25-106, urging rapid remediation of critical Adobe InDesign vulnerabilities across enterprise creative and publishing environments.',
     ],
     'sitefinity-cve-2025-3600-patch-immediately' => [
         'title' => 'Progress Sitefinity Alert: CVE-2025-3600 Exploit Released — Patch Immediately',
@@ -18,7 +18,7 @@ $newsPosts = [
         'category' => 'Technology News',
         'category_slug' => 'technology',
         'featured_image' => 'images/news/sitefinity-security.jpg',
-        'list_summary' => 'A public exploit for CVE-2025-3600 increases risk for Sitefinity portals. SanguineIT outlines urgent remediation steps for enterprise CMS estates.',
+        'list_summary' => 'Active exploitation tied to CVE-2025-3600 puts Sitefinity environments at elevated risk; SanguineIT outlines immediate remediation and hardening priorities for enterprise CMS operators.',
     ],
     'adobe-commerce-october-2025-security-patches' => [
         'title' => 'Adobe October 2025 Security Update: Critical Patches Released for Commerce and Magento',
@@ -26,7 +26,7 @@ $newsPosts = [
         'category' => 'Technology News',
         'category_slug' => 'technology',
         'featured_image' => 'images/news/commerce-security.jpg',
-        'list_summary' => 'Critical Adobe Commerce and Magento security patches are available. Merchants should stage, test, and deploy on an accelerated timeline.',
+        'list_summary' => 'Adobe Commerce and Magento October 2025 security patches require urgent staging and deployment to reduce checkout, admin, and customer data exposure risks.',
     ],
     'sanguineit-excellence-digital-delivery-award' => [
         'title' => 'SanguineIT Recognized for Excellence in Digital Delivery',
@@ -34,7 +34,7 @@ $newsPosts = [
         'category' => 'Award News',
         'category_slug' => 'award',
         'featured_image' => 'images/news/award-excellence.jpg',
-        'list_summary' => 'SanguineIT receives industry recognition for consistent delivery quality, client satisfaction, and enterprise program outcomes.',
+        'list_summary' => 'SanguineIT has been recognized for excellence in digital delivery, highlighting global program governance, engineering quality, and measurable client outcomes.',
     ],
     'strategic-cloud-alliance-partnership' => [
         'title' => 'Strategic Partnership Announced with Leading Cloud Alliance',
@@ -42,7 +42,7 @@ $newsPosts = [
         'category' => 'Partnership News',
         'category_slug' => 'partnership',
         'featured_image' => 'images/news/cloud-partnership.jpg',
-        'list_summary' => 'New alliance expands SanguineIT cloud modernization, managed operations, and platform engineering capacity for global clients.',
+        'list_summary' => 'A new strategic cloud alliance expands SanguineIT modernization, platform engineering, and FinOps capabilities for enterprise clients across global markets.',
     ],
     'enterprise-transformation-program-delivered' => [
         'title' => 'Enterprise Transformation Program Successfully Delivered',
@@ -50,7 +50,7 @@ $newsPosts = [
         'category' => 'Project Launched News',
         'category_slug' => 'project',
         'featured_image' => 'images/news/enterprise-transformation.jpg',
-        'list_summary' => 'Multi-year digital transformation completed with improved uptime, unified customer experience, and stronger governance controls.',
+        'list_summary' => 'SanguineIT completes a multi-year enterprise transformation program delivering unified digital experiences, improved resilience, and stronger governance visibility.',
     ],
     'regional-delivery-center-opens' => [
         'title' => 'New Regional Delivery Center Opens to Support Global Clients',
@@ -58,7 +58,7 @@ $newsPosts = [
         'category' => 'Infrastructure News',
         'category_slug' => 'infrastructure',
         'featured_image' => 'images/news/delivery-center.jpg',
-        'list_summary' => 'Expanded delivery footprint strengthens nearshore collaboration, 24x7 coverage, and platform operations for international accounts.',
+        'list_summary' => 'SanguineIT opens a regional delivery center to strengthen global engineering capacity, nearshore collaboration, and 24x7 operational support.',
     ],
     'healthcare-portal-modernization-live' => [
         'title' => 'Healthcare Portal Modernization Goes Live Across 12 Locations',
@@ -66,7 +66,7 @@ $newsPosts = [
         'category' => 'Project Launched News',
         'category_slug' => 'project',
         'featured_image' => 'images/news/healthcare-portal.jpg',
-        'list_summary' => 'Patient access portal rollout improves scheduling, records visibility, and operational reporting for a regional healthcare network.',
+        'list_summary' => 'A healthcare portal modernization led by SanguineIT goes live across 12 locations, improving patient access, scheduling workflows, and digital care coordination.',
     ],
 ];
 

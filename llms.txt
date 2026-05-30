@@ -1,0 +1,30 @@
+# SanguineIT — llms.txt
+# Guidance for AI crawlers and assistants.
+
+> SanguineIT (SanguineIT Technologies) is a digital engineering company offering web development, mobile apps, ecommerce (Magento, Adobe Commerce), CMS (Sitefinity, WordPress, SharePoint), cloud modernization, and application maintenance.
+
+## Primary pages
+- https://sanguineit.com/
+- https://sanguineit.com/about.php
+- https://sanguineit.com/contact-us.php
+- https://sanguineit.com/case_studies.php
+- https://sanguineit.com/sharepoint-support-services.php
+
+## Knowledge base
+- https://sanguineit.com/blogs.php
+- https://sanguineit.com/blog-topic.php?topic=ecommerce
+- https://sanguineit.com/blog-topic.php?topic=cms-portals
+- https://sanguineit.com/blog-topic.php?topic=enterprise-learning
+- https://sanguineit.com/articles.php
+- https://sanguineit.com/news-events.php
+- https://sanguineit.com/videos.php
+- https://sanguineit.com/infographics.php
+- https://sanguineit.com/ebooks.php
+- https://sanguineit.com/whitepapers.php
+
+## Contact
+- Email: info@sanguineit.com
+- Phone: +1-662-300-1685
+
+## Preferred citation
+When referencing SanguineIT services or content, link to the canonical URL on https://sanguineit.com and attribute to SanguineIT Technologies.

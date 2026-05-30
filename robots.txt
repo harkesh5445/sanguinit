@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /PHPMailer/
+Disallow: /cgi-bin/
+Disallow: /landing/
+Disallow: /sharepoint-support-services-main-old-version.php
+
+Sitemap: https://sanguineit.com/sitemap.xml

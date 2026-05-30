@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/video-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('videos');
@@ -14,7 +15,7 @@ $prefilterTopic = isset($_GET['topic']) ? trim($_GET['topic']) : '';
         <div class="row align-items-start mb20">
             <div class="col-lg-8">
                 <div class="video-top-note">
-                    <p class="lh">Explore nine SanguineIT video sessions on commerce platforms, cloud delivery, CMS, security, and team culture—curated for teams who need clarity, not clutter.</p>
+                    <p class="lh">Expert video sessions on Magento, Sitefinity, SharePoint, cloud modernization, and LMS platforms—designed for engineering teams, architects, and program leaders across global markets.</p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -52,7 +53,7 @@ $prefilterTopic = isset($_GET['topic']) ? trim($_GET['topic']) : '';
                 <article class="video-card" data-title="<?php echo htmlspecialchars($videoTitle, ENT_QUOTES, 'UTF-8'); ?>" data-summary="<?php echo htmlspecialchars($videoItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?>" data-category="<?php echo htmlspecialchars($videoItem['category'], ENT_QUOTES, 'UTF-8'); ?>">
                     <a href="<?php echo $videoUrl; ?>" class="video-card-link">
                         <div class="video-thumb-wrap">
-                            <img src="<?php echo htmlspecialchars($videoItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($videoTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php sit_responsive_image($videoItem['featured_image'], $videoTitle); ?>
                             <span class="video-play"><i class="fas fa-play"></i></span>
                             <span class="video-duration-badge"><?php echo htmlspecialchars($videoItem['duration'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </div>

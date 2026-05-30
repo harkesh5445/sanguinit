@@ -1,7 +1,28 @@
-<p class="lh">Enterprise intranets fail when navigation and governance are afterthoughts. This video explains hub sites, metadata, search configuration, and provisioning templates SanguineIT uses for SharePoint Online programs.</p>
-<?php echo video_takeaways([
-    'Information architecture for distributed organizations',
-    'Modern page templates and mobile-friendly experiences',
-    'Governance for site creation and external sharing',
-    'Integration with Teams and Power Platform',
-]); ?>
+<?php
+$takeaways = [
+    'Build intranets around user intent, not organizational charts or legacy folder structures.',
+    'Use scalable SharePoint design patterns for navigation, content governance, and search quality.',
+    'Balance local team autonomy with enterprise controls for compliance and content consistency.',
+    'Integrate SharePoint with Microsoft 365 workflows to improve adoption and operational value.',
+];
+?>
+<p class="lh">Enterprise intranets often launch with strong visual design and weak long-term usability. Within months, navigation becomes inconsistent, content quality declines, and search trust drops. This video explains how to avoid those outcomes using proven SharePoint intranet design patterns that scale across departments, regions, and business functions. The focus is not on isolated page templates; it is on creating an operating model where information remains discoverable, current, and useful as the organization evolves.</p>
+<p class="lh">For global enterprises spanning North America, Europe, and APAC, intranets are strategic communication infrastructure. Employees rely on them to find policies, collaborate on projects, access tools, and understand organizational priorities. When intranet architecture is weak, productivity suffers and governance risk increases. This session helps digital workplace teams design intranets that support both local relevance and global consistency, with clear ownership models that prevent content sprawl and platform drift.</p>
+
+<h2>Design Around User Journeys and Information Intent</h2>
+<p class="lh">Successful intranets start with audience intent, not technology configuration. This section explains how to identify high-frequency user journeys such as onboarding, policy lookup, team collaboration, and service request initiation. By mapping these journeys first, organizations can prioritize information architecture decisions that reduce cognitive load and shorten time-to-information. Employees should not need deep organizational knowledge to find the right content quickly.</p>
+<p class="lh">The video also challenges the common habit of mirroring org charts in navigation. Organizational structures change frequently, while user intent patterns are more stable. A journey-led architecture creates resilience because it remains useful even as reporting lines evolve. This approach improves adoption and reduces the maintenance burden on content owners who would otherwise need constant navigation updates for structural changes unrelated to user needs.</p>
+
+<h2>Scalable SharePoint Patterns for Navigation and Search</h2>
+<p class="lh">Hub sites, associated sites, and standardized page templates are presented as foundational patterns for scalable intranet ecosystems. The session demonstrates how these elements create a coherent user experience while allowing business units to manage localized content. Standardization is important, but rigid control can limit relevance. The right model provides reusable templates, shared design language, and governance guardrails while still giving local teams room to tailor communication for their audiences.</p>
+<p class="lh">Search quality is another major theme. Employees quickly lose trust in intranets when search results are noisy or outdated. The video explains how metadata strategy, content types, and managed properties influence discoverability. It also highlights curation practices such as promoted results and lifecycle policies that keep critical content visible and stale content archived. Strong search governance transforms SharePoint from a document repository into a reliable knowledge platform.</p>
+
+<h2>Governance That Enables, Not Restricts</h2>
+<p class="lh">Governance is often misunderstood as a set of restrictions. This section reframes governance as an enabler of quality at scale. Clear ownership models, publishing responsibilities, and review cadences help teams maintain content accuracy without centralized bottlenecks. The video outlines practical governance components: site provisioning workflows, naming standards, permission controls, and retention policies aligned with organizational risk requirements.</p>
+<p class="lh">External sharing and security boundaries are discussed in operational terms. Organizations need collaboration flexibility, but they also need confidence that sensitive content remains protected. The session recommends role-based access design, periodic permission audits, and policy-aware sharing defaults. These controls reduce accidental exposure while keeping collaboration efficient for distributed teams and cross-functional programs.</p>
+
+<h2>Integrating SharePoint with Daily Workflows</h2>
+<p class="lh">An intranet creates real value when it is embedded into everyday work rather than treated as a standalone destination. The final section explores integration patterns with Microsoft Teams, Power Platform, and business workflows so employees can act on information without context switching. Examples include policy acknowledgment workflows, automated approvals, and team-specific dashboards tied to operational metrics. These integrations improve both engagement and process consistency.</p>
+<p class="lh">The video concludes with a maturity roadmap for intranet teams: stabilize architecture, improve governance, enhance search trust, and continuously optimize based on usage insights. Organizations that treat intranet operations as an evolving capability consistently see better adoption and communication effectiveness.</p>
+<?php echo video_takeaways($takeaways); ?>
+<p class="lh">If your enterprise is redesigning a SharePoint intranet or scaling governance across regions, <a href="contact-us.php">contact SanguineIT</a> for a structured implementation approach.</p>

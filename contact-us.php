@@ -61,7 +61,14 @@ if (!empty($_POST)) {
 ?> 
  
 
-<?php include "header.php" ?>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+$page_data = [
+    'title' => 'Contact SanguineIT | Start Your Project',
+    'description' => 'Reach SanguineIT for web, mobile, ecommerce, and cloud engineering. Offices in Noida, India and Brooklyn, NY — call +1-662-300-1685 or send a message.',
+    'canonical' => sit_base_url() . '/contact-us.php',
+];
+include "header.php" ?>
 
 <!--Breadcrumb Area-->
 <section class="breadcrumb-area banner-6">
@@ -264,4 +271,5 @@ if (!empty($_POST)) {
     });
 </script>
 
+<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
 <?php include "footer.php" ?>

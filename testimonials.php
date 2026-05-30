@@ -1,9 +1,11 @@
-<?php include "header.php" ?>
-	  <meta charset="utf-8"/>
-     <title>Client Testimonials Web Design &amp; Digital Marketing Agency HTML Sanguine - Sanguine</title>
-      <meta name="description" content="Creative Agency, Marketing Agency Sanguine">
-      <meta name="keywords" content="Digital Marketing Company, Creative Agency, Marketing Agency">
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+$page_data = [
+    'title' => 'Client Testimonials | SanguineIT',
+    'description' => 'Read what clients say about SanguineIT — delivery quality, communication, and long-term support for web and digital engineering projects.',
+    'canonical' => sit_base_url() . '/testimonials.php',
+];
+include "header.php" ?>
   <!--Breadcrumb Area-->
   <section class="breadcrumb-area banner-2">
     <div class="text-block">

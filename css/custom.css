@@ -2889,8 +2889,34 @@ body.quote-modal-open .modal-open {
     }
 }
 
-@media only screen and (min-width: 1151px) {
-    .main-header .mobile-menu2 {
-        display: none !important;
-    }
+.home-faq-section .home-faq-accordion .card {
+    border: 1px solid #e8e8ef;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.home-faq-section .home-faq-accordion .card-header {
+    background: #fff;
+    border-bottom: none;
+}
+.home-faq-section .home-faq-accordion .btn-link {
+    color: #050748;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 20px;
+    white-space: normal;
+}
+.home-faq-section .home-faq-accordion .btn-link:hover,
+.home-faq-section .home-faq-accordion .btn-link:focus {
+    text-decoration: none;
+    color: #ff1f8e;
+}
+.home-faq-section .home-faq-accordion .card-body {
+    padding: 0 20px 18px;
+}
+.home-internal-links .s-block h4 {
+    margin-bottom: 12px;
+}
+.home-internal-links .s-block ul li {
+    margin-bottom: 8px;
 }

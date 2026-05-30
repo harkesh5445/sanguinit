@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'iOS App Development Services | SanguineIT',
+    'description' => 'Native iOS app development — Swift and SwiftUI apps, App Store launch, Apple ecosystem integrations, and enterprise mobility for global businesses.',
+    'keywords' => 'iOS app development, Swift development, native iOS apps, iPhone app development, iOS agency, SanguineIT',
+    'canonical' => sit_base_url() . '/ios.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">IOS</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">iOS App Development</h1>
 								</div>
 							</div>
 						</div>
@@ -66,21 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ios_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ios_1.jpg', 'Native iOS app development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>IOS</h2>
-									<p class="lh">We have been one of the early adopters of iOS development since its inception. Having extensive experience with iPhone and iPad app development since past years of our operations, we have been able to successfully develop and deliver comprehensive apps for the iOS platform across multiple domains. Some of the industry verticals that we have covered are construction, retail, hospitaloity, transportation, business productivity and many more.</p>
-									<p class="lh">The users today are going mobile. The businesses need to be mobile friendly in order to meet the consumer’s ever increasing demands. So, mobile apps are the need of he hour and future of the mobile technology. We strive for utilizing the mobile technology to best fit the desired user experience. We research, analyze and implement the ideas across several categories. We make sure that the ios application development we do is far better in speed, smoothness and are optimized for future.</p>
-									<p class="lh">Our iOS team encapsulates creative and dedicated mobile application developers and designers who have developed award winning apps for top level companies, small and medium businesses and creative individuals which we take our pride in. Our dedicated team will give you world’s most innovative apps.</p>
+									<h2>Native iOS Engineering for Premium Mobile Experiences</h2>
+									<p class="lh">SanguineIT builds native iOS applications for consumer brands, fintech products, and enterprise mobility programs that need polished UX, Apple ecosystem integration, and App Store-ready quality — delivered for teams across North America, Europe, and APAC.</p>
+									<p class="lh">Our iOS engineers work in Swift and SwiftUI with UIKit where needed, applying MVVM and Combine patterns to deliver apps with seamless payments, push notifications, HealthKit integrations, and secure authentication — all optimized for the latest iOS releases.</p>
+									<p class="lh">From MVP launches to enterprise deployments, we offer dedicated iOS squads alongside our <a href="android.php">Android</a>, <a href="flutter.php">Flutter</a>, and <a href="app-maintenance.php">app maintenance</a> programs.</p>
 								</div>
 							</div>
 						</div>
@@ -89,59 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Our Services:</h2>
+									<h2>iOS capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>iPhone/iPad application development</li>
-									<li>iPhone/iPad Game development</li>
-									<li>Location based application development using Google Maps, GPS etc...</li>
-									<li>3rd Party API integrations</li>
-									<li>Customized API development</li>
-									<li>Porting/Migration of apps from iOS to Android and vice versa</li>
-									<li>iPhone/iPad QA Testing</li>
-									
-									</ul>
-									</p>
+									<li><b>Native Swift &amp; SwiftUI —</b> iPhone and iPad apps with Human Interface Guidelines compliance.</li>
+									<li><b>Apple ecosystem —</b> Apple Pay, Sign in with Apple, Push Notifications, and iCloud sync.</li>
+									<li><b>API integration —</b> REST, GraphQL, OAuth, and WebSocket connections with Core Data caching.</li>
+									<li><b>Security &amp; compliance —</b> Keychain storage, biometric auth, and App Transport Security best practices.</li>
+									<li><b>App Store launch —</b> TestFlight beta programs, review guidance, and release automation.</li>
+									<li><b>Enterprise distribution —</b> MDM deployment and custom B2B app distribution workflows.</li>
+</ul>
+</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ios_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ios_2.jpg', 'Swift iOS app development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ios_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ios_3.jpg', 'iOS enterprise mobile application engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Why Choose us?</h2>
-									<p class="lh"><b>Some of the benefits that you would have by choosing us include the following:</b></p>
-									<p class="lh">
-									<ul class="listing">
-									<li>Introduction to a modular approach to mobile application development.</li>
-<li>Strong focus on improving user experience in every way possible.</li>
-<li>Top quality vast experienced development team based out of India.</li>
-<li>Our team has expertise in iOS 7, 8, 9 SDK and Cocoa and Objective-C.</li>
-<li>Expertise in making the app highly precise, interactive and user-friendly.</li>
-<li>Fast turnaround time with 100% customer satisfaction guaranteed.</li>
-<li>Highly experienced team having expertise in Mac OS X systems and Xcode IDE.</li>
-<li>One of the premier companies to adapt to SWIFT language and we take pride to be iOS 9 ready.</li>
-</ul>
-</p>
-<p class="lh"><b>Vast experience with all the iPhone models used till date ranging from iPhone 5 to iPhone 6S.</b></p>
+									<h2>iOS apps built for App Store success</h2>
+									<p class="lh">Whether you launch a consumer product or deploy internal tools via MDM, SanguineIT aligns iOS architecture with your performance, privacy, and release requirements. We automate TestFlight pipelines, instrument crash analytics, and measure outcomes against App Store ratings, retention, and conversion metrics.</p>
+									<p class="lh">View <a href="case_studies.php">mobile case studies</a>, explore our <a href="portfolio.php">portfolio</a>, or <a href="contact-us.php">contact us</a> for an iOS product assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -170,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Mobile Services</span>
+									<h2>What We Build</h2>
+									<p class="lh mb30">Native and cross-platform mobile engineering for global product teams.</p>
 								</div>
 							</div>
 						</div>
@@ -180,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Native iOS Apps</h4>
+									<p class="lh">Swift and SwiftUI applications following Apple Human Interface Guidelines.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Apple Ecosystem Integration</h4>
+									<p class="lh">Apple Pay, Sign in with Apple, push notifications, and iCloud features.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Backend &amp; API Integration</h4>
+									<p class="lh">REST, GraphQL, and real-time connections with Core Data persistence.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Security &amp; Privacy</h4>
+									<p class="lh">Keychain, biometrics, and compliance-ready data handling patterns.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>App Store Release</h4>
+									<p class="lh">TestFlight betas, review preparation, and automated release pipelines.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Enterprise Distribution</h4>
+									<p class="lh">MDM deployment and B2B app distribution for internal teams.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need an <span>iOS Development Team</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -242,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -254,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

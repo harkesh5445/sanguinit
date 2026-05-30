@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Technology & Communications Software | SanguineIT',
+    'description' => 'Software development for telecom and communications companies — customer portals, OSS/BSS integrations, network dashboards, and digital customer experience platforms.',
+    'keywords' => 'telecom software development, communications IT, OSS BSS integration, telecom portals, network operations software, SanguineIT',
+    'canonical' => sit_base_url() . '/technology-and-communication.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Technology and Communication</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Technology &amp; Communications</h1>
 								</div>
 							</div>
 						</div>
@@ -66,21 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/com_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/com_1.jpg', 'Telecom and communications software development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Technology and Communication</h2>
-									<p class="lh">Explore our expertise into Telecommunications with proficient IT solutions.</p>
-									<p class="lh">With an array of service offerings for Communication Service Providers (CSPs), Telecom Equipment Manufacturers (TEMs) and Independent Software Vendors (ISVs), we are a chosen transformation partner for several leading wireline, wireless and broadband operators in Europe, Asia-Pacific and North America.</p>
-									<p class="lh">Customers of communications service providers want easier to use digital channels, proactive and personalized offerings, and the ability to bring connected technologies to life, our latest research reveals.</p>
+									<h2>Digital Engineering for Telecom &amp; Communications</h2>
+									<p class="lh">SanguineIT builds customer-facing portals, self-service apps, and operational dashboards for telecommunications providers, MSPs, and communications technology companies that need scalable digital channels and integration with billing, provisioning, and network management systems — globally.</p>
+									<p class="lh">Our teams deliver subscription management interfaces, usage dashboards, support ticket portals, partner APIs, and internal network operations tools — with high availability architecture and integration patterns for OSS/BSS ecosystems.</p>
+									<p class="lh">From MVNO digital launches to enterprise portal modernization, we combine customer experience design with the integration depth telecom IT environments demand.</p>
 								</div>
 							</div>
 						</div>
@@ -89,53 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Here are some of the highlights:</h2>
+									<h2>Telecom &amp; communications capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>More than five years of experience in telecommunication serving world’s leading operators in 5 continents</li>
-<li>The unified operation strategy – IT and Network</li>
-<li>Deep industry expertise to craft integrated, industry-specific solutions</li>
-<li>Business Transformation partners for Tier-One Communication Service Providers across the globe</li>
-<li>Industry recognition in the Communication Service Providers space by Gartner Leaders in IT services for Communication service Providers</li>
-<li>Robust Centers of Excellence in association with Intel, Sun , Microsoft, BMC</li>
-<li>Complete transparency and partnership based execution</li>
-<li>Commitment to long-term partnerships versus traditional vendor relationships</li>
-
+									<li><b>Customer self-service —</b> Account management, plan changes, usage views, and bill pay portals.</li>
+									<li><b>Provisioning &amp; activation —</b> Digital onboarding, eSIM workflows, and service activation journeys.</li>
+									<li><b>OSS/BSS integration —</b> Connectors to billing, CRM, and network provisioning systems.</li>
+									<li><b>Partner &amp; reseller portals —</b> Wholesale management, commission tracking, and API access for partners.</li>
+									<li><b>Network operations dashboards —</b> Monitoring interfaces, alert management, and SLA reporting views.</li>
+									<li><b>Mobile apps —</b> iOS and Android apps for account management, support, and usage monitoring.</li>
 </ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/com_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/com_2.jpg', 'Telecom customer portal and OSS integration', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/com_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/com_3.jpg', 'Communications platform engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Below are some of the segments in Technology and communications domain:</h2>
-									<p class="lh"><ul class="listing">
-									<li>Cable and Satellite</li>
-<li>Integrated Communications Providers</li>
-<li>Network Equipment Providers</li>
-<li>Wireless Communications</li>
-
-</ul></p>
+									<h2>Telecom platforms built for subscriber experience and ops efficiency</h2>
+									<p class="lh">Communications customers expect instant self-service — and operations teams need accurate data flowing between digital channels and back-office systems. SanguineIT designs integration layers with retry logic, reconciliation jobs, and monitoring that surfaces sync issues before customers notice billing or provisioning errors.</p>
+									<p class="lh">Explore our <a href="sharepoint-support-services.php">SharePoint</a> and portal practices, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a telecom digital assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -164,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for Telecom &amp; Comms</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -174,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Customer Self-Service Portals</h4>
+									<p class="lh">Account management, plan changes, usage views, and digital bill pay.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Digital Activation &amp; eSIM</h4>
+									<p class="lh">Onboarding and provisioning workflows for new subscribers.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>OSS/BSS Integration</h4>
+									<p class="lh">Billing, CRM, and network system connectivity with reliable sync.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Partner &amp; Reseller Portals</h4>
+									<p class="lh">Wholesale management and API access for channel partners.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Network Operations Tools</h4>
+									<p class="lh">Monitoring dashboards, alerts, and SLA reporting for NOC teams.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Subscriber Mobile Apps</h4>
+									<p class="lh">iOS and Android apps for account management and support.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Telecom Development Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -236,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -248,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

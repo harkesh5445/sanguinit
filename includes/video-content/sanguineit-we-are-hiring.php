@@ -1,8 +1,28 @@
-<p class="lh">SanguineIT continues to grow across commerce, cloud, mobile, and enterprise CMS practices. This short video highlights our culture, delivery philosophy, and the roles we are actively hiring for in engineering and consulting.</p>
-<?php echo video_takeaways([
-    'Open roles in Magento, Sitefinity, .NET, mobile, and DevOps',
-    'How we support learning, mentorship, and certification',
-    'Hybrid and distributed collaboration practices',
-    'How to apply and what to expect in our interview process',
-]); ?>
-<p class="lh"><a href="contact-us.php">View careers and talk to our team</a>.</p>
+<?php
+$takeaways = [
+    'Explore roles across commerce, cloud, enterprise platforms, mobile, and integration engineering.',
+    'Understand how mentorship, learning paths, and delivery exposure accelerate career growth.',
+    'See how distributed teams collaborate effectively across US and India delivery centers.',
+    'Prepare for a transparent interview process focused on capability, mindset, and impact.',
+];
+?>
+<p class="lh">SanguineIT is growing because clients are asking for delivery partners who can combine deep engineering capability with dependable execution at scale. This hiring video shares what that growth means for professionals looking to build meaningful careers in digital engineering. Instead of presenting generic recruitment messaging, the session explains how teams operate, which capabilities are in demand, and what candidates can expect from an environment that serves global organizations across North America, Europe, and APAC.</p>
+<p class="lh">The core message is simple: hiring is not about filling seats; it is about building capability clusters that can solve real business problems. Our programs span commerce modernization, cloud-native engineering, enterprise CMS platforms, mobile applications, integration architecture, and ongoing managed services. That breadth creates opportunities for both specialists and adaptable technologists. Whether you are an experienced architect or an early-career engineer, the focus is on your ability to collaborate, learn quickly, and deliver reliable outcomes.</p>
+
+<h2>What We Build and Why It Matters</h2>
+<p class="lh">Candidates often ask what kind of projects they will work on. This section gives a practical answer. Teams work on initiatives that directly affect customer experience and operational performance: re-platforming ecommerce ecosystems, modernizing legacy applications, strengthening API security, scaling content operations, and improving performance under real-world traffic. These are not isolated technical exercises; they are business-critical programs where engineering quality influences revenue, cost efficiency, and user trust.</p>
+<p class="lh">The video also highlights the variety of engagement models. Some teams join clients as long-term dedicated pods, while others execute focused modernization streams or advisory-led transformations. This variety helps professionals build broad context and domain depth. Engineers learn how to adapt to different client maturity levels, stakeholder structures, and delivery expectations without compromising engineering standards. That adaptability is a key reason our teams remain valuable in complex enterprise environments.</p>
+
+<h2>Culture of Accountability and Learning</h2>
+<p class="lh">A strong culture is defined by daily behavior, not slogans. This part of the session explains the principles that shape our work: ownership, clarity, respect, and continuous improvement. Team members are expected to communicate risks early, ask precise questions, and document decisions so projects remain transparent. At the same time, people are supported with mentorship and structured feedback, because sustainable excellence comes from coaching, not pressure alone.</p>
+<p class="lh">Learning pathways are discussed in detail. Professionals can advance through technical depth in specific stacks or move into broader roles that combine architecture, delivery leadership, and client consulting. Internal enablement includes knowledge-sharing sessions, peer review discipline, practical certifications, and exposure to cross-functional collaboration. The goal is to help people build durable careers where they can contribute at increasing levels of complexity and influence.</p>
+
+<h2>How Global Collaboration Works Here</h2>
+<p class="lh">SanguineIT operates with a distributed delivery model that includes US and India teams working as one accountable unit. The video explains how this model is structured to avoid common offshore-onshore disconnects. Responsibilities are explicitly mapped, communication rhythms are consistent, and quality standards are shared across locations. This creates predictable delivery for clients while giving team members exposure to international collaboration styles and stakeholder expectations.</p>
+<p class="lh">For candidates, this means your communication skills matter as much as your technical strength. You will work with cross-functional stakeholders, participate in planning and estimation, and contribute to decisions that affect releases and roadmaps. The session emphasizes that respectful, structured collaboration is a career accelerator. Professionals who can simplify complexity and align teams are consistently trusted with high-impact work.</p>
+
+<h2>The Interview Experience and What We Value</h2>
+<p class="lh">The hiring process is designed to be transparent and practical. Rather than relying on puzzle-heavy interviews disconnected from real work, the focus is on how you solve problems, reason about trade-offs, and collaborate in realistic delivery scenarios. Depending on the role, discussions may include architecture framing, debugging approaches, platform-specific implementation choices, and communication with non-technical stakeholders. Candidates are encouraged to think out loud and explain assumptions.</p>
+<p class="lh">We value curiosity, ownership, and integrity. Technical expertise is essential, but long-term success comes from professionals who can learn continuously and support team outcomes beyond their immediate task list.</p>
+<?php echo video_takeaways($takeaways); ?>
+<p class="lh">If you are looking for a global digital engineering environment where your work can create measurable impact, and where growth is supported with structure and mentorship, <a href="contact-us.php">connect with our team through the contact page</a>.</p>

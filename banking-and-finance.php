@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Banking & Finance Software Development | SanguineIT',
+    'description' => 'Digital engineering for banking and financial services — secure web and mobile apps, portals, payment integrations, and compliance-ready platforms for global institutions.',
+    'keywords' => 'banking software development, fintech development, financial services IT, secure banking apps, SanguineIT',
+    'canonical' => sit_base_url() . '/banking-and-finance.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Banking and Finance</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Banking &amp; Finance</h1>
 								</div>
 							</div>
 						</div>
@@ -66,23 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ban_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ban_1.jpg', 'Banking and finance software development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Banking and Finance</h2>
-									<p class="lh">End to End solutions for Banking and Financial industry.
-It’s a mobile world. People use devices to do almost everything, especially banking. Your customers expect financial services to be available wherever life takes them. ATMs, mobile points of sale and smart phones make it easier than ever to serve their needs.
-</p>
-									<p class="lh">Your customers also want to know their personal data is secure—and that they control how and where it’s used. Safeguarding their information and assets is more than just good business—it goes a long way toward gaining customer trust.</p>
-									<p class="lh">To meet the ever changing needs of the economy, we strive to develop financial applications that are robust, scalable and highly customer centric.</p>
+									<h2>Digital Engineering for Banking &amp; Financial Services</h2>
+									<p class="lh">SanguineIT builds secure web, mobile, and portal applications for banks, credit unions, fintech startups, and insurance providers that need reliable transactions, regulatory compliance, and customer experiences customers trust — across North America, Europe, and APAC.</p>
+									<p class="lh">Our teams deliver customer-facing mobile banking, loan origination portals, payment gateway integrations, CRM dashboards, and back-office automation with security-first architecture — encryption, audit trails, role-based access, and staging environments that mirror production compliance requirements.</p>
+									<p class="lh">We integrate with core banking systems, KYC providers, and analytics platforms while maintaining the change control and documentation enterprise financial IT teams expect.</p>
 								</div>
 							</div>
 						</div>
@@ -91,80 +98,44 @@ It’s a mobile world. People use devices to do almost everything, especially ba
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Our application development services in the financial services domain include the following:</h2>
+									<h2>Banking &amp; finance capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>Robust Financial web/mobile Applications Development</li>
-<li>Robust Financial web/mobile Applications Development</li>
-<li>Contracts Authoring and Approvals Management</li>
-
+									<li><b>Mobile &amp; web banking —</b> Account management, transfers, bill pay, and notification experiences on iOS and Android.</li>
+									<li><b>Payment integrations —</b> Gateways, wallets, ACH, and card processing with PCI-aware implementation patterns.</li>
+									<li><b>Loan &amp; onboarding portals —</b> Digital application flows, document upload, and status tracking for lending products.</li>
+									<li><b>Insurance &amp; claims —</b> Policy management interfaces and workflow automation for faster claims processing.</li>
+									<li><b>Analytics &amp; CRM —</b> Customer insight dashboards and integration with Salesforce and marketing automation.</li>
+									<li><b>Security &amp; compliance —</b> Encryption, MFA, audit logging, and architecture reviews aligned to financial regulations.</li>
 </ul>
 </p>
-	<p class="lh">Digitalization is driving major transformation regarding customer experience in banking. New social ecosystems and rapid consumer technology development is changing consumer behavior and expectations: customers expect pro-activity, more personal service and offers.</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ban_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ban_2.jpg', 'Fintech mobile and web application development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ban_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/ban_3.jpg', 'Secure financial services platform engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Business benefits with digital customer experiences</h2>
-									<p class="lh">
-									<ul class="listing">
-									<li>New revenues and improved conversion by reaching customer with pro-active personal sales messages on consumer’s life situations
-									</li>
-									<li>Increased loyalty driving for advocacy</li>
-									<li>New business models and innovations within partner ecosystems</li>
-									<li>Reduce the cost of serving customers</li>
-									<li>Free resources for business from running IT with cloud and standard solutions</li>
-									</ul></p>
-									<p class="lh">Meaning digitalization really is about new business models and ecosystems, addition to what new technology enables for customer experience. This presents a major opportunity for banks, insurance companies and retailers to re-think and improve their services for consumers – together.</p>
+									<h2>Financial platforms built for trust and scale</h2>
+									<p class="lh">Customers expect banking to work everywhere — and they expect their data to stay protected. SanguineIT designs financial applications with proactive fraud monitoring hooks, disaster recovery planning, and performance tuning for peak transaction volumes during market events and campaign launches.</p>
+									<p class="lh">Explore our <a href="android.php">mobile</a> and <a href="custom-web-development.php">web development</a> practices, read <a href="blog-topic.php?topic=enterprise-learning">enterprise insights</a>, view <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a financial services technology assessment.</p>
 								</div>
 							</div>
-						</div>
-					</div>
-				</section>
-					<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-						<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<h2>Benefits of our Digital Services for banking/finance sector:</h2>
-									<p class="lh">
-									<ul class="listing">
-									<li>Intelligent Sales</li>
-<li>Digital Consumer</li>
-<li>Smoother Claims</li>
-<li>Better Customer Insights</li>
-<li>Contact us to know more about our services in banking/finance domain.</li>
-</ul>
-</p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/ban_4.jpg" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							
 						</div>
 					</div>
 				</section>
@@ -191,9 +162,9 @@ It’s a mobile world. People use devices to do almost everything, especially ba
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for Financial Services</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -201,60 +172,55 @@ It’s a mobile world. People use devices to do almost everything, especially ba
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Digital Banking Apps</h4>
+									<p class="lh">Mobile and web experiences for account management, transfers, and customer engagement.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Payment &amp; Wallet Integration</h4>
+									<p class="lh">Secure payment flows with PCI-aware architecture and gateway connectivity.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Lending &amp; Onboarding Portals</h4>
+									<p class="lh">Digital application journeys with document capture and workflow automation.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Insurance &amp; Claims Systems</h4>
+									<p class="lh">Policy and claims interfaces that reduce manual processing overhead.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Core System Integration</h4>
+									<p class="lh">Connectors to banking cores, CRM, and third-party fintech APIs.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Security &amp; Compliance Engineering</h4>
+									<p class="lh">Encryption, MFA, audit trails, and architecture aligned to financial regulations.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Fintech Development Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -263,7 +229,7 @@ It’s a mobile world. People use devices to do almost everything, especially ba
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -275,10 +241,6 @@ It’s a mobile world. People use devices to do almost everything, especially ba
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

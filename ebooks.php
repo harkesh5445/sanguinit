@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/ebook-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('ebooks');
@@ -13,7 +14,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
     <div class="container">
         <div class="row align-items-center mb20">
             <div class="col-lg-7">
-                <p class="eb-page-intro lh">Eight practical guides you can read online—mobility, marketing, cloud, commerce, and delivery—from the SanguineIT team.</p>
+                <p class="eb-page-intro lh">In-depth digital guides on mobility, cloud governance, commerce, SEO, and delivery strategy—readable online and built for teams planning their next platform initiative.</p>
             </div>
             <div class="col-lg-5">
                 <div class="eb-top-search">
@@ -37,7 +38,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                     <a href="<?php echo $ebUrl; ?>" class="eb-card-link">
                         <div class="eb-card-shell">
                             <div class="eb-cover">
-                                <img src="<?php echo htmlspecialchars($ebItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($ebTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                                <?php sit_responsive_image($ebItem['featured_image'], $ebTitle); ?>
                                 <img src="images/logo/sanguine-logo2.png" alt="SanguineIT" class="eb-brand-logo">
                                 <div class="eb-cover-band">
                                     <p class="eb-cover-title"><?php echo htmlspecialchars($ebItem['cover_line'], ENT_QUOTES, 'UTF-8'); ?> <span><?php echo htmlspecialchars($ebItem['cover_highlight'], ENT_QUOTES, 'UTF-8'); ?></span></p>

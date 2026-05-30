@@ -7,7 +7,7 @@
     <title>Microsoft SharePoint Development Services</title>
     <meta name="description" content="Creative Agency, Marketing Agency Sanguine">
       <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="rajesh-doot">
+    <meta name="robots" content="noindex, nofollow">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- <meta name="theme-color" content="#2e2a8f"> -->

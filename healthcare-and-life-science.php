@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Healthcare & Life Sciences Software | SanguineIT',
+    'description' => 'Healthcare and life sciences software development — HIPAA-aware portals, patient apps, LMS platforms, and clinical workflow tools for providers and health tech companies.',
+    'keywords' => 'healthcare software development, HIPAA compliant apps, health tech, medical app development, life sciences IT, SanguineIT',
+    'canonical' => sit_base_url() . '/healthcare-and-life-science.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Health Care & Life Science</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Healthcare &amp; Life Sciences</h1>
 								</div>
 							</div>
 						</div>
@@ -66,22 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/helth_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/helth_1.jpg', 'Healthcare software development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Health Care & Life Science</h2>
-									<p class="lh">Constitute our expertise into Healthcare and Life science industry.</p>
-									<p class="lh">Serving the life sciences industry gives us a strong appreciation for the resource dedication and demanding processes that result in life-saving innovations. We understand that IT is critical in its function to accelerate product research and development. That’s why we’re committed to simplifying IT and optimizing your entire enterprise.</p>
-									<p class="lh">We can provide you with comprehensive technology and support solutions that help increase productivity while streamlining compliance readiness and improving communication not solely with discovery, research and development but with all the phases that follow: clinical trials, manufacturing, supply chain management, and sales and marketing.</p>
-									<p class="lh">The Life Sciences and Health Care industry group strives to support clients in addressing the challenges that impact today’s industry.</p>
+									<h2>Digital Engineering for Healthcare &amp; Life Sciences</h2>
+									<p class="lh">SanguineIT builds web and mobile applications for healthcare providers, health tech startups, and life sciences organizations that need HIPAA-aware architecture, reliable patient experiences, and integration with EHR and operational systems — delivered globally with security and accessibility as first-class requirements.</p>
+									<p class="lh">Our teams deliver patient portals, telehealth interfaces, provider dashboards, training platforms, and internal workflow tools with encryption, access controls, and audit logging appropriate for protected health information environments.</p>
+									<p class="lh">We also build LMS and training portals for clinical staff — see our <a href="blog-topic.php?topic=enterprise-learning">enterprise learning</a> content hub for Moodle and compliance training approaches.</p>
 								</div>
 							</div>
 						</div>
@@ -90,50 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Our Healthcare Technology Solutions include the following:</h2>
+									<h2>Healthcare capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>Compliance Assessments for Healthcare Technology Companies</li>
-<li>Legacy Product Management</li>
-<li>Agile New Product Development</li>
-<li>Critical User Experience and Design</li>
+									<li><b>Patient portals —</b> Appointment scheduling, results access, messaging, and bill pay with secure authentication.</li>
+									<li><b>Telehealth &amp; mHealth apps —</b> Video visit integration, vitals tracking, and medication reminder experiences.</li>
+									<li><b>Provider dashboards —</b> Clinical workflow tools, referral management, and operational reporting.</li>
+									<li><b>Training &amp; LMS —</b> Compliance training, onboarding, and certification tracking for clinical and admin staff.</li>
+									<li><b>EHR &amp; API integration —</b> HL7/FHIR connectors and third-party health data exchange patterns.</li>
+									<li><b>HIPAA-aware architecture —</b> Encryption, BAAs, access logging, and secure cloud deployment practices.</li>
 </ul>
 </p>
-<p class="lh">The entire healthcare ecosystem is striving to achieve a sustainable competitive advantage by adopting technological advances such as Big Data, cloud, mobility, social media, predictive analytics and digitalization, which are leading to simplified operating environments despite the constantly changing regulatory ecosystem</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/helth_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/helth_2.jpg', 'Healthcare mobile and portal development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/helth_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/helth_3.jpg', 'Life sciences and healthcare platform engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>We offer broad range of services across Healthcare and Life Sciences domain. These include the following domains:</h2>
-									<p class="lh">
-									<ul class="listing">
-										<li>Pharmaceuticals and Biotech</li>
-										<li>Medical Devices</li>
-										<li>Contract Research Organizations (CRO)</li>
-										<li>Payers</li>
-										<li>Providers</li>
-									</ul></p>
+									<h2>Health platforms built for compliance and care quality</h2>
+									<p class="lh">Healthcare software fails when security is an afterthought or when clinical workflows are ignored in favor of generic UX. SanguineIT engages stakeholders early — providers, operations, and IT — to design systems that improve care delivery while meeting regulatory and accessibility requirements including WCAG where applicable.</p>
+									<p class="lh">View <a href="case_studies.php">case studies</a>, explore our <a href="ios.php">mobile</a> capabilities, or <a href="contact-us.php">contact us</a> for a healthcare technology assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -162,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for Healthcare</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -172,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Patient Portals</h4>
+									<p class="lh">Secure scheduling, results, messaging, and payment experiences for patients.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Telehealth &amp; mHealth Apps</h4>
+									<p class="lh">Mobile experiences for virtual care, vitals, and patient engagement.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Provider &amp; Admin Dashboards</h4>
+									<p class="lh">Workflow tools and reporting for clinical and operations teams.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Clinical Training &amp; LMS</h4>
+									<p class="lh">Compliance training and certification platforms for healthcare staff.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Health Data Integration</h4>
+									<p class="lh">EHR, FHIR, and third-party API connectivity with secure data handling.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>HIPAA-Aware Engineering</h4>
+									<p class="lh">Encryption, access controls, and audit logging for PHI environments.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Healthcare Technology Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -234,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -246,9 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

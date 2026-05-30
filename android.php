@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Android App Development Services | SanguineIT',
+    'description' => 'Native Android app development — Kotlin and Java apps, Play Store launch, API integrations, offline-first UX, and enterprise mobility for global businesses.',
+    'keywords' => 'Android app development, Kotlin Android, native Android apps, mobile app development, Android agency, SanguineIT',
+    'canonical' => sit_base_url() . '/android.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Android Application Development</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Android App Development</h1>
 								</div>
 							</div>
 						</div>
@@ -66,20 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/appli_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/appli_1.jpg', 'Native Android app development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Android Application Development</h2>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich and interactive android apps for both phones and tablets.</p>
-									<p class="lh">Android has taken the market share by surprise. In order to support the SMBs and other businesses, Android is playing an important role in enhancing their business processes and improving the quality of work. provides a team of highly skilled and experienced mobile app developers regarding Android app development service.</p>
+									<h2>Native Android Engineering for Global Mobile Products</h2>
+									<p class="lh">SanguineIT builds native Android applications for consumer brands, B2B field teams, and enterprise mobility programs that need reliable performance, deep device integration, and Play Store-ready release discipline — delivered for teams across North America, Europe, and APAC.</p>
+									<p class="lh">Our Android engineers work in Kotlin and Java with modern architecture patterns — MVVM, Jetpack Compose, Room, WorkManager, and Firebase — to deliver apps that handle offline scenarios, push notifications, payments, and third-party SDK integrations without compromising maintainability.</p>
+									<p class="lh">From MVP launches to enterprise rollouts, we offer dedicated Android squads alongside our <a href="ios.php">iOS</a>, <a href="reactnative.php">React Native</a>, and <a href="app-maintenance.php">app maintenance</a> practices.</p>
 								</div>
 							</div>
 						</div>
@@ -88,51 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Technology expertise we possess:</h2>
+									<h2>Android capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>Android Motion and touch-sensing Java classes, OpenGL 3D graphics, Android Media APIs</li>
-<li> Location–based Service APIs, Google Maps</li>
-<li>	 Android Security Architecture, Wi–Fi APIs, Facebook API</li>
-<li>	 Activity Creator, Android Interface Description Language, and Asset Packaging Tool</li>
-<li>	 SQLite, MySQL 5.6 as databases, J2EE App Servers on Server side / Backend, Cloud Integration</li>
-<li>	 In App Purchases using PayPal, CCAvenue, BillDesk, etc.
-Choosing us would be the best for your Android app needs because:</li>
-<li>	We offer you a dedicated team of Android developers having expertise on Android 4.x / 5.x / 6.x and regularly update their knowledge with the new release of Android platform.</li>
-<li>	We analyze the client requirements and accordingly create the requisite development framework with all devices compatibility.</li>
-<li>	 We possess experience on different tools including Android SDK tools (Trace view, Zipalign, Hierarchy Viewer, and DDMS) and other IDE tools /framework memory analyzer.</li>
-<li>	 Our mobile app development services include Android Game API, App billing using PayPal, Google checkout, etc., Views customization, background apps with multiple screens support, Home screen AppWidgets and efficient use of Views following Android guidelines.</li>
-<li>	 We have a team of 20+ Android developers with varying experience levels ranging between 2+ Years to 8+ Years and with mean experience being 4.2 years.</li>
+									<li><b>Native Kotlin &amp; Java apps —</b> Phone and tablet experiences with Material Design and adaptive layouts.</li>
+									<li><b>API &amp; backend integration —</b> REST, GraphQL, OAuth, and real-time data sync with robust offline caching.</li>
+									<li><b>Payments &amp; commerce —</b> Google Pay, in-app purchases, and subscription billing flows.</li>
+									<li><b>Device features —</b> GPS, camera, biometrics, Bluetooth, and push notifications via FCM.</li>
+									<li><b>Play Store launch —</b> Release signing, staged rollouts, crash monitoring, and ASO guidance.</li>
+									<li><b>Enterprise mobility —</b> MDM compatibility, SSO, and secure data handling for regulated industries.</li>
 </ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/appli_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/appli_2.jpg', 'Android Kotlin app development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/appli_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/appli_3.jpg', 'Android enterprise mobile application engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Our Methodology:</h2>
-									<p class="lh">Before working on developing the Android Apps, our developers conduct rigorous discussion sessions with our clients to understand their business needs effectively. After conducting the sessions, technical feasibility is decided and the complete app architecture is drawn out by our developers. The development process thus begins after client’s approval of the same and a robust, scalable app is born!</p>
-									<p class="lh">Interested in our Android Application development services? Fill out our request form and we would get back to you within 24 hours!</p>
+									<h2>Android apps built for production reliability</h2>
+									<p class="lh">Whether you launch a consumer app or deploy field tools to thousands of devices, SanguineIT aligns Android architecture with your connectivity, security, and release requirements. We automate CI/CD pipelines, instrument crash analytics, and measure outcomes against store ratings, retention, and support ticket volume.</p>
+									<p class="lh">View <a href="case_studies.php">mobile case studies</a>, explore our <a href="portfolio.php">portfolio</a>, or <a href="contact-us.php">contact us</a> for an Android product assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -161,9 +162,9 @@ Choosing us would be the best for your Android app needs because:</li>
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Mobile Services</span>
+									<h2>What We Build</h2>
+									<p class="lh mb30">Native and cross-platform mobile engineering for global product teams.</p>
 								</div>
 							</div>
 						</div>
@@ -171,60 +172,55 @@ Choosing us would be the best for your Android app needs because:</li>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Native Android Apps</h4>
+									<p class="lh">Kotlin and Java applications with Material Design and modern Jetpack libraries.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Backend Integration</h4>
+									<p class="lh">REST, GraphQL, and real-time sync with offline-first data strategies.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Payments &amp; Subscriptions</h4>
+									<p class="lh">Google Pay, in-app purchases, and billing flows tested for production.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Device &amp; Sensor Features</h4>
+									<p class="lh">GPS, camera, biometrics, Bluetooth, and push notification integration.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Play Store Release</h4>
+									<p class="lh">Signing, staged rollouts, crash monitoring, and App Store optimization support.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Enterprise Mobility</h4>
+									<p class="lh">SSO, MDM compatibility, and secure data handling for business deployments.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need an <span>Android Development Team</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -233,7 +229,7 @@ Choosing us would be the best for your Android app needs because:</li>
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -245,7 +241,6 @@ Choosing us would be the best for your Android app needs because:</li>
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

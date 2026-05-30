@@ -1,4 +1,12 @@
-<?php include "header.php" ?>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+$page_data = [
+    'title' => 'Ecommerce Web Development | Magento & Adobe Commerce | SanguineIT',
+    'description' => 'SanguineIT builds high-converting ecommerce stores on Magento, Adobe Commerce, and headless stacks — catalog, checkout, integrations, migration, and ongoing optimization.',
+    'keywords' => 'ecommerce web development, Magento development, Adobe Commerce, online store development, headless commerce',
+    'canonical' => sit_base_url() . '/ecommerce-web-development.php',
+];
+include "header.php" ?>
 	  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
@@ -77,10 +85,10 @@
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>eCommerce web development</h2>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have. All our customers require is to involve us our administrations and we will modify your web advancement needs successfully. </p>
-									<p class="lh">We at SanguineIT introduce our portion of eCommerce improvement answers for a superior development in your business. We furnish our customers with the best administrations of eCommerce for their exceptional prerequisites. We are an expert eCommerce Website Development office in the Delhi. The characterized arrangements we give have presented to us a ton of popularity. Our examination guarantees us to show acceptable outcomes consistently. </p>
-									<p class="lh">We do what we state and our group promises you to deal with all your briefs angle. It will incorporate planning and improvement of eCommerce site to offer a safe web based shopping stage to customers inspired by buys on the web. Our responsibility to work causes us to convey the exceptional outcomes. Recruit us today for the eCommerce Web Development administrations with ease. </p>
+									<h2>Ecommerce Web Development</h2>
+									<p class="lh">SanguineIT helps retailers and B2B brands launch and scale ecommerce experiences on Magento, Adobe Commerce, Shopify Plus, and custom headless storefronts — with catalog architecture, checkout optimization, and ERP or OMS integrations built for peak traffic.</p>
+									<p class="lh">Our engineers handle complex requirements: multi-store catalogs, tiered pricing, subscription flows, tax and shipping rules, payment gateways, and PCI-aware hosting patterns. We migrate legacy stores without SEO loss and tune Core Web Vitals so merchandising updates do not slow revenue pages.</p>
+									<p class="lh">From discovery through launch, you get a single delivery team aligned to conversion KPIs. Post go-live, our <a href="magento-maintenance-services.php">Magento maintenance</a> and <a href="app-maintenance.php">application support</a> teams keep patches, extensions, and promotions shipping on schedule.</p>
 								</div>
 							</div>
 						</div>
@@ -91,21 +99,15 @@
 						<div class="row">
 						<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Technology expertise we possess:</h2>
+									<h2>Ecommerce capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li><b>Present day Tools -  </b>We at SanguineIT will supplement your eCommerce division with our advanced apparatuses and procedures. This will help in making your eCommerce stage rode better by the clients.  </li>
-<li><b>Versatile Solutions - </b>Our eCommerce arrangements will work incredible on the work area as well as on the versatile variant. We will guarantee that your clients love your application and administrations. 
-</li>
-<li><b>Master Knowledge - </b>SanguineIT has a group of effective and first class engineers that will plan your eCommerce stage, in a responsive and astounding way. 
-</li>
-<li><b>Transportation Cart - </b>We will plan your application in manners that will incorporate the delivery trucks advancement stage too. This will guarantee that the clients will have a decent degree of involvement. 
-</li>
-<li><b>Variations of eCommerce Portals - </b>We give you the most ideal administrations through the advancement of eCommerce entries that will improve the client base of your business. 
-</li>
-<li><b>Sensible Price - </b>Our eCommerce improvement administrations are truly moderate in nature and guarantee that you get an incentive for cash through the administrations. We will improve your worldwide reach. 
-</li>
-
+									<li><b>Platform expertise —</b> Magento Open Source, Adobe Commerce Cloud, Shopify, and composable commerce architectures.</li>
+									<li><b>Conversion-focused UX —</b> Fast category pages, streamlined checkout, and personalization hooks that lift average order value.</li>
+									<li><b>Integrations —</b> ERP, CRM, PIM, WMS, tax, fraud, and marketing automation connected through reliable APIs.</li>
+									<li><b>Secure payments —</b> Gateway configuration, tokenization, and compliance-ready deployment patterns.</li>
+									<li><b>SEO-safe migrations —</b> URL mapping, redirect plans, and structured data preserved during replatforming — see our <a href="Magento.php">Magento development</a> service.</li>
+									<li><b>Continuous optimization —</b> Performance monitoring, A/B test support, and release trains for seasonal campaigns.</li>
 </ul>
 </p>
 								</div>
@@ -222,7 +224,7 @@ We are a client situated organization making every one of our customers apprecia
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
 								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
@@ -241,7 +243,7 @@ We are a client situated organization making every one of our customers apprecia
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -257,4 +259,5 @@ We are a client situated organization making every one of our customers apprecia
 		
 		
 		
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
 		<?php include "footer.php" ?>

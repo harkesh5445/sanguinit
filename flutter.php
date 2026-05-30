@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Flutter App Development Services | SanguineIT',
+    'description' => 'Flutter cross-platform app development — iOS, Android, and web from one Dart codebase with native performance and beautiful Material/Cupertino UI.',
+    'keywords' => 'Flutter development, Dart apps, cross-platform mobile, Flutter agency, iOS Android Flutter, SanguineIT',
+    'canonical' => sit_base_url() . '/flutter.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Flutter</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Flutter App Development</h1>
 								</div>
 							</div>
 						</div>
@@ -66,20 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/fluit_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/fluit_1.jpg', 'Flutter cross-platform app development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Flutter</h2>
-									<p class="lh">At SanguineIT, as a renowned Flutter App Development Company, we have a veteran team of flutter developers with experienced in developing beautiful and functionally-rich apps.</p>
-									<p class="lh">As a one of the main web and versatile application improvement organization, SanguineIT offers cutting edge application advancement administrations utilizing Google's progressive structure, Flutter. This open source portable application SDK underpins both Android and iOS stages utilizing a solitary codebase. This unequaled and exceptionally solid portable UI system empower to create great local interfaces on cross stages just inside a 120 FPS record time.</p>
+									<h2>Flutter Engineering for Beautiful Cross-Platform Apps</h2>
+									<p class="lh">SanguineIT builds Flutter applications for brands and product teams that want pixel-perfect UI on iOS, Android, and web from a single Dart codebase — with near-native performance and faster release cycles for global markets.</p>
+									<p class="lh">Our Flutter engineers deliver custom widgets, BLoC and Riverpod state management, Firebase backends, platform channels for native features, and responsive layouts that adapt across phone, tablet, and desktop form factors.</p>
+									<p class="lh">From MVP to enterprise rollout, we offer dedicated Flutter squads alongside our <a href="reactnative.php">React Native</a> and native <a href="android.php">Android</a>/<a href="ios.php">iOS</a> practices for the right platform strategy.</p>
 								</div>
 							</div>
 						</div>
@@ -88,99 +98,47 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>What are the advantages of redistributing Flutter App Development? </h2>
-									<p class="lh"><b>Here are a portion of the critical advantages of redistributing your Flutter App improvement in the nation like India: </b></p>
+									<h2>Flutter capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>Low turn of events and operational expense </li>
-									<li>Adaptable to work as indicated by your time-region </li>
-									<li>Adaptable to work as indicated by your time-region </li>
-								<li>Diminished advancement times </li>
-								<li>Guaranteed quality administrations </li>
-								<li>Cutting edge innovation </li>
-								<li>Better comprehension of various stages </li>
-								</ul>
-								</p>
+									<li><b>Cross-platform UI —</b> Material and Cupertino designs with custom animations and responsive layouts.</li>
+									<li><b>State management —</b> BLoC, Riverpod, and Provider patterns for scalable app architecture.</li>
+									<li><b>Platform channels —</b> Native integrations for camera, payments, biometrics, and device sensors.</li>
+									<li><b>Firebase &amp; backends —</b> Auth, Firestore, Cloud Functions, and REST API integration.</li>
+									<li><b>Web &amp; desktop —</b> Flutter web and desktop targets when you need unified experiences beyond mobile.</li>
+									<li><b>Store deployment —</b> App Store and Play Store release automation with crash and analytics setup.</li>
+</ul>
+</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/fluit_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/fluit_2.jpg', 'Flutter Dart mobile app development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				<!--Start Process-->
-				<section class="service-block pad-tb light-dark">
+				<section class="service pad-tb">
 					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading ptag">
-									<span>Process</span>
-									<h2>QUESTION </h2>
-									<!-- <p class="lh">Our design process follows a proven approach. We begin with a deep understanding of your needs and create a planning template.</p> -->
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="image-block upset bg-shape wow fadeIn">
+									<?php sit_responsive_image('images/about_2/fluit_3.jpg', 'Flutter enterprise mobile application development', ['class' => 'img-fluid']); ?>
+								</div>
+							</div>
+							<div class="col-lg-8 block-1">
+								<div class="common-heading text-l pl25">
+									<h2>Flutter apps built for design consistency at scale</h2>
+									<p class="lh">Whether you launch a consumer brand app or internal operations tools, SanguineIT aligns Flutter architecture with your design system and integration requirements. We automate golden tests, CI/CD for both stores, and measure outcomes against frame rates, crash-free rates, and time-to-market.</p>
+									<p class="lh">View <a href="case_studies.php">case studies</a>, explore our <a href="portfolio.php">portfolio</a>, or <a href="contact-us.php">contact us</a> for a Flutter feasibility assessment.</p>
 								</div>
 							</div>
 						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="images/about_2/fluit_3.jpg" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>1</span>
-									<h3>What amount does it cost to build up a Flutter App?</h3>
-									<p class="lh">The expense of Flutter App advancement relies upon numerous components, for example, the improvement stage, App classifications, App intricacy, nation of designer and number of highlights you need in your application. Reach us with your prerequisite to get the App advancement cost. </p>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>2</span>
-									<h3>What amount of time does it require to assemble a Flutter App? </h3>
-									<p class="lh">Sorting out what amount of time does it require to build up a Flutter App will rely upon different components like improvement stage, unpredictability of the plan, experience level of designer, highlights and usefulness, testing and some more. Reach us with your necessity to know the assessed time. </p>
-								</div>
-							</div>
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="images/about_2/fluit_4.jpg" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="images/about_2/fluit_5.jpg" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>3</span>
-									<h3>Why pick MindInventory for Flutter App advancement? </h3>
-									<p class="lh">There are innumerable advantages of picking MindInventory for your App improvement. Not many of them are as beneath: </p>
-									<ul class="listing">
-										<li>Capable and experienced designers </li>
-										<li>Global norm</li>
-										<li>Dexterous advancement measure</li>
-										<li>Straightforwardness and correspondence </li>
-										<li>We convey on time on financial plan </li>
-										<li>Powerful emotionally supportive network</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						
 					</div>
 				</section>
-				<!--End Process-->
-				
 				<!--End About-->
 				<!--Start Tech-->
 				<div class="techonology-used-">
@@ -204,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Mobile Services</span>
+									<h2>What We Build</h2>
+									<p class="lh mb30">Native and cross-platform mobile engineering for global product teams.</p>
 								</div>
 							</div>
 						</div>
@@ -214,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Cross-Platform UI</h4>
+									<p class="lh">Pixel-perfect Material and Cupertino interfaces across iOS and Android.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>State Architecture</h4>
+									<p class="lh">BLoC and Riverpod patterns for maintainable, testable Flutter apps.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Native Integrations</h4>
+									<p class="lh">Platform channels for payments, biometrics, and device-specific features.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Backend &amp; Firebase</h4>
+									<p class="lh">Authentication, databases, and API integration for full-stack mobile products.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Flutter Web &amp; Desktop</h4>
+									<p class="lh">Extended Flutter targets when unified experiences matter beyond phones.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Store Release &amp; Analytics</h4>
+									<p class="lh">Dual-store deployment with crash monitoring and performance tracking.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Flutter Development Team</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -276,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -288,10 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-				
-				
-				
-				
-				
-				<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

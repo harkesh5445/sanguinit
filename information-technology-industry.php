@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'IT Industry Software Development | SanguineIT',
+    'description' => 'Software development for IT companies and SaaS providers — product engineering, API platforms, DevOps, cloud migration, and dedicated development teams for global tech firms.',
+    'keywords' => 'IT industry software development, SaaS development, product engineering, tech company outsourcing, software development partner, SanguineIT',
+    'canonical' => sit_base_url() . '/information-technology-industry.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Information Technology Industry</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Information Technology</h1>
 								</div>
 							</div>
 						</div>
@@ -66,20 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/hello_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/hello_1.jpg', 'IT industry software development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Information Technology Industry</h2>
-									<p class="lh">Dominent expertised solutions for Information Technology domain.</p>
-									<p class="lh">Computers and information systems are essential parts of every business today. Like accounting and legal, every business needs to invest in technology to compete. Technology is both a cost of doing business, and an opportunity to do more business. Most people I talk with recognize the necessity of having a computer, an email address, and a web site, but still look at the upfront cost more than other issues.</p>
+									<h2>Product Engineering for IT &amp; SaaS Companies</h2>
+									<p class="lh">SanguineIT partners with software vendors, SaaS startups, and enterprise IT departments that need to extend engineering capacity without sacrificing code quality — delivering web, mobile, and cloud-native products for global markets across North America, Europe, and APAC.</p>
+									<p class="lh">Our teams embed with your product managers and architects to build API platforms, admin consoles, integration layers, and customer-facing applications using modern stacks — React, Node.js, Laravel, .NET, and cloud services on AWS and Azure.</p>
+									<p class="lh">Whether you need a dedicated squad for a product line or milestone-based delivery for a major release, we align with agile ceremonies, documentation standards, and security reviews your engineering org already follows.</p>
 								</div>
 							</div>
 						</div>
@@ -88,49 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Why IT?</h2>
-									<p class="lh"><b>What are the benefits of technology for a business? There are many, but most fall under a few categories:</b>
+									<h2>IT industry capabilities we deliver</h2>
+									<p class="lh">
 									<ul class="listing">
-									<li>Reach more potential customers, develop a business relationship with potential customers</li>
-<li>Streamline operations, reduce costs, improve efficiency, maximize profit, minimize waste, devote talent to core business instead of overhead</li>
-<li>Provide better service to customers</li>
-<li>Support better relationships with key partners</li>
-<li>Allow customers to better guide the business</li>
+									<li><b>SaaS product development —</b> Multi-tenant architectures, subscription billing, and onboarding flows.</li>
+									<li><b>API &amp; platform engineering —</b> Versioned REST/GraphQL APIs with developer documentation and SDK support.</li>
+									<li><b>Cloud migration &amp; DevOps —</b> Containerization, CI/CD pipelines, and infrastructure-as-code on AWS and Azure.</li>
+									<li><b>Legacy modernization —</b> Strangler patterns, microservice extraction, and database migration programs.</li>
+									<li><b>QA &amp; test automation —</b> Regression suites, performance testing, and release gate automation.</li>
+									<li><b>Dedicated engineering teams —</b> Long-term squads that learn your codebase, domain, and release calendar.</li>
 </ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/hello_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/hello_2.jpg', 'SaaS product engineering and development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/hello_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/hello_3.jpg', 'Enterprise IT software platform engineering', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Some of the services in the IT industry that we cater to are listed below:</h2>
-									<p class="lh"><ul class="listing"><li>	Enterprise Business Solutions</li>
-									<li>Application Development and Maintenance</li>
-									<li>Infrastructure based Services</li>
-									</ul></p>
-									<p class="lh">We have a leading presence in the fast-paced information technology (IT) industry. With global expertise and seamless cross-platform functionality, we create IT solutions that empower companies to focus on, and enhance their core businesses.</p>
-									<p class="lh">Our team of consultants and thought leaders provide comprehensive consulting services in business transformation, business process consulting, information technology (IT) consulting and operational excellence.</p>
-									<p class="lh"><b>Contact us or fill out our enquiry form and talk to our experts for your business requirements.</b></p>
+									<h2>Technology partnerships built for shipping velocity</h2>
+									<p class="lh">IT companies win when they ship reliably without accumulating debt. SanguineIT measures success through deployment frequency, defect escape rate, and time-to-market for roadmap commitments — not just hours billed. We document architecture decisions, maintain test coverage targets, and integrate with your existing Jira, GitHub, and monitoring stack.</p>
+									<p class="lh">Explore our <a href="custom-web-development.php">custom development</a>, <a href="NodeJS.php">Node.js</a>, and <a href="ReactJs.php">React</a> practices, read <a href="articles.php">articles</a>, or <a href="contact-us.php">contact us</a> for a product engineering assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -159,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for IT &amp; SaaS</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -169,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>SaaS Product Development</h4>
+									<p class="lh">Multi-tenant platforms with billing, onboarding, and scalable architecture.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>API &amp; Platform Engineering</h4>
+									<p class="lh">Versioned APIs, developer docs, and integration layers for partner ecosystems.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Cloud &amp; DevOps</h4>
+									<p class="lh">AWS/Azure deployment, CI/CD, and infrastructure automation.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Legacy Modernization</h4>
+									<p class="lh">Microservice extraction and cloud migration with minimal disruption.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>QA &amp; Test Automation</h4>
+									<p class="lh">Automated regression, performance testing, and release quality gates.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Dedicated Dev Teams</h4>
+									<p class="lh">Embedded squads aligned to your product roadmap and engineering standards.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Product Engineering Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -231,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -243,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

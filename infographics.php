@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/infographic-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('infographics');
@@ -13,7 +14,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
     <div class="container">
         <div class="row align-items-center mb20">
             <div class="col-lg-7">
-                <p class="info-page-intro lh">Eight executive-ready visuals on LMS, commerce, cloud, security, and delivery—built to align stakeholders and accelerate decisions.</p>
+                <p class="info-page-intro lh">Executive-ready visual briefs on commerce, cloud governance, security, and digital maturity—helping leadership teams align faster on complex technology decisions.</p>
             </div>
             <div class="col-lg-5">
                 <div class="info-top-search">
@@ -48,7 +49,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                 <article class="info-card" data-title="<?php echo htmlspecialchars($infoTitle, ENT_QUOTES, 'UTF-8'); ?>" data-summary="<?php echo htmlspecialchars($infoItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?>" data-category-label="<?php echo htmlspecialchars($infoItem['category'], ENT_QUOTES, 'UTF-8'); ?>">
                     <a href="<?php echo $infoUrl; ?>" class="info-card-link">
                         <div class="info-card-thumb">
-                            <img src="<?php echo htmlspecialchars($infoItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($infoTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php sit_responsive_image($infoItem['featured_image'], $infoTitle); ?>
                             <span class="info-card-badge"><?php echo htmlspecialchars($infoItem['category'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </div>
                         <div class="info-card-body">

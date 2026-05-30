@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/article-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('articles');
@@ -11,10 +12,10 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
 
 <section class="article-reference-section pad-tb">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-left">
             <div class="col-lg-11">
                 <h2 class="article-title">SanguineIT Articles</h2>
-                <p class="article-page-intro lh">Expert articles on web development, ecommerce, CMS platforms, cloud, and dedicated engineering—from the SanguineIT team.</p>
+                <p class="article-page-intro lh">Long-form articles for engineering leaders and product owners—covering platform strategy, outsourcing models, commerce architecture, and operational excellence for organizations worldwide.</p>
             </div>
         </div>
 
@@ -56,7 +57,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                     <div class="col-lg-4 col-md-6 mb20 article-grid-col">
                         <article class="article-card" data-category="<?php echo htmlspecialchars($articleItem['category_slug'], ENT_QUOTES, 'UTF-8'); ?>" data-title="<?php echo htmlspecialchars($articleTitle, ENT_QUOTES, 'UTF-8'); ?>" data-content="<?php echo htmlspecialchars($articleSummary, ENT_QUOTES, 'UTF-8'); ?>">
                             <a href="<?php echo $articleUrl; ?>" class="article-card-link">
-                                <img src="<?php echo htmlspecialchars($articleItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($articleTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                                <?php sit_responsive_image($articleItem['featured_image'], $articleTitle); ?>
                                 <h4><?php echo htmlspecialchars($articleTitle, ENT_QUOTES, 'UTF-8'); ?></h4>
                                 <p class="article-card-date"><?php echo htmlspecialchars($articleItem['date'], ENT_QUOTES, 'UTF-8'); ?></p>
                             </a>

@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'MySQL Database Development & Support | SanguineIT',
+    'description' => 'MySQL database development — schema design, query optimization, replication, cloud migration on AWS RDS and Azure Database for MySQL.',
+    'keywords' => 'MySQL development, MySQL DBA, database optimization, MySQL cloud, SanguineIT',
+    'canonical' => sit_base_url() . '/MySQL.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">ASP.NET Development</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">MySQL Database Services</h1>
 								</div>
 							</div>
 						</div>
@@ -66,25 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/fethh_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/data_1.jpg', 'MySQL database development and optimization', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>.NET Application Development </h2>
-									<p class="lh">SanguineIT, as an ISO 9001:2015 affirmed ASP .NET Development Company, rules the product improvement field with the intensity of Microsoft .NET instruments by exploiting the critical highlights of this exceptionally flexible stage – Efficient code the board rehearses, shortsighted programming model, administration situated design, simple arrangement, and practicality. We assist undertakings with building basic business arrangements with vital customization and complete unwavering quality, be it any size or section of the business. </p>
-									<p class="lh"><ul class="listing">
-									<li>Windows Azure/AWS Cloud Application Development and Deployment</li>									<li>BI Application Development/Data Analytics and Reporting utilizing Power BI/Tableau </li>
-									<li>Joining with outsider/ERP frameworks: Tally/Quickbooks, SAP, Microsoft Dynamics (AX/D365) and so on </li>									<li>Web and Desktop Custom .NET Application Development and DevOps/CICD Implementation </li>
-									<li>Cross Platform, Web API Development and Custom Web Services Development </li>
-									<li>Microsoft Azure Development/Sharepoint Customization </li>
-									<li>Information Migration and Transformation utilizing outsider API over On-premise/Cloud Environment </li>									<li>Internet business Application Development and Payment Gateway/Wallet Integration </li></ul></p>
+									<h2>MySQL Engineering for Web &amp; SaaS Applications</h2>
+									<p class="lh">SanguineIT designs, optimizes, and supports MySQL databases for web applications, ecommerce platforms, and SaaS products — with schema design, indexing strategy, replication, and cloud deployment on AWS RDS and Azure Database for MySQL.</p>
+									<p class="lh">Our database engineers work alongside PHP, Laravel, Node.js, and .NET development teams to ensure data layers scale with traffic and remain maintainable through product growth.</p>
+									<p class="lh">See also <a href="database-auditing.php">database auditing</a> and <a href="Laravel.php">Laravel development</a>.</p>
 								</div>
 							</div>
 						</div>
@@ -93,49 +98,40 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									
-									<p class="lh">We, at SANGUINEIT perceive the utilization of this ever-developing stage, in this seriously serious market. Throughout the long term, our .NET engineers, creators and analyzers have been totally centered around giving the best .NET arrangements and administrations to our regarded clients. They have been actualizing out-of-the-container Microsoft arrangements, as referenced beneath and our ability ranges over a huge number of ventures. 
-									<ul class="listing">
-									<li>Tweaked Enterprise Solutions </li>
-<li>	 Versatility Solutions </li>
-<li>	Task Management Systems </li>
-<li>	Electronic Healthcare Applications </li>
-<li>Items Navigation System </li>
-<li>Custom CRM Solutions </li>
-<li>Start to finish ERP Solutions </li>
-<li>CMS based Corporate Websites </li>
-<li>Representative Self Service Systems </li>
-<li>eService and Maintenance </li>
-</ul>
-</p>
+									<h2>MySQL capabilities we deliver</h2>
+									<p class="lh"><ul class="listing">
+									<li><b>Schema design —</b> Normalized models with indexing for read-heavy and write-heavy workloads.</li>
+									<li><b>Query optimization —</b> EXPLAIN analysis, slow query logs, and index recommendations.</li>
+									<li><b>Replication &amp; HA —</b> Primary-replica setup, failover planning, and read scaling.</li>
+									<li><b>Cloud migration —</b> On-premise to AWS RDS and Azure Database for MySQL.</li>
+									<li><b>Backup &amp; recovery —</b> Point-in-time recovery and tested restore procedures.</li>
+									<li><b>Security —</b> Least-privilege access, encryption, and connection hardening.</li>
+</ul></p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/feth_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/data_2.jpg', 'MySQL performance tuning and replication', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/feth_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/data_3.jpg', 'MySQL enterprise database support', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<p class="lh">Our specialized and utilitarian capability in Custom .NET Application Development ranges over a scope of present day advancements like .Net Core, MVC, MVVM, HTML5, Bootstrap with solid backend information bases, for example, MS SQL, NO SQL facilitated at on-reason, or Azure/AWS Cloud-based Infrastructure. </p>
-									<p class="lh">We likewise offer restrictive administrations for the PowerBI/Microsoft Azure by methods for USQL/SSIS/SSAS administrations. </p>
-									<p  class="lh">Our enhanced ASP .NET advancement arrangements have helped numerous associations to conquer obstacles like authoritative nimbleness, conflicting execution, and inadequate information the executives.</p>
+									<h2>MySQL databases built for application reliability</h2>
+									<p class="lh">Application outages often trace to missing indexes, lock contention, or untested migrations. SanguineIT treats the database as a first-class part of delivery — not an afterthought handed to whoever is available.</p>
+									<p class="lh"><a href="contact-us.php">Contact us</a> for a MySQL performance review.</p>
 								</div>
 							</div>
 						</div>
@@ -164,70 +160,65 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Database Services</span>
+									<h2>MySQL Services</h2>
+									<p class="lh mb30">Focused capabilities backed by global delivery experience.</p>
 								</div>
-							</div>
+								</div>
 						</div>
 						<div class="row upset link-hover">
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Schema Design</h4>
+									<p class="lh">Normalized models, indexing strategy, and migration-safe DDL planning.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Query Optimization</h4>
+									<p class="lh">Slow query analysis, execution plans, and performance tuning.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>High Availability</h4>
+									<p class="lh">Replication, failover, and backup strategies for production uptime.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Cloud Deployment</h4>
+									<p class="lh">Managed database hosting on AWS RDS, Azure SQL, and Atlas.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Security &amp; Access Control</h4>
+									<p class="lh">Role-based permissions, encryption, and audit logging.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Migration &amp; Support</h4>
+									<p class="lh">Version upgrades, data migration, and ongoing DBA support.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need <span>MySQL Database Expertise</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -236,7 +227,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -248,13 +239,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

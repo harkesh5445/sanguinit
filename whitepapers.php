@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/whitepaper-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('whitepapers');
@@ -15,7 +16,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
     <div class="container">
         <div class="row align-items-center mb20">
             <div class="col-lg-7">
-                <p class="wp-page-intro lh">Eight analyst-grade whitepapers on commerce, cloud, compliance, and platform strategy—readable online with executive summaries.</p>
+                <p class="wp-page-intro lh">Research papers on platform economics, compliance, modernization, and commerce ROI—written for CIOs, CTOs, and architecture boards evaluating global technology investments.</p>
             </div>
             <div class="col-lg-5">
                 <div class="wp-top-search">
@@ -51,7 +52,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                 <article class="wp-card" data-title="<?php echo htmlspecialchars($wpTitle, ENT_QUOTES, 'UTF-8'); ?>" data-summary="<?php echo htmlspecialchars($wpItem['list_summary'], ENT_QUOTES, 'UTF-8'); ?>" data-category-label="<?php echo htmlspecialchars($wpItem['category'], ENT_QUOTES, 'UTF-8'); ?>" data-author="<?php echo htmlspecialchars($wpItem['author'], ENT_QUOTES, 'UTF-8'); ?>">
                     <a href="<?php echo $wpUrl; ?>" class="wp-card-link">
                         <div class="wp-card-thumb">
-                            <img src="<?php echo htmlspecialchars($wpItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($wpTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php sit_responsive_image($wpItem['featured_image'], $wpTitle); ?>
                             <span class="wp-card-badge">Whitepaper</span>
                         </div>
                         <div class="wp-card-body">

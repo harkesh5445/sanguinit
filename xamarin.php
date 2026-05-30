@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Xamarin App Development Services | SanguineIT',
+    'description' => 'Xamarin and .NET MAUI cross-platform app development — shared C# codebase for iOS and Android with native UI and Microsoft ecosystem integration.',
+    'keywords' => 'Xamarin development, .NET MAUI, cross-platform mobile, C# mobile apps, Xamarin agency, SanguineIT',
+    'canonical' => sit_base_url() . '/xamarin.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Xamarin - Cross platform app development</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Xamarin &amp; .NET MAUI Development</h1>
 								</div>
 							</div>
 						</div>
@@ -66,21 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/cros_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/app_4.jpg', 'Xamarin cross-platform mobile development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Cross platform app development</h2>
-									<p class="lh">Want a cross platform application that runs in all the major mobile platforms like iOS, Android etc? We offer cross platform mobile application development services at highly affordable prices using Titanium Appcelerator, PhoneGap platforms etc.</p>
-									<p class="lh">Developing mobile apps is crucial in the modern times. Consumers are moving towards mobile technology at a very rapid rate. The individual technology platform for the apps limits their use on multiple mobile OS’s. Like Native iOS cannot run on Android platform and vice versa. For this, cross platform app development comes into the picture. It follows the principle of one app for all!</p>
-									<p class="lh">We specialize in cross platform app development using several tools which would help in cutting down the costs as well as allowing the app to run on multiple mobile OS’s with ease.</p>
+									<h2>Xamarin &amp; .NET MAUI Engineering for Microsoft Ecosystem Teams</h2>
+									<p class="lh">SanguineIT builds Xamarin and .NET MAUI applications for enterprises invested in the Microsoft stack — delivering iOS and Android apps from shared C# code with native performance and Azure backend integration.</p>
+									<p class="lh">Our mobile engineers deliver Xamarin.Forms and .NET MAUI apps with MVVM architecture, Azure AD authentication, offline SQLite sync, and integration with existing .NET APIs and SharePoint environments — ideal for internal enterprise mobility programs.</p>
+									<p class="lh">Paired with our <a href="aspdotnet-development.php">ASP.NET development</a> and <a href="Microsoft.php">Microsoft</a> practices for full-stack .NET delivery.</p>
 								</div>
 							</div>
 						</div>
@@ -89,57 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Technology Expertise we work on:</h2>
+									<h2>Xamarin / MAUI capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-										<li>1.	PhoneGap</li>
-										<li>2.	Sencha Touch</li>
-										<li>3.	React Native</li>
-										<li>4.	Titanium Appcelerator</li>
-										<li>5.	HTML5/Ionic apps and so on</li>
-
-									</ul>
-									</p>
+									<li><b>Cross-platform C# apps —</b> Shared business logic for iOS and Android with platform-specific UI.</li>
+									<li><b>.NET MAUI migration —</b> Xamarin.Forms upgrades to modern .NET MAUI architecture.</li>
+									<li><b>Azure integration —</b> Azure AD, App Center, and Azure-hosted API connectivity.</li>
+									<li><b>Enterprise mobility —</b> Intune MDM, offline sync, and secure document handling.</li>
+									<li><b>Native UI customization —</b> Platform renderers and handlers for brand-specific experiences.</li>
+									<li><b>Store deployment —</b> App Store and Play Store release with CI/CD via Azure DevOps.</li>
+</ul>
+</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/cros_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/app_5.jpg', '.NET MAUI mobile app development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/cros_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/app_6.jpg', 'Xamarin enterprise mobile application development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>Why Hire us?</h2>
-									<p class="lh">
-									<ul class="listing">
-									<li>1.	Flexibility – Our team follows a flexible engagement model satisfying your business needs and streamlined to markets and ultimate customer satisfaction.</li>
-									<li>2.	 Introduction to a modular approach to mobile application development.</li>
-									<li>3.	 Strong focus on improving user experience in every way possible.</li>
-									<li>4.	 Top quality vast experienced development team based out of India.</li>
-									<li>4.	 Our team has expertise cross platform technologies like PhoneGap, Ionic, Sencha touch etc..</li>
-									<li>6.	 Expertise in making the app highly precise, interactive and user-friendly.</li>
-									<li>7.	 Fast turnaround time with 100% customer satisfaction guaranteed.</li>
-									<li>8.	Cross mobile OS rigorous testing.</li>
-									</ul>
-								
-									</p>
-									<p class="lh">Do feel free to fill out our request form and one of our consultants would get back to you within 24 hours!</p>
+									<h2>.NET mobile apps built for enterprise integration</h2>
+									<p class="lh">For organizations standardizing on Microsoft technologies, Xamarin and .NET MAUI reduce mobile delivery cost while keeping backend and authentication patterns consistent. SanguineIT evaluates MAUI readiness for existing Xamarin estates and plans migration paths that minimize disruption.</p>
+									<p class="lh">Explore our <a href="aspdotnet-development.php">.NET development</a> services or <a href="contact-us.php">contact us</a> for a Xamarin/MAUI assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -168,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Mobile Services</span>
+									<h2>What We Build</h2>
+									<p class="lh mb30">Native and cross-platform mobile engineering for global product teams.</p>
 								</div>
 							</div>
 						</div>
@@ -178,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Cross-Platform C# Apps</h4>
+									<p class="lh">Shared business logic for iOS and Android from your .NET investment.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>.NET MAUI Migration</h4>
+									<p class="lh">Upgrade paths from Xamarin.Forms to modern MAUI architecture.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Azure &amp; Microsoft Integration</h4>
+									<p class="lh">Azure AD, App Center, and API connectivity with existing .NET backends.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Enterprise Mobility</h4>
+									<p class="lh">Intune MDM, offline sync, and secure enterprise data handling.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Native UI Customization</h4>
+									<p class="lh">Platform-specific renderers for brand-aligned mobile experiences.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>CI/CD &amp; Store Release</h4>
+									<p class="lh">Azure DevOps pipelines for automated dual-store deployment.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Xamarin / MAUI Team</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -240,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -252,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

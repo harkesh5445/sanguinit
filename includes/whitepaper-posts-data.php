@@ -12,7 +12,7 @@ $whitepaperPosts = [
         'category' => 'Ecommerce',
         'category_slug' => 'ecommerce',
         'featured_image' => 'images/whitepapers/magento-business.jpg',
-        'list_summary' => 'Strategic analysis of Magento and Adobe Commerce for growth, B2B expansion, and platform modernization.',
+        'list_summary' => 'A strategic Magento whitepaper on commerce growth, B2B enablement, and phased modernization for global online businesses.',
         'executive_summary' => 'Magento remains a leading choice for mid-market and enterprise merchants who need flexible catalogs, B2B capabilities, and a mature extension ecosystem. This whitepaper outlines capability areas, total cost considerations, and a phased roadmap for measurable revenue impact.',
         'highlights' => [
             ['value' => 'B2B+B2C', 'label' => 'Unified commerce models'],
@@ -35,7 +35,7 @@ $whitepaperPosts = [
         'category' => 'Sitefinity',
         'category_slug' => 'sitefinity',
         'featured_image' => 'images/whitepapers/sitefinity-capabilities.jpg',
-        'list_summary' => 'Enterprise CMS strengths—personalization, multi-site governance, .NET integrations, and upgrade strategy.',
+        'list_summary' => 'An enterprise Sitefinity guide covering personalization, governance, integration architecture, and lifecycle modernization strategy.',
         'executive_summary' => 'Sitefinity delivers marketing agility on a .NET foundation trusted by regulated and global organizations. This paper explains specialized capabilities that differentiate Sitefinity for enterprise portals and when to invest in customization versus configuration.',
         'highlights' => [
             ['value' => '.NET', 'label' => 'Enterprise stack fit'],
@@ -58,7 +58,7 @@ $whitepaperPosts = [
         'category' => 'Cloud',
         'category_slug' => 'cloud',
         'featured_image' => 'images/whitepapers/cloud-tco.jpg',
-        'list_summary' => 'Compare five-year TCO across maintenance, elasticity, staffing, and risk for modernization decisions.',
+        'list_summary' => 'A five-year TCO framework comparing legacy and cloud-native platforms across cost, risk, and delivery economics.',
         'executive_summary' => 'Legacy platforms often appear cheaper until hidden costs—incident frequency, release delays, and talent scarcity—are modeled honestly. This whitepaper provides a TCO framework SanguineIT uses with CIOs evaluating cloud-native migration.',
         'highlights' => [
             ['value' => '5-yr', 'label' => 'TCO horizon'],
@@ -81,7 +81,7 @@ $whitepaperPosts = [
         'category' => 'Compliance',
         'category_slug' => 'compliance',
         'featured_image' => 'images/whitepapers/governance-saas.jpg',
-        'list_summary' => 'Controls, audit evidence, and release governance for HIPAA, SOC 2, and PCI-aligned SaaS products.',
+        'list_summary' => 'A governance blueprint for regulated SaaS covering controls, policy automation, and audit-ready operating practices.',
         'executive_summary' => 'Regulated SaaS requires governance embedded in engineering workflows—not annual checklist exercises. This paper documents patterns for access control, change management, data residency, and continuous compliance monitoring.',
         'highlights' => [
             ['value' => 'SOC 2', 'label' => 'Control mapping'],
@@ -104,7 +104,7 @@ $whitepaperPosts = [
         'category' => 'Research',
         'category_slug' => 'research',
         'featured_image' => 'images/whitepapers/ai-engineering.jpg',
-        'list_summary' => 'Evaluate AI coding assistants for productivity gains while managing IP, security, and quality risks.',
+        'list_summary' => 'A practical AI engineering ROI guide balancing productivity acceleration with security, IP, and quality guardrails.',
         'executive_summary' => 'Generative AI tools can accelerate delivery when governed. This research paper defines guardrails, measurement approaches, and realistic ROI expectations for engineering organizations adopting AI-assisted development.',
         'highlights' => [
             ['value' => '30%', 'label' => 'Potential task acceleration'],
@@ -127,7 +127,7 @@ $whitepaperPosts = [
         'category' => 'Strategy',
         'category_slug' => 'strategy',
         'featured_image' => 'images/whitepapers/enterprise-resilience.jpg',
-        'list_summary' => 'Availability, disaster recovery, and operational readiness for mission-critical customer platforms.',
+        'list_summary' => 'An enterprise resilience blueprint for critical platforms spanning architecture patterns, operations testing, and recovery readiness.',
         'executive_summary' => 'Resilience is a business capability—not only infrastructure redundancy. This blueprint connects SLOs, incident response, chaos practices, and vendor dependencies into an executive-ready operating model.',
         'highlights' => [
             ['value' => '99.9%+', 'label' => 'SLO targets'],
@@ -150,7 +150,7 @@ $whitepaperPosts = [
         'category' => 'Ecommerce',
         'category_slug' => 'ecommerce',
         'featured_image' => 'images/whitepapers/headless-commerce.jpg',
-        'list_summary' => 'Business case framework for headless storefronts, APIs, and composable commerce investments.',
+        'list_summary' => 'An ROI assessment framework for headless commerce adoption, composable architecture trade-offs, and implementation risk control.',
         'executive_summary' => 'Headless commerce unlocks channel agility but adds integration complexity. This guide helps leaders model ROI across development cost, time-to-market, conversion impact, and operational overhead before committing architecture.',
         'highlights' => [
             ['value' => 'API-first', 'label' => 'Channel flexibility'],
@@ -173,7 +173,7 @@ $whitepaperPosts = [
         'category' => 'Security',
         'category_slug' => 'security',
         'featured_image' => 'images/whitepapers/observability.jpg',
-        'list_summary' => 'Logs, metrics, traces, and alerting design for platforms where downtime has material business impact.',
+        'list_summary' => 'An observability strategy for mission-critical applications covering telemetry maturity, tooling governance, and incident reduction.',
         'executive_summary' => 'Observability reduces mean time to resolution and prevents alert fatigue when designed holistically. This whitepaper defines a maturity path from basic monitoring to unified telemetry aligned with SRE practices.',
         'highlights' => [
             ['value' => 'MTTR', 'label' => 'Incident reduction'],

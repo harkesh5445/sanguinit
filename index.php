@@ -1,4 +1,14 @@
-<?php include "header.php" ?>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'SanguineIT | Web, Mobile & Digital Engineering Partner',
+    'description' => 'SanguineIT delivers custom web and mobile development, ecommerce, CMS, cloud modernization, and managed digital engineering for enterprises in the US, India, and worldwide.',
+    'keywords' => 'web development company, mobile app development, ecommerce, Magento, Sitefinity, digital engineering, SanguineIT',
+    'canonical' => SIT_SITE_URL . '/',
+];
+$sit_skip_portfolio_js = true;
+include "header.php" ?>
 
       <section class="hero-card-web bg-gradient12 shape-bg3">
          <div class="hero-main-rp container-fluid">
@@ -66,11 +76,7 @@
       <section class="best-web-design-compny hero-card-web bg-gradient12 shape-bg3">
       <div class="hero-main-rp container-fluid bwd">
       <div class="left-img-box">
-      <picture>
-      <source type="image/webp" srcset="images/wdbc/wdbc-image.png">
-      <source type="image/png" srcset="images/wdbc/wdbc-image.png">
-      <img class="webdesigningimg" src="images/wdbc/wdbc-image.png" alt="website design company">
-      </picture>
+      <img class="webdesigningimg" src="images/wdbc/wdbc-image.png" alt="Custom web and mobile development" loading="lazy" decoding="async">
       </div>
       <div class="right-content">
       <div class="headingsecfresh">
@@ -279,7 +285,7 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
       </div>
       </div>
       <div class="col-lg-6">
-      <div  data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image bg-shape-dez wow fadeIn" data-wow-duration="2s"><img src="images/about/about-company.jpg" alt="image" class="img-fluid"></div>
+      <div  data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image bg-shape-dez wow fadeIn" data-wow-duration="2s"><?php sit_responsive_image('images/about/about-company.jpg', 'SanguineIT digital engineering team', ['class' => 'img-fluid', 'priority' => 'high']); ?></div>
       <p class="lh text-center mt30">Our Team of experts make it efficient, clear and eye-catching user experience, Our production and analysis team works each aspect of your requirement to make it perfect for the user!
 </p>
       <div class="cta-card mt60 text-center">
@@ -292,7 +298,11 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
       </div>
       </section>
       <!--End why choose-->
-      <section class="portfoliosection">
+
+      <?php include __DIR__ . '/includes/homepage-faq-section.php'; ?>
+      <?php include __DIR__ . '/includes/homepage-internal-links.php'; ?>
+
+      <section class="portfoliosection portfoliosection--static">
          <section id="we-lead" class="common-slider"  style="display: none;">
             <div class="wrapper-img">
                <div class="container-el">
@@ -782,7 +792,18 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
          </div>
          <!-- Portfolio -->
          <!-- client logo -->
-         <!-- Mobile Prtfolio -->
+         <!-- Mobile Portfolio (static fallback — no empty scroll gap) -->
+         <div class="container portfoliosection--static-head">
+            <div class="row justify-content-center">
+               <div class="col-lg-8 text-center">
+                  <div class="common-heading">
+                     <span>Our Work</span>
+                     <h2 class="mb15">Featured Client Projects</h2>
+                     <p class="lh">A snapshot of platforms we have engineered across streaming, health, commerce, and enterprise.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
          <div class="mob">
             <div class="owl-carousel owl-theme" id="port-slider">
                <div class="item">
@@ -909,75 +930,75 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
       <div class="clients-logos text-center col-12">
       <ul class="row text-center clearfix">
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay=".2s">
-      <div class="brand-logo"><img src="images/client/clients-1.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-1.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay=".4s">
-      <div class="brand-logo"><img src="images/client/clients-2.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-2.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay=".6s">
-      <div class="brand-logo"><img src="images/client/clients-3.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-3.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay=".8s">
-      <div class="brand-logo"><img src="images/client/clients-4.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-4.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="1s">
-      <div class="brand-logo"><img src="images/client/clients-5.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-5.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="1.2s">
-      <div class="brand-logo"><img src="images/client/clients-6.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-6.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="1.4s">
-      <div class="brand-logo"><img src="images/client/clients-7.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-7.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="1.6s">
-      <div class="brand-logo"><img src="images/client/clients-8.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-8.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="1.8s">
-      <div class="brand-logo"><img src="images/client/clients-9.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-9.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="2s">
-      <div class="brand-logo"><img src="images/client/clients-10.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-10.png" alt="SanguineIT client logo" class="img-fluid"></div>
     <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="2.2s">
-      <div class="brand-logo"><img src="images/client/clients-11.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-11.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="2.4s">
-      <div class="brand-logo"><img src="images/client/clients-12.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-12.png" alt="SanguineIT client logo" class="img-fluid"></div>
      <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="2.6s">
-      <div class="brand-logo"><img src="images/client/clients-13.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-13.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="2.8s">
-      <div class="brand-logo"><img src="images/client/clients-14.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-14.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="3s">
-      <div class="brand-logo"><img src="images/client/clients-4.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-4.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="3.2s">
-      <div class="brand-logo"><img src="images/client/clients-1.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-1.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="3.4s">
-      <div class="brand-logo"><img src="images/client/clients-7.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-7.png" alt="SanguineIT client logo" class="img-fluid"></div>
     <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       <li class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeIn" data-wow-delay="3.6s">
-      <div class="brand-logo"><img src="images/client/clients-2.png" alt="clients" class="img-fluid"></div>
+      <div class="brand-logo"><img loading="lazy" decoding="async" src="images/client/clients-2.png" alt="SanguineIT client logo" class="img-fluid"></div>
       <!-- <p class="lh">Shutter, USA</p> -->
       </li>
       </ul>
@@ -1012,25 +1033,25 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
             <div class="row">
                <div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".2s">
                   <div class="badges-content">
-                     <img src="images/about/badges-a.png" alt="budges"  class="img-fluid">
+                     <?php sit_responsive_image('images/about/badges-a.png', 'Industry recognition badge', ['class' => 'img-fluid']); ?>
                      <p>ABC DEF Industry Leader</p>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".4s">
                   <div class="badges-content">
-                     <img src="images/about/badges-b.png" alt="budges"  class="img-fluid">
+                     <?php sit_responsive_image('images/about/badges-b.png', 'Industry recognition badge', ['class' => 'img-fluid']); ?>
                      <p>Best eCommerce Development Company</p>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".6s">
                   <div class="badges-content">
-                     <img src="images/about/badges-c.png" alt="budges"  class="img-fluid">
+                     <?php sit_responsive_image('images/about/badges-c.png', 'Industry recognition badge', ['class' => 'img-fluid']); ?>
                      <p>ABC DEF High Performer Winner</p>
                   </div>
                </div>
                <div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".8s">
                   <div class="badges-content">
-                     <img src="images/about/badges-d.png" alt="budges"  class="img-fluid">
+                     <?php sit_responsive_image('images/about/badges-d.png', 'Industry recognition badge', ['class' => 'img-fluid']); ?>
                      <p>Top App Developer 2019-20</p>
                   </div>
                </div>
@@ -1302,9 +1323,5 @@ Our initial efforts make it a clean, transparent, efficient and no-confusion pro
          </div>
       </section>
       <!--End Location-->
-    
-    
-    
-    
-    
+
     <?php include "footer.php" ?>

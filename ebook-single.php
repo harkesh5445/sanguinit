@@ -9,7 +9,16 @@ if (!$post) {
     exit;
 }
 
+require_once __DIR__ . '/includes/seo.php';
+
 $pageTitle = $post['title'];
+$page_data = [
+    'title' => $pageTitle . ' | SanguineIT E-Books',
+    'description' => !empty($post['list_summary']) ? $post['list_summary'] : $pageTitle,
+    'canonical' => sit_base_url() . '/ebook-single.php?slug=' . rawurlencode($slug),
+    'og_image' => !empty($post['featured_image']) ? $post['featured_image'] : '',
+    'json_ld' => [sit_article_schema($post, $slug, 'ebook-single.php', 'Article')],
+];
 $ebookHtml = get_ebook_post_html($slug);
 $currentEbookSlug = $slug;
 $ebookSidebarPost = $post;

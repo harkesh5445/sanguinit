@@ -1,13 +1,21 @@
-<?php include "header.php" ?>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+$page_data = [
+    'title' => 'Website Maintenance & Support Services | SanguineIT',
+    'description' => 'Professional website maintenance and support — CMS updates, security patching, backups, content changes, SEO health, and performance monitoring for global business sites.',
+    'keywords' => 'website maintenance, website support, CMS updates, site security, WordPress maintenance, Sitefinity support, website care plan, SanguineIT',
+    'canonical' => sit_base_url() . '/website-maintenance-and-support-services.php',
+];
+include 'header.php';
+?>
+
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Website Maintenance And Support Services</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Website Maintenance &amp; Support Services</h1>
 								</div>
 							</div>
 						</div>
@@ -70,16 +78,16 @@
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/Web_1.jpg" alt="image" class="img-fluid"/>
+									<img src="images/about_2/Web_1.jpg" alt="Website maintenance and support team" class="img-fluid"/>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Website Maintenance And Support Services</h2>
-									<p class="lh">site upkeep administrations With our site support administrations, we take care of your site for you, leaving you allowed to maintain your business. Our specialists will refresh and improve your site, guaranteeing it is supported up day by day, is kept without malware, and security refreshes are introduced consistently to guarantee it's working at ideal execution. </p>
-									<p class="lh">However, that is just the beginning of our administrations; we have creators and engineers close by to help with straightforward plan changes to full site assembles. Site improvement specialists to help support your site up the rankings just as web-based media the executives administrations to guarantee you get taken note. </p>
-									<p class="lh">Web upkeep is critical to the accomplishment of any site, without a well-performing upgraded site you'll never get to the highest point of the rankings, call us today for a no-commitment statement to perceive how we can help. </p>
+									<h2>Website Care That Protects Rankings, Security, and Trust</h2>
+									<p class="lh">Your website is a revenue and credibility channel — but only if it stays fast, secure, and current. SanguineIT website maintenance and support services help marketing and IT teams keep corporate sites, ecommerce storefronts, and CMS portals healthy without diverting internal developers from product work.</p>
+									<p class="lh">We handle platform updates, SSL and backup hygiene, malware monitoring, content publishing assistance, and performance checks across WordPress, Sitefinity, Magento, and custom PHP/.NET stacks. Our global delivery model supports clients in the US, Europe, and APAC with overlapping hours for urgent changes and planned release windows.</p>
+									<p class="lh">Pair website care with broader coverage through <a href="app-maintenance.php">application maintenance</a> or platform-specific programs such as <a href="sitefinity.php">Sitefinity support</a> and <a href="magento-maintenance-services.php">Magento maintenance</a>.</p>
 								</div>
 							</div>
 						</div>
@@ -90,41 +98,34 @@
 						<div class="row">
 						<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>For what reason do I need site upkeep? </h2>
-									<p class="lh">Having a site is an extraordinary apparatus and basic in the present advanced climate. It gives potential clients knowledge into your business, where you are, the point at which you're open and obviously what you sell. In any case, it's just helpful if individuals can discover it! </p>
-									<p class="lh">There is such a great amount of rivalry out there you should be certain your site positions well for your objective clients. There are numerous components to getting this going, however one of the most significant is guaranteeing it's stayed up with the latest, and not simply from the innovation it's worked with, the substance must be later. </p>
-									<p class="lh">We realize it requires some investment to distribute refreshes, you may just access your site once in a while, and it's frequently dubious finding the username and secret word your designer messaged you, and that is the place where we can help. Send us your update, and we'll do it for you! </p>
-									<p class="lh">We help organizations everywhere on the UK, from one off fixes to normal month to month page alters and site streamlining, connect today and perceive how we can help. </p>
+									<h2>Why ongoing website maintenance matters</h2>
+									<p class="lh">Search engines and users both reward sites that load quickly, publish fresh content, and run on patched, supported software. Neglected CMS cores, expired certificates, and broken forms silently erode leads long before a major outage occurs.</p>
+									<p class="lh">Regular maintenance reduces security exposure, prevents plugin and extension conflicts after upgrades, and keeps analytics, forms, and integrations working as marketing campaigns evolve. For enterprise teams, it also provides audit-friendly change logs and documented release discipline.</p>
+									<p class="lh">If your team lacks bandwidth to publish updates or troubleshoot CMS issues, SanguineIT acts as an extension of your operations — you send requests; we implement, test, and deploy with clear communication.</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/web_2.jpg" alt="image" class="img-fluid"/>
+									<img src="images/about_2/web_2.jpg" alt="Website performance and SEO monitoring" class="img-fluid"/>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/web_3.jpg" alt="image" class="img-fluid"/>
+									<img src="images/about_2/web_3.jpg" alt="Website support engagement models" class="img-fluid"/>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<h2>What amount does it cost for site upkeep sevices? </h2>
-									<p class="lh"><b>We have two alternatives:</b> </p>
-									<p class="lh">1. Month to month upkeep bundles from $250 </p>
-									<p class="lh">Our month to month alternative furnishes quick facilitating with a SSL authentication, normal reinforcements and framework redesigns from as meager as $250 every month. More highlights, for example, ordinary help time, website architecture and SEO are additionally accessible as extra's to make a bespoke bundle for your business. </p>
-									<p class="lh">The month to month plan is the ideal choice to guarantee your site's CMS is stayed up with the latest, assisting with keeping it as secure as conceivable from infections and programmers. Adding support time to your bundle implies we can likewise help with content updates, saving your time while guaranteeing your site stays new and current. View all our support bundles here.  </p>
-									<p class="lh">2. Specially appointed/Pay As You Go from $200  </p>
-									<p class="lh">Our impromptu site uphold administration functions admirably in the event that you just need assistance sometimes, giving you the choice to pay an hourly pace of $200 for any necessary framework refreshes, content changes or some other kind of changes/fixes on your site as and when you need. You email or call us with your necessities; we'll quote you a cost and afterward continue ahead with the updates when you give us the approval.</p>
+									<h2>Flexible support plans for every stage</h2>
+									<p class="lh"><b>Monthly care plans</b> — Ideal for businesses that want proactive monitoring, CMS updates, backups, security patching, and a bank of support hours for content or design changes each month.</p>
+									<p class="lh"><b>On-demand support</b> — Best when you need occasional fixes, landing page updates, or emergency troubleshooting without a long-term retainer. Request work as needed with transparent estimates before we proceed.</p>
+									<p class="lh">Every engagement can be tailored with SEO health checks, accessibility reviews, hosting coordination, and design support. Read our article on <a href="article-single.php?slug=website-maintenance-vital-after-development">why website maintenance is vital after launch</a>, or <a href="contact-us.php">contact us</a> for a plan matched to your site complexity and traffic profile.</p>
 								</div>
 							</div>
 						</div>
@@ -153,70 +154,66 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Website Care</span>
+									<h2>What's Included</h2>
+									<p class="lh mb30">Core website maintenance capabilities for marketing sites and enterprise portals.</p>
 								</div>
 							</div>
 						</div>
 						<div class="row upset link-hover">
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
+									<h4>CMS &amp; Plugin Updates</h4>
+									<p class="lh">Scheduled core, theme, and extension updates with staging validation before production deployment.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
+									<h4>Security &amp; Backups</h4>
+									<p class="lh">SSL monitoring, malware scans, hardened configurations, and tested backup restore procedures.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Content &amp; Design Updates</h4>
+									<p class="lh">Landing pages, banners, copy changes, and minor UI adjustments handled by our web team.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
-									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
+									<h4>Performance Monitoring</h4>
+									<p class="lh">Uptime checks, Core Web Vitals reviews, and optimization recommendations to protect SEO and conversion.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Form &amp; Integration Fixes</h4>
+									<p class="lh">CRM, marketing automation, payment, and analytics integrations kept working after platform changes.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>SEO Health Checks</h4>
+									<p class="lh">Broken links, indexability issues, metadata gaps, and redirect hygiene reviewed on a regular cadence.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Request a <span>Website Care Quote</span></p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
+
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -225,7 +222,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -237,8 +234,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

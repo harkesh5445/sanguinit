@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/performance.php';
+if (!isset($page_data) || !is_array($page_data)) {
+    $page_data = [];
+}
+$sit_meta = sit_resolve_meta($page_data);
+$sit_org_schema = sit_organization_schema();
+$sit_load_portfolio_assets = sit_needs_portfolio_assets();
+?><!DOCTYPE html>
 <html lang="en" class="no-js">
    <head>
       <meta charset="utf-8"/>
-      <title>Sanguine - Web Design &amp; Digital Marketing Agency HTML Sanguine</title>
-      <meta name="description" content="Creative Agency, Marketing Agency Sanguine">
-      <meta name="keywords" content="Creative Agency, Marketing Agency">
-      <meta name="author" content="rajesh-doot">
+      <?php sit_render_head_meta($sit_meta); ?>
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="theme-color" content="#2e2a8f">
@@ -13,16 +19,29 @@
 	  
 	  
       <link href="images/favicon.png" rel="icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
       <!--plugin-css-->
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/plugin.min.css" rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+      <?php echo sit_async_stylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'); ?>
+      <?php echo sit_async_stylesheet('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); ?>
       <!-- Sanguine-style-->
       <link href="css/style.css" rel="stylesheet">
       <link href="css/responsive.css" rel="stylesheet">
+      <?php if ($sit_load_portfolio_assets) : ?>
       <link href="css/portfolio.css" rel="stylesheet">
+      <?php endif; ?>
       <link href="css/custom.css" rel="stylesheet">
+      <?php
+      if (!empty($sit_meta['json_ld'])) {
+          foreach ($sit_meta['json_ld'] as $schemaBlock) {
+              echo sit_render_json_ld($schemaBlock);
+          }
+      }
+      echo sit_render_json_ld($sit_org_schema);
+      ?>
    </head>
    <body>
       <!--Start Header -->
@@ -31,8 +50,8 @@
             <div class="menu-header">
                <div class="dsk-logo">
                   <a class="nav-brand" href="index.php">
-                     <img src="images/logo/sanguine-logo2.png" alt="Logo" class="mega-white-logo"/>
-                     <img src="images/logo/sanguine-logo2.png" alt="Logo" class="mega-darks-logo"/> 
+                     <img src="images/logo/sanguine-logo2.png" alt="Logo" class="mega-white-logo" width="180" height="48" decoding="async"/>
+                     <img src="images/logo/sanguine-logo2.png" alt="Logo" class="mega-darks-logo" width="180" height="48" decoding="async"/>
                      <!-- <span style="color: #fff; font-weight: 900; font-size:30px;">Sanguine</span> -->
                   </a>
                </div>

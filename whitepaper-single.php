@@ -9,7 +9,16 @@ if (!$post) {
     exit;
 }
 
+require_once __DIR__ . '/includes/seo.php';
+
 $pageTitle = $post['title'];
+$page_data = [
+    'title' => $pageTitle . ' | SanguineIT Whitepapers',
+    'description' => !empty($post['list_summary']) ? $post['list_summary'] : $pageTitle,
+    'canonical' => sit_base_url() . '/whitepaper-single.php?slug=' . rawurlencode($slug),
+    'og_image' => !empty($post['featured_image']) ? $post['featured_image'] : '',
+    'json_ld' => [sit_article_schema($post, $slug, 'whitepaper-single.php', 'Article')],
+];
 $whitepaperHtml = get_whitepaper_post_html($slug);
 $currentWhitepaperSlug = $slug;
 $whitepaperSidebarPost = $post;

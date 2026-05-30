@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Open Source Development Services | SanguineIT',
+    'description' => 'Open source technology development — WordPress, Drupal, Joomla, Magento, Laravel, and community-driven platforms with enterprise support and governance.',
+    'keywords' => 'open source development, open source CMS, open source ecommerce, OSS consulting, SanguineIT',
+    'canonical' => sit_base_url() . '/opensource-technology.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">OpenSource Technology</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Open Source Technology</h1>
 								</div>
 							</div>
 						</div>
@@ -66,20 +74,21 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/fu.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/fu.jpg', 'Open source technology development services', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Open Source Web Application Development </h2>
-									<p class="lh">With a lower generally cost of proprietorship, viable and rich execution and unequaled highlights, open source improvement is the most invaluable alternative for organizations today. The conceivable outcomes of patching up your business with the future advancement of client driven and incorporated applications with open source web improvement is the thing that makes it a favored arrangement for private companies as well as for corporate too. </p>
-									<p class="lh">Also, open source improvement has never been so adaptable &amp; adjustable with SanguineIT open source IT programming arrangements. It's no big surprise that "particular" blasts on the web, and that is actually what you get with a main open source improvement organization like SanguineIT. With an imaginative way to deal with convey highest administrations, this is what we accomplish for you.  </p>
+									<h2>Enterprise-Grade Delivery on Open Source Platforms</h2>
+									<p class="lh">SanguineIT helps organizations adopt and operate open source technology — CMS, ecommerce, and application frameworks — with the governance, security patching, and customization depth enterprise IT teams require, without proprietary vendor lock-in.</p>
+									<p class="lh">Our open source practice spans WordPress, Drupal, Joomla, Magento, PrestaShop, Laravel, and Node.js — selecting platforms based on total cost of ownership, community health, and your team's operational model rather than sales-driven recommendations.</p>
 								</div>
 							</div>
 						</div>
@@ -88,48 +97,47 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-12 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>Technology expertise we possess:</h2>
+									<h2>Open source capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li><b>Key Planning -  </b>Our key anticipating ventures can assist you with clearing a way for your development. </li>
-									<li><b>Procedure Execution -  </b>In light of your business destinations, we execute our arrangements cautiously on the grounds that good thoughts merit incredible methodology execution. </li>
-									<li><b>Advancement and Customization - </b> To assist you with boosting your site execution and deliverability, we send improvement administrations to make the following enormous thing. 
-									</li>
-									<li><b>Last Check - </b> All that we do goes through thorough testing meetings to convey the best that meets your authoritative objectives and targets. </li>
-									<li><b>Open Source Web App Development Services - </b> SanguineIT, a quickly developing open source advancement organization, offers exhaustive open source IT programming answers for organizations, new businesses and enormous associations. With a way to deal with convey top of the line and customized administrations from scratch to meet your business goals, we guarantee most dependable open source site and applications for organizations. Our open source advancement group hands on the most recent open source innovations to capitalize on your financial plan and render most appropriate improvement administrations dependent on your authoritative prerequisites. With the accompanying open source web application improvement administration, we remain ahead in the opposition, yet it's not restricted. </li>
-									<li><b>Joomla - </b> Prepare Your Website Mobile and User-accommodating in a savvy way. Get us in contact for altered Joomla site advancement arrangements. </li>
-									<li><b>Magento -  </b>Get Your Business Online, with an all the more remarkable and true shopping basket advancement. Don't hesitate to call for exceptionally versatile and reasonable (Ecommerce) Magento Website Development. </li>
-									<li><b>Online business -  </b>Begin selling more online with highlight stuffed ground-breaking shopping basket arrangements. Get cites for our customized Ecommerce Website Development administration.</li>
-									<li><b>Wordpress -  </b>With a demonstrated history in open source web application advancement, we offer practical WordPress Development administrations with the assurance of most extreme quality. </li>
-									<li><b> Drupal -  </b>Experience the most remarkable and aggressive open source site with our wide scope of exhaustive Drupal Web Development administrations.</li>
-									<li><b>Open Source Web Application Frameworks - </b> We are a prestigious association delivering exhaustive and financially savvy open source advancement administrations. Our top of the line administrations oblige different businesses and we hand on a few open source web application structures according to appropriateness and necessities of the customers. Be it CakePHP, Ruby On Rails, Django, etc, we are utilizing the most recent open source devices and advances to deliver savvy administrations . Our capacity to convey the best open source advancement administrations have gotten the favored decision of entrepreneurs searching for open source CMS improvement and other IT programming arrangements. Among a few open source web application systems accessible, SanguineITopen source designers are master in the followings, however not restricted. </li>
-									<li><b>Cake PHP -  </b>Prepare a broad scope of to-run worked in-assets, as information base access, confirmation and numerous different highlights with our CakePHP open source web application advancement. </li>
-									<li><b>Ruby On Rails -  </b>With an incredible group of expert Ruby on Rails engineers, we empower you to encounter extraordinary open source assets and network. </li>
-									<li><b>Codeignitor -  </b>Get your hands on highlight pressed web applications, web-based interfaces, CMS, shopping baskets and significantly more with our top of the line CodeIgniter Development administration. </li>
-									<li><b>YII -  </b>Get a basic and developmental site that is secure, quick, effective and simple to-keep up. Our devoted Yll designers master in this open source innovation. </li>
-									<li><b>SanguineIT Helps Your Leverage The Advantages of Open Source -  </b>Begun its activity in 2014, SanguineIT is the quickest developing open source improvement organization, delivering practical and esteem driven administrations to a worldwide demographic. With a particular way to deal with serve our clients with something basic, however huge, we have increased an unequaled involvement with different web application stages and open source improvement innovations that characterizes our ability in taking care of a wide range of undertaking settings aside it's unpredictability. 
-
-Notwithstanding conveying condition of-craftsmanship administration, we go past the customary web application advancement and offer prepared to-work open source IT programming answers for support business commitment with clients and accomplices. Being the best open source versatile application improvement organization, here's the manner by which we assist you with taking advantage of your financial plan. </li>
-									<li><b>Examining Your Business -  </b>With a client driven methodology, we comprehend your business, make polls and examine creative thoughts that develop. </li>
-									<li><b>Locate the Right Platform - </b> Plan a model prerequisites with the correct open source advancement stage from a variety of administrations and accept an approach what's impartial for long haul objectives. </li>
-									<li><b>Plan and Customization -  </b>With a plan to develop your business, we concoct the best plan that adds esteem quicker than it adds costs. </li>
-									<li><b>Modified Development -</b> As a famous open source improvement organization, we comprehend the estimation of assessment, consequently offer 100% modified open source advancement administrations.</li>
-									<li><b>Straightforwardness - </b> Straightforwardness and responsibility are the structure squares of SanguineITpositive standing Open Source Software Development Cost. </li>
-									<li><b>Time and Cost Effective -  </b>We plan to benefit as much as possible from your financial plan and work perseveringly to convey the unparalleled open source advancement and customization administrations. Don't hesitate to interface for Open Source Software Development Cost </li>
-									<li><b>Inventive Ideas Developed Through Creative Minds - </b>SanguineIT is one of the main IT programming and web application improvement organization ability in open source web application advancement. As a quickest developing open source advancement organization, we have conveyed 1000+ tasks in numerous businesses like Ecommerce, wellbeing and wellness, and amusement. You can Hire Open Source Web Developers committed designers that surface with the best plans to convey the most recent and profoundly versatile web answers for limit the Open Source Software Development Cost. Look at our ongoing works.</li>
+									<li><b>Platform selection —</b> CMS and commerce evaluation aligned to requirements and TCO.</li>
+									<li><b>Custom development —</b> Themes, modules, plugins, and extensions without forked cores.</li>
+									<li><b>Security &amp; patching —</b> Advisory monitoring and staged update programs.</li>
+									<li><b>Migration from proprietary —</b> Content and data migration from closed platforms.</li>
+									<li><b>Community contribution —</b> Upstream-compatible customizations for long-term maintainability.</li>
+									<li><b>Managed support —</b> SLA-backed maintenance across OSS estates.</li>
 </ul>
 </p>
 								</div>
 							</div>
-							
-							
+							<div class="col-lg-4">
+								<div class="image-block upset bg-shape wow fadeIn">
+									<?php sit_responsive_image('images/about_2/ecno_1.jpg', 'Open source CMS and ecommerce platforms', ['class' => 'img-fluid']); ?>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
-				
-		
+				<section class="service pad-tb">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="image-block upset bg-shape wow fadeIn">
+									<?php sit_responsive_image('images/about_2/glob_2.jpg', 'Enterprise open source platform engineering', ['class' => 'img-fluid']); ?>
+								</div>
+							</div>
+							<div class="col-lg-8 block-1">
+								<div class="common-heading text-l pl25">
+									<h2>Open source that enterprise IT can stand behind</h2>
+									<p class="lh">Open source succeeds when teams treat security updates, extension governance, and documentation as first-class operations — not afterthoughts. SanguineIT delivers OSS projects with the same change control and quality bars as proprietary builds.</p>
+									<p class="lh">See <a href="WordPress.php">WordPress</a>, <a href="Drupal.php">Drupal</a>, <a href="Magento.php">Magento</a>, and <a href="content-management-services.php">CMS services</a>, or <a href="contact-us.php">contact us</a> for an OSS platform assessment.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<!--End About-->
 				<!--Start Tech-->
 				<div class="techonology-used-">
@@ -153,9 +161,9 @@ Notwithstanding conveying condition of-craftsmanship administration, we go past 
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Services</span>
+									<h2>Open Source Services</h2>
+									<p class="lh mb30">Focused capabilities backed by global delivery experience.</p>
 								</div>
 							</div>
 						</div>
@@ -163,60 +171,55 @@ Notwithstanding conveying condition of-craftsmanship administration, we go past 
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>OSS Platform Strategy</h4>
+									<p class="lh">CMS and commerce selection based on TCO and team fit.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Custom OSS Development</h4>
+									<p class="lh">Themes, modules, and extensions built upstream-compatible.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Security &amp; Patch Management</h4>
+									<p class="lh">Advisory monitoring and staged update programs.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Proprietary-to-OSS Migration</h4>
+									<p class="lh">Content and data migration from closed platforms.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>Extension Governance</h4>
+									<p class="lh">Inventory, audit, and retirement of risky third-party code.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Managed OSS Support</h4>
+									<p class="lh">SLA-backed maintenance across WordPress, Drupal, Magento, and more.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need an <span>Open Source Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -225,7 +228,7 @@ Notwithstanding conveying condition of-craftsmanship administration, we go past 
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -237,8 +240,6 @@ Notwithstanding conveying condition of-craftsmanship administration, we go past 
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-			
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

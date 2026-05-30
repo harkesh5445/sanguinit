@@ -13,7 +13,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/workplace-mobility.jpg',
         'cover_line' => 'Sectors That Will Benefit from',
         'cover_highlight' => 'WORKPLACE MOBILITY',
-        'list_summary' => 'How field services, healthcare, logistics, and retail use mobile apps to improve productivity and customer outcomes.',
+        'list_summary' => 'A strategic mobility playbook for global sectors to improve frontline productivity, compliance, and customer experience at scale.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'why-mobility-matters', 'label' => 'Why mobility matters now'],
@@ -31,7 +31,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/seo-content.jpg',
         'cover_line' => 'How To Write',
         'cover_highlight' => 'CONTENT THAT RANKS WELL',
-        'list_summary' => 'A practical guide to search intent, structure, internal linking, and measuring content performance.',
+        'list_summary' => 'An end-to-end SEO writing framework covering intent, structure, distribution, and measurement for sustainable organic growth.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'search-intent', 'label' => 'Understand search intent'],
@@ -49,7 +49,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/outsourcing-partner.jpg',
         'cover_line' => 'Choosing Right',
         'cover_highlight' => 'OUTSOURCING PARTNER',
-        'list_summary' => 'Evaluate vendors on delivery model, engineering quality, security posture, and cultural fit before you sign.',
+        'list_summary' => 'A due diligence guide to choose outsourcing partners based on delivery maturity, governance strength, and long-term business fit.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'engagement-models', 'label' => 'Engagement models'],
@@ -67,7 +67,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/app-marketing.jpg',
         'cover_line' => '10 Ways to',
         'cover_highlight' => 'MARKET YOUR APP FOR FREE',
-        'list_summary' => 'Organic growth tactics for early-stage apps—ASO, communities, partnerships, and retention loops without paid spend.',
+        'list_summary' => 'Ten practical no-budget app marketing strategies that improve discoverability, activation, and retention through organic channels.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'foundation', 'label' => 'Foundation before promotion'],
@@ -85,7 +85,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/cloud-governance.jpg',
         'cover_line' => 'Cloud Transformation',
         'cover_highlight' => 'GOVERNANCE HANDBOOK',
-        'list_summary' => 'Policies, FinOps rhythms, and accountability models for sustainable cloud programs.',
+        'list_summary' => 'A cloud governance handbook covering guardrails, FinOps discipline, and security-compliance integration for enterprise transformation.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'governance-principles', 'label' => 'Governance principles'],
@@ -103,7 +103,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/product-engineering.jpg',
         'cover_line' => 'Product-Led',
         'cover_highlight' => 'ENGINEERING GUIDE',
-        'list_summary' => 'Align product discovery, engineering delivery, and metrics so teams ship value—not just output.',
+        'list_summary' => 'A product-led engineering guide to align discovery, delivery, and metrics around measurable customer and business outcomes.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'discovery', 'label' => 'Discovery and outcomes'],
@@ -121,7 +121,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/magento-b2b.jpg',
         'cover_line' => 'Magento B2B',
         'cover_highlight' => 'COMMERCE GUIDE',
-        'list_summary' => 'Catalog design, company accounts, quote workflows, and ERP integration for Adobe Commerce B2B.',
+        'list_summary' => 'A Magento B2B implementation roadmap for account structures, quote workflows, integrations, and launch readiness at enterprise scale.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'b2b-fundamentals', 'label' => 'B2B commerce fundamentals'],
@@ -139,7 +139,7 @@ $ebookPosts = [
         'featured_image' => 'images/ebooks/agile-delivery.jpg',
         'cover_line' => 'Agile Delivery',
         'cover_highlight' => 'HANDBOOK',
-        'list_summary' => 'Ceremonies, communication norms, and quality gates that keep offshore and hybrid teams aligned.',
+        'list_summary' => 'A distributed agile handbook with team design, remote ceremonies, and release-quality practices for global engineering squads.',
         'toc' => [
             ['id' => 'introduction', 'label' => 'Introduction'],
             ['id' => 'team-design', 'label' => 'Team design'],

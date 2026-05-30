@@ -1,3 +1,20 @@
 #RewriteEngine On
 #RewriteCond %{HTTPS} off
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_mime.c>
+AddType image/webp .webp
+</IfModule>
+
+RewriteEngine On
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+# Enable when HTTPS is enforced site-wide:
+# Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>

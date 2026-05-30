@@ -9,7 +9,19 @@ if (!$post) {
     exit;
 }
 
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/blog-topic-clusters.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+
 $pageTitle = $post['title'];
+$slugParam = $slug;
+$page_data = [
+    'title' => $pageTitle . ' | SanguineIT Blog',
+    'description' => !empty($post['excerpt']) ? $post['excerpt'] : (isset($post['list_excerpt']) ? $post['list_excerpt'] : $pageTitle),
+    'canonical' => sit_base_url() . '/blog-single.php?slug=' . rawurlencode($slugParam),
+    'og_image' => !empty($post['featured_image']) ? $post['featured_image'] : '',
+    'json_ld' => [sit_blog_posting_schema($post, $slugParam)],
+];
 $commentsLabel = ((int) $post['comments'] === 0) ? 'No Comments' : ((int) $post['comments'] === 1 ? '1 Comment' : (int) $post['comments'] . ' Comments');
 $activeBlogCategory = isset($post['category_slug']) ? $post['category_slug'] : '';
 $articleHtml = get_blog_post_html($slug);
@@ -25,6 +37,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 
 <link rel="stylesheet" href="css/blog-single.css">
+<link rel="stylesheet" href="css/blog-topic-cluster.css">
 
 <section class="blog-single-section">
     <div class="container">
@@ -34,7 +47,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
 
                 <article class="blog-single-article">
                     <div class="blog-single-featured">
-                        <img src="<?php echo htmlspecialchars($post['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                        <?php sit_responsive_image($post['featured_image'], $pageTitle, ['priority' => 'high']); ?>
                     </div>
 
                     <h1 class="blog-single-title"><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></h1>
@@ -67,6 +80,28 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                     <div class="blog-article-body">
                         <?php echo $articleHtml; ?>
                     </div>
+
+                    <?php
+                    $postTopic = get_blog_topic_for_post($post);
+                    $relatedPosts = get_related_blog_posts_for_post($slug, 3);
+                    if ($postTopic || $relatedPosts) :
+                        $topicCluster = $postTopic ? get_blog_topic_cluster($postTopic) : null;
+                        ?>
+                    <div class="blog-single-cluster">
+                        <?php if ($topicCluster) : ?>
+                        <h4>Part of: <?php echo sit_h($topicCluster['title']); ?></h4>
+                        <p class="lh mb15"><a href="<?php echo blog_topic_url($postTopic); ?>">View the full topic hub &rarr;</a></p>
+                        <?php endif; ?>
+                        <?php if ($relatedPosts) : ?>
+                        <h4>Related in this cluster</h4>
+                        <ul>
+                            <?php foreach ($relatedPosts as $relSlug => $relPost) : ?>
+                            <li><a href="<?php echo blog_post_url($relSlug); ?>"><?php echo sit_h($relPost['title']); ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
                 </article>
             </div>
 

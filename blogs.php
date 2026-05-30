@@ -1,6 +1,14 @@
 <?php
 require_once __DIR__ . '/includes/blog-posts-data.php';
+require_once __DIR__ . '/includes/blog-topic-clusters.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Blog | Digital Engineering Insights | SanguineIT',
+    'description' => 'Read SanguineIT blog posts on ecommerce, CMS, cloud, security, and enterprise web development — practical guides for technical leaders.',
+    'canonical' => sit_base_url() . '/blogs.php',
+];
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('blogs');
@@ -8,13 +16,34 @@ include __DIR__ . '/includes/kb-premium-banner.php';
 ?>
 
 <link rel="stylesheet" href="css/blog-editorial.css">
+<link rel="stylesheet" href="css/blog-topic-cluster.css">
+
+<section class="blog-cluster-strip">
+    <div class="container">
+        <h2 class="blog-cluster-strip__title">Explore by Topic</h2>
+        <p class="blog-cluster-strip__lead lh">Pillar hubs group our best commerce, CMS, and LMS guides — each linking to services and related articles for deeper topical authority.</p>
+        <div class="blog-cluster-cards">
+            <?php foreach (get_blog_topic_cluster_slugs() as $topicSlug) :
+                $cluster = get_blog_topic_cluster($topicSlug);
+                $count = count(get_blog_posts_for_topic($topicSlug));
+                ?>
+            <a href="<?php echo blog_topic_url($topicSlug); ?>" class="blog-cluster-card">
+                <p class="blog-cluster-card__eyebrow"><?php echo sit_h($cluster['eyebrow']); ?></p>
+                <h3><?php echo sit_h($cluster['title']); ?></h3>
+                <p><?php echo sit_h($cluster['description']); ?></p>
+                <span class="blog-cluster-card__count"><?php echo (int) $count; ?> articles &rarr;</span>
+            </a>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
 
 <section class="blog-reference-section pad-tb">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-11">
                 <h2 class="blog-main-title">Latest from SanguineIT</h2>
-                <p class="blog-page-lead">Insights on commerce, cloud, and enterprise delivery — written by practitioners, not generic playbooks.</p>
+                <p class="blog-page-lead">Original research and practitioner guides on commerce, cloud, CMS, and enterprise engineering—written for global technology leaders who need actionable insight, not recycled advice.</p>
             </div>
         </div>
 
@@ -40,7 +69,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                                 ?>
                             <div class="carousel-item<?php echo $ci === 0 ? ' active' : ''; ?>">
                                 <a href="<?php echo blog_post_url($cSlug); ?>" class="blog-editorial-slide">
-                                    <img src="<?php echo htmlspecialchars($cImage, ENT_QUOTES, 'UTF-8'); ?>" alt="">
+                                    <?php sit_responsive_image($cImage, $cPost['title'], ['lazy' => $ci !== 0, 'priority' => $ci === 0 ? 'high' : 'auto']); ?>
                                     <span class="blog-editorial-slide__shade" aria-hidden="true"></span>
                                     <div class="blog-editorial-slide__body">
                                         <span class="blog-editorial-slide__tag"><?php echo htmlspecialchars($cPost['category'], ENT_QUOTES, 'UTF-8'); ?></span>
@@ -74,7 +103,7 @@ include __DIR__ . '/includes/kb-premium-banner.php';
                         ?>
                     <article class="blog-editorial-card blog-list-card" data-title="<?php echo htmlspecialchars($listTitle, ENT_QUOTES, 'UTF-8'); ?>" data-content="<?php echo htmlspecialchars($listExcerpt, ENT_QUOTES, 'UTF-8'); ?>">
                         <a href="<?php echo blog_post_url($listSlug); ?>" class="blog-editorial-card__media">
-                            <img src="<?php echo htmlspecialchars($listPost['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($listTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                            <?php sit_responsive_image($listPost['featured_image'], $listTitle); ?>
                             <span class="blog-editorial-card__category"><?php echo htmlspecialchars($listPost['category'], ENT_QUOTES, 'UTF-8'); ?></span>
                         </a>
                         <div class="blog-editorial-card__body blog-list-card-content">

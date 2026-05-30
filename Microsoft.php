@@ -1,16 +1,24 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Microsoft Technology Solutions | SanguineIT',
+    'description' => 'Microsoft stack development — Azure cloud, SharePoint, Dynamics 365, Power Platform, and .NET applications for enterprise digital transformation worldwide.',
+    'keywords' => 'Microsoft development, Azure solutions, SharePoint, Dynamics 365, Power Platform, Microsoft partner, SanguineIT',
+    'canonical' => sit_base_url() . '/Microsoft.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">ASP.NET Development</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Microsoft Technology Solutions</h1>
 								</div>
-							</div>
+								</div>
 						</div>
 					</div>
 				</section>
@@ -66,25 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/fethh_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/Share_1.jpg', 'Microsoft technology solutions and Azure development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>.NET Application Development </h2>
-									<p class="lh">SanguineIT, as an ISO 9001:2015 affirmed ASP .NET Development Company, rules the product improvement field with the intensity of Microsoft .NET instruments by exploiting the critical highlights of this exceptionally flexible stage – Efficient code the board rehearses, shortsighted programming model, administration situated design, simple arrangement, and practicality. We assist undertakings with building basic business arrangements with vital customization and complete unwavering quality, be it any size or section of the business. </p>
-									<p class="lh"><ul class="listing">
-									<li>Windows Azure/AWS Cloud Application Development and Deployment</li>									<li>BI Application Development/Data Analytics and Reporting utilizing Power BI/Tableau </li>
-									<li>Joining with outsider/ERP frameworks: Tally/Quickbooks, SAP, Microsoft Dynamics (AX/D365) and so on </li>									<li>Web and Desktop Custom .NET Application Development and DevOps/CICD Implementation </li>
-									<li>Cross Platform, Web API Development and Custom Web Services Development </li>
-									<li>Microsoft Azure Development/Sharepoint Customization </li>
-									<li>Information Migration and Transformation utilizing outsider API over On-premise/Cloud Environment </li>									<li>Internet business Application Development and Payment Gateway/Wallet Integration </li></ul></p>
+									<h2>End-to-End Microsoft Stack Engineering</h2>
+									<p class="lh">SanguineIT delivers solutions across the Microsoft ecosystem — Azure cloud, SharePoint intranets, Dynamics 365, Power Platform, and .NET applications — for enterprises standardizing on Microsoft technology across North America, Europe, and APAC.</p>
+									<p class="lh">Our Microsoft practice spans infrastructure migration to Azure, custom SharePoint development, Dynamics integrations, Power Apps for line-of-business automation, and ASP.NET Core product engineering — with identity tied to Azure AD and governance aligned to enterprise IT policies.</p>
+									<p class="lh">See also our dedicated <a href="aspdotnet-development.php">ASP.NET development</a>, <a href="sharepoint-support-services.php">SharePoint support</a>, and <a href="xamarin.php">Xamarin/MAUI</a> practices.</p>
 								</div>
 							</div>
 						</div>
@@ -93,49 +98,42 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									
-									<p class="lh">We, at SANGUINEIT perceive the utilization of this ever-developing stage, in this seriously serious market. Throughout the long term, our .NET engineers, creators and analyzers have been totally centered around giving the best .NET arrangements and administrations to our regarded clients. They have been actualizing out-of-the-container Microsoft arrangements, as referenced beneath and our ability ranges over a huge number of ventures. 
+									<h2>Microsoft capabilities we deliver</h2>
+									<p class="lh">
 									<ul class="listing">
-									<li>Tweaked Enterprise Solutions </li>
-<li>	 Versatility Solutions </li>
-<li>	Task Management Systems </li>
-<li>	Electronic Healthcare Applications </li>
-<li>Items Navigation System </li>
-<li>Custom CRM Solutions </li>
-<li>Start to finish ERP Solutions </li>
-<li>CMS based Corporate Websites </li>
-<li>Representative Self Service Systems </li>
-<li>eService and Maintenance </li>
+									<li><b>Azure cloud —</b> App Service, Functions, SQL, Key Vault, and landing zone architecture.</li>
+									<li><b>SharePoint &amp; M365 —</b> Intranets, document workflows, and custom SPFx web parts.</li>
+									<li><b>Dynamics 365 —</b> CRM/ERP customization, integrations, and portal extensions.</li>
+									<li><b>Power Platform —</b> Power Apps, Power Automate, and Power BI dashboards.</li>
+									<li><b>.NET applications —</b> Web apps, APIs, and desktop tools on modern .NET.</li>
+									<li><b>Identity &amp; security —</b> Azure AD, conditional access, and compliance-ready deployments.</li>
 </ul>
 </p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/feth_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/Share_2.jpg', 'Azure and SharePoint enterprise development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/feth_3.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/Share_3.jpg', 'Microsoft enterprise digital transformation', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-								
-									<p class="lh">Our specialized and utilitarian capability in Custom .NET Application Development ranges over a scope of present day advancements like .Net Core, MVC, MVVM, HTML5, Bootstrap with solid backend information bases, for example, MS SQL, NO SQL facilitated at on-reason, or Azure/AWS Cloud-based Infrastructure. </p>
-									<p class="lh">We likewise offer restrictive administrations for the PowerBI/Microsoft Azure by methods for USQL/SSIS/SSAS administrations. </p>
-									<p  class="lh">Our enhanced ASP .NET advancement arrangements have helped numerous associations to conquer obstacles like authoritative nimbleness, conflicting execution, and inadequate information the executives.</p>
+									<h2>Microsoft investments that compound over time</h2>
+									<p class="lh">Organizations on Microsoft stack benefit when partners understand the full platform — not just one product. SanguineIT connects SharePoint content, Dynamics data, Power Platform workflows, and Azure hosting into coherent solutions rather than siloed projects.</p>
+									<p class="lh">Explore <a href="dotnet-migration.php">.NET migration</a> services, read <a href="articles.php">articles</a>, or <a href="contact-us.php">contact us</a> for a Microsoft stack assessment.</p>
 								</div>
 							</div>
 						</div>
@@ -164,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Services</span>
+									<h2>Microsoft Stack Services</h2>
+									<p class="lh mb30">Focused capabilities backed by global delivery experience.</p>
 								</div>
 							</div>
 						</div>
@@ -174,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Azure Cloud Solutions</h4>
+									<p class="lh">Migration, hosting, and managed services on Microsoft Azure.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>SharePoint &amp; M365</h4>
+									<p class="lh">Intranets, workflows, and custom collaboration components.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Dynamics 365</h4>
+									<p class="lh">CRM/ERP customization and third-party integrations.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Power Platform</h4>
+									<p class="lh">Low-code apps, automation flows, and BI dashboards.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>.NET Application Development</h4>
+									<p class="lh">Web, API, and desktop applications on modern .NET.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Identity &amp; Governance</h4>
+									<p class="lh">Azure AD integration and enterprise security patterns.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Microsoft Technology Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -236,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -248,13 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

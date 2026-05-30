@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/news-posts-data.php';
 require_once __DIR__ . '/includes/kb-banner-config.php';
+require_once __DIR__ . '/includes/image-helpers.php';
 include 'header.php';
 
 $kbBanner = kb_get_banner_config('news-events');
@@ -12,10 +13,10 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
 
 <section class="news-reference-section pad-tb">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-left">
             <div class="col-lg-11">
                 <h2 class="news-page-title">Press Releases &amp; Company News</h2>
-                <p class="news-page-intro lh">Latest announcements from SanguineIT—security advisories, partnerships, project launches, and industry recognition.</p>
+                <p class="news-page-intro lh">Press releases, security advisories, and company milestones from SanguineIT—keeping global clients and partners informed on platform updates and delivery achievements.</p>
             </div>
         </div>
 
@@ -50,7 +51,7 @@ $prefilterCategory = isset($_GET['category']) ? trim($_GET['category']) : '';
                         $newsSummary = $newsItem['list_summary'];
                         ?>
                     <article class="news-item" data-category="<?php echo htmlspecialchars($newsItem['category_slug'], ENT_QUOTES, 'UTF-8'); ?>" data-title="<?php echo htmlspecialchars($newsTitle, ENT_QUOTES, 'UTF-8'); ?>" data-content="<?php echo htmlspecialchars($newsSummary, ENT_QUOTES, 'UTF-8'); ?>">
-                        <img src="<?php echo htmlspecialchars($newsItem['featured_image'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($newsTitle, ENT_QUOTES, 'UTF-8'); ?>">
+                        <?php sit_responsive_image($newsItem['featured_image'], $newsTitle); ?>
                         <div class="news-item-content">
                             <h4><?php echo htmlspecialchars($newsTitle, ENT_QUOTES, 'UTF-8'); ?></h4>
                             <p class="news-date"><?php echo htmlspecialchars($newsItem['date'], ENT_QUOTES, 'UTF-8'); ?></p>

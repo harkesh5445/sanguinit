@@ -1,14 +1,22 @@
-<?php include "header.php" ?>
-	  
+<?php
+require_once __DIR__ . '/includes/seo.php';
+require_once __DIR__ . '/includes/image-helpers.php';
+$page_data = [
+    'title' => 'Retail & Consumer Products Software | SanguineIT',
+    'description' => 'Retail and consumer brand software — ecommerce storefronts, mobile apps, omnichannel integrations, and commerce platforms for DTC and enterprise retailers worldwide.',
+    'keywords' => 'retail software development, ecommerce retail, consumer brand apps, omnichannel retail, DTC technology, SanguineIT',
+    'canonical' => sit_base_url() . '/retail-and-consumer-products.php',
+];
+include 'header.php';
+?>
+		  
 				<!--Breadcrumb Area-->
 				<section class="breadcrumb-areav2" data-background="images/banner/6.jpg">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-7">
 								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Retail and consumer products</h1>
-									<!-- <p class="lh mt20 wow fadeInUp text-white" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p> -->
-									<!-- <a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a> -->
+									<h1 class="wow fadeInUp" data-wow-delay=".2s" style="color: #fff;">Retail &amp; Consumer Products</h1>
 								</div>
 							</div>
 						</div>
@@ -66,23 +74,22 @@
 				</div>
 				<!--End Hero-->
 				<!--Start About-->
+
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/vom_1.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/vom_1.jpg', 'Retail and consumer products software development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
 							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
 									<span>Overview</span>
-									<h2>Retail and consumer products</h2>
-									<p class="lh">End to end IT solutions for Retail & consumer industry</p>
-									<p class="lh">Consumer products and retail companies need instant information to adapt quickly to changing market conditions. We give you real-time data, information consistency and efficient processes to improve performance and gain a competitive advantage.</p>
-									<p class="lh">Retailers operate in an increasingly fast-moving environment. Success in a global market not only depends on getting the right product assortment to the right distribution channel at the right time, but also in ensuring that pricing and promotion strategies are optimized.</p>
-									<p class="lh">Consumer products and retail companies face new challenges every day: rising costs, slow growth and technology-enabled shoppers to name a few. Achieving sustainable performance improvement requires innovative strategies, perspective and perseverance.</p>
- 
+									<h2>Digital Engineering for Retail &amp; Consumer Brands</h2>
+									<p class="lh">SanguineIT builds ecommerce storefronts, mobile shopping apps, and omnichannel platforms for DTC brands, multi-location retailers, and consumer product companies that need fast checkout, reliable inventory sync, and marketing-ready experiences — across North America, Europe, and APAC.</p>
+									<p class="lh">Our commerce engineers work across <a href="Magento.php">Magento</a>, <a href="Shopify.php">Shopify</a>, <a href="WordPress.php">WordPress/WooCommerce</a>, and custom stacks to deliver catalog management, personalization, loyalty programs, and ERP/OMS integrations that keep operations and merchandising teams aligned.</p>
+									<p class="lh">From seasonal campaign launches to platform migrations, we combine storefront performance work with post-launch support through our maintenance programs.</p>
 								</div>
 							</div>
 						</div>
@@ -91,36 +98,47 @@
 				<section class="service pad-tb">
 					<div class="container">
 						<div class="row">
-						<div class="col-lg-8 block-1">
+							<div class="col-lg-8 block-1">
 								<div class="common-heading text-l pl25">
-									<h2>We deliver IT business solutions in the following areas:</h2>
+									<h2>Retail capabilities we deliver</h2>
 									<p class="lh">
 									<ul class="listing">
-									<li>Strategic Planning</li>
-<li>Supply Chain Management</li>
-<li>Manufacturing Management</li>
-<li>Sales and Marketing</li>
-<li>	Analytics</li>
-<li>Mobility</li>
-<li>CRM</li>
-<li>ERP</li>
+									<li><b>Ecommerce storefronts —</b> High-converting product pages, checkout optimization, and multi-currency support.</li>
+									<li><b>Mobile commerce apps —</b> Native and cross-platform shopping experiences with push promotions and saved carts.</li>
+									<li><b>Omnichannel integration —</b> Inventory, order, and customer data sync across web, mobile, and POS systems.</li>
+									<li><b>Personalization &amp; loyalty —</b> Recommendation engines, rewards programs, and segmented marketing integrations.</li>
+									<li><b>Marketplace &amp; B2B —</b> Wholesale portals, dealer networks, and multi-vendor catalog management.</li>
+									<li><b>Analytics &amp; CRO —</b> Conversion tracking, A/B testing infrastructure, and Core Web Vitals optimization.</li>
 </ul>
 </p>
-	
-<p class="lh">Equipped with extensive industry, technology and delivery capabilities, we work with you to provide solutions and services that address strategic and operational challenges, optimize business performance, align technology with business priorities, reduce cost, improve margins and constantly sharpen competitive advantage. We have invested in a rich set of solution offerings, assets and accelerators to increase ROI and decrease the time-to-value of your business and IT programs.</p>	
-<p class="lh"><b>Contact us or fill out our request form to start a conversation with one of our experts!</b></p></div>
+								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="images/about_2/vom_2.jpg" alt="image" class="img-fluid"/>
+									<?php sit_responsive_image('images/about_2/vom_2.jpg', 'Retail ecommerce and mobile commerce development', ['class' => 'img-fluid']); ?>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</section>
-				
-				
+				<section class="service pad-tb">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="image-block upset bg-shape wow fadeIn">
+									<?php sit_responsive_image('images/about_2/busn_1.jpg', 'Consumer brand digital commerce platform', ['class' => 'img-fluid']); ?>
+								</div>
+							</div>
+							<div class="col-lg-8 block-1">
+								<div class="common-heading text-l pl25">
+									<h2>Retail platforms built for conversion and operational scale</h2>
+									<p class="lh">Peak season traffic, complex promotions, and returns workflows stress retail technology stacks. SanguineIT load-tests checkout paths, governs extension and plugin sprawl, and documents integration contracts so merchandising launches do not surprise warehouse and finance teams.</p>
+									<p class="lh">Read our <a href="blog-topic.php?topic=ecommerce">ecommerce blog hub</a>, view <a href="clients.php">client logos</a>, explore <a href="case_studies.php">case studies</a>, or <a href="contact-us.php">contact us</a> for a retail commerce assessment.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<!--End About-->
 				<!--Start Tech-->
 				<div class="techonology-used-">
@@ -144,9 +162,9 @@
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="lh mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
+									<span>Industry Solutions</span>
+									<h2>Solutions for Retail &amp; DTC</h2>
+									<p class="lh mb30">Digital engineering tailored to sector-specific requirements and compliance.</p>
 								</div>
 							</div>
 						</div>
@@ -154,60 +172,55 @@
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/logo-and-branding.svg" alt="service" class="img-fluid"/></div>
-									<h4>Mobility</h4>
-									<p class="lh">We have helped our numerous clients worldwide with cutting edge Android applications with unique, feature rich.</p>
+									<h4>Ecommerce Storefronts</h4>
+									<p class="lh">Magento, Shopify, and custom commerce sites optimized for conversion.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service2.svg" alt="service" class="img-fluid"/></div>
-									<h4>Application Support</h4>
-									<p class="lh">Utilizing the force and limit of the cloud can make catastrophe recuperation considerably more savvy and secure. </p>
+									<h4>Mobile Shopping Apps</h4>
+									<p class="lh">Native and cross-platform apps with push notifications and loyalty features.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service3.svg" alt="service" class="img-fluid"/></div>
-									<h4>Web Development</h4>
-									<p class="lh">Our amazing web based business site Development administrations are a result of the fantastic group we have.</p>
+									<h4>Omnichannel Integration</h4>
+									<p class="lh">Inventory and order sync across web, mobile, ERP, and POS systems.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service4.svg" alt="service" class="img-fluid"/></div>
-									<h4>Auditing</h4>
-									<p class="lh"> It's a valuable guide and really expounds on why we have to play out a SEO Audit at crusade start. </p>
+									<h4>Personalization &amp; Loyalty</h4>
+									<p class="lh">Recommendations, rewards, and segmented campaign integrations.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service5.svg" alt="service" class="img-fluid"/></div>
-									<h4>ASP.NET Development</h4>
-									<p class="lh">We assist undertakings with building basic business arrangements with vital customization.</p>
+									<h4>B2B &amp; Wholesale Portals</h4>
+									<p class="lh">Dealer networks and contract pricing for multi-channel retail operations.</p>
 								</div>
 							</div>
 							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
 								<div class="s-block">
 									<div class="s-card-icon"><img src="images/icons/service6.svg" alt="service" class="img-fluid"/></div>
-									<h4>CMS</h4>
-									<p class="lh">SanguineIT unites the business best practices and information for a coordinated vital. </p>
+									<h4>Performance &amp; Analytics</h4>
+									<p class="lh">Core Web Vitals tuning, conversion tracking, and campaign load testing.</p>
 								</div>
 							</div>
 						</div>
 						<div class="-cta-btn mt70">
 							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p class="lh">Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+								<p class="lh">Need a <span>Retail Commerce Partner</span>?</p>
+								<a href="contact-us.php" class="btn-main bg-btn2 lnk">Get Started<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!--End Service-->
-				
-				
-				
-				
-			
 				<!--Start CTA-->
 				<section class="cta-area pad-tb">
 					<div class="container">
@@ -216,7 +229,7 @@
 								<div class="common-heading">
 									<span>Let's work together</span>
 									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="#" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
+									<a href="contact-us.php" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
 									<p class="lh cta-call">Or call us now <a href="tel:(+1)662-300-1685"><i class="fas fa-phone-alt"></i> (+1) 662-300-1685</a></p>
 								</div>
 							</div>
@@ -228,8 +241,6 @@
 					<div class="shape shape-a4"><img src="images/shape/shape-11.svg" alt="shape"/></div>
 				</section>
 				<!--End CTA-->
-				
-		
-		
-		
-		<?php include "footer.php" ?>
+
+		<?php include __DIR__ . '/includes/page-internal-links.php'; ?>
+		<?php include 'footer.php';

@@ -9,7 +9,16 @@ if (!$post) {
     exit;
 }
 
+require_once __DIR__ . '/includes/seo.php';
+
 $pageTitle = $post['title'];
+$page_data = [
+    'title' => $pageTitle . ' | SanguineIT Infographics',
+    'description' => !empty($post['list_summary']) ? $post['list_summary'] : $pageTitle,
+    'canonical' => sit_base_url() . '/infographic-single.php?slug=' . rawurlencode($slug),
+    'og_image' => !empty($post['featured_image']) ? $post['featured_image'] : '',
+    'json_ld' => [sit_article_schema($post, $slug, 'infographic-single.php', 'Article')],
+];
 $infoHtml = get_infographic_post_html($slug);
 $currentInfographicSlug = $slug;
 
